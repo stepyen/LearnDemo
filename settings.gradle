@@ -1,5 +1,9 @@
+include ':Demo_Template'
+include ':Demo_Base'
+include ':Demo_base'
+include ':Demo_Kotlin'
+include ':Demo_Java'
+include ':Demo_Picture'
 include ':Lib_FileProvider'
-include ':lib_java'
-include ':lib_kotlin'
 include ':app'
 rootProject.name = "LearnDemo"
