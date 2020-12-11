@@ -11,11 +11,8 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-
 import com.stepyen.demo.picture.R;
 import com.stepyen.lib.fileprovider.FileProvider7;
-
 import java.io.File;
 import java.io.IOException;
 
