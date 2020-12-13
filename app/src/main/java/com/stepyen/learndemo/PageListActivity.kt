@@ -22,10 +22,15 @@ class PageListActivity : BasePageActivity() {
     override fun initView() {
 
         for (pageBean in intent.getParcelableArrayListExtra<PageBean>(KEY_PAGE_LIST)) {
-            addButton(pageBean.title, View.OnClickListener {
-                startActivity(Intent(this@PageListActivity, pageBean.cls).apply {
+
+            if (pageBean.cls == null) {
+                addTextView(pageBean.title)
+            }else{
+                addButton(pageBean.title, View.OnClickListener {
+                    startActivity(Intent(this@PageListActivity, pageBean.cls).apply {
+                    })
                 })
-            })
+            }
         }
 
     }

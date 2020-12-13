@@ -1,3 +1,4 @@
+include ':Demo_AndroidManifest'
 include ':Demo_Animation'
 include ':Demo_Template'
 include ':Demo_Base'

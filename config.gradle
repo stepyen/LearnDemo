@@ -154,8 +154,8 @@ ext {
             // stepyen
             "stepyen_xutil_core"          : "com.github.stepyen.XUtil:xutil-core:$versions.stepyen_xutil",
             "stepyen_xutil_sub"           : "com.github.stepyen.XUtil:xutil-sub:$versions.stepyen_xutil",
-            "stepyen_xui"                 : "com.github.stepyen:XUI:1.4.1"
-
+            "stepyen_xui"                 : "com.github.stepyen:XUI:1.4.1",
+            "orhanobut_logger"                 : "com.orhanobut:logger:2.2.0"
 
     ]
 }

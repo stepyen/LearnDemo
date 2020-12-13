@@ -1,0 +1,11 @@
+apply from: '../common_demo.gradle'
+
+
+android {
+    defaultConfig {
+        manifestPlaceholders = [
+                test_value         : "这是测试值",
+                test_value_activity: "Activity 中的测试值"
+        ]
+    }
+}

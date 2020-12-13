@@ -1,5 +1,10 @@
 package com.stepyen.learndemo
 
+import com.stepyen.demo.androidmanifest.activity.AdjustPanActivity
+import com.stepyen.demo.androidmanifest.activity.AdjustResizeActivity
+import com.stepyen.demo.androidmanifest.activity.AdjustUnspecifiedActivity
+import com.stepyen.demo.androidmanifest.activity.MetaDataActivity
+import com.stepyen.demo.androidmanifest.activity.task.TaskActivity
 import com.stepyen.demo.animation.activity.DemoFrameAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
@@ -20,8 +25,23 @@ object PageDataManage {
 
         put("debug", arrayListOf<PageBean>().apply {
 
-//            add(PageBean("设备信息", DeviceActivity::class.java))
             add(PageBean("设备信息", DemoDebugActivity::class.java))
+
+
+        })
+
+        put("配置清单", arrayListOf<PageBean>().apply {
+
+            add(PageBean("属性：WindowSoftInputMode"))
+            add(PageBean("adjustUnspecified", AdjustUnspecifiedActivity::class.java))
+            add(PageBean("adjustResize", AdjustResizeActivity::class.java))
+            add(PageBean("adjustPan", AdjustPanActivity::class.java))
+
+            add(PageBean("meta-data"))
+            add(PageBean("meta-data", MetaDataActivity::class.java))
+
+            add(PageBean("activity 启动模式"))
+            add(PageBean("启动模式", TaskActivity::class.java))
 
 
         })

@@ -46,6 +46,8 @@ dependencies {
     api "$library.stepyen_xutil_sub"
     api "$library.stepyen_xui"
 
+    api "$library.orhanobut_logger"
+
 
     api project(":Lib_FileProvider")
     api project(":Lib_AvoidResult")

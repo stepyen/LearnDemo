@@ -95,7 +95,7 @@ open class BasePageActivity :AppCompatActivity() {
 
 
     protected fun addButton(title: String, clickListener: View.OnClickListener) {
-        addButton(title, clickListener, 0)
+        addButton(title, clickListener, 10)
     }
 
     protected fun addButton(title: String, clickListener: View.OnClickListener, marginTop: Int) {

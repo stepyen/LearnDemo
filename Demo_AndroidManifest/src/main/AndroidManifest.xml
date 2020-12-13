@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stepyen.demo.androidmanifest">
+
+
+    <application>
+        <activity
+            android:name=".activity.AdjustUnspecifiedActivity"
+            android:windowSoftInputMode="adjustUnspecified"></activity>
+        <activity
+            android:name=".activity.AdjustResizeActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".activity.AdjustPanActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name=".activity.MetaDataActivity"
+           >
+            <meta-data
+                android:name="activity.test"
+                android:resource="@string/test_meta_info" />
+        </activity>
+
+        <meta-data
+            android:name="application.test"
+            android:value="applicationValue" />
+
+        <meta-data
+            android:name="application.test.manifestPlaceholders"
+            android:value="${test_value}" />
+
+    </application>
+</manifest>
