@@ -9,5 +9,5 @@ java {
 }
 
 dependencies {
-    implementation "$library.kotlin_stdlib_jdk7"
+    implementation "$library.kotlin_stdlib"
 }

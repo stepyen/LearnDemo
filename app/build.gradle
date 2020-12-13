@@ -17,6 +17,8 @@ android {
         }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -37,7 +39,9 @@ android {
 dependencies {
 
     implementation project(":Demo_Base")
-//    implementation project("Demo_Picture")
+    implementation project(":Demo_Animation")
+    implementation project(":Demo_Debug")
+    implementation project(":Demo_Picture")
 
-//    implementation project("Lib_FileProvider")
+
 }

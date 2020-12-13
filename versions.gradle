@@ -1,14 +1,17 @@
 def addRepos(RepositoryHandler handler) {
-    handler.maven { url "http://nexus.baby-bus.com/repository/maven-public/" }
-    handler.maven {
-        url "http://maven.baby-bus.com/repository/maven-public/"
-    }
+//    handler.maven { url "http://nexus.baby-bus.com/repository/maven-public/" }
+//    handler.maven {url "http://maven.baby-bus.com/repository/maven-public/"}
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
     handler.maven { url 'https://jitpack.io' }
-    handler.maven { url 'https://dueros.baidu.com/maven/repository/maven-releases/' }
-    // 友盟
-    handler.maven { url 'https://dl.bintray.com/umsdk/release' }
-    // 友盟分享7.1.2新浪分享所需
-    handler.maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+    handler.maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+//    handler.maven { url 'https://dueros.baidu.com/maven/repository/maven-releases/' }
+//    // 友盟
+//    handler.maven { url 'https://dl.bintray.com/umsdk/release' }
+//    // 友盟分享7.1.2新浪分享所需
+//    handler.maven { url "https://dl.bintray.com/thelasterstar/maven/" }
 }
 
 ext.addRepos = this.&addRepos

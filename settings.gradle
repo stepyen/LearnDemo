@@ -1,9 +1,12 @@
+include ':Demo_Animation'
 include ':Demo_Template'
 include ':Demo_Base'
-include ':Demo_base'
+include ':Demo_Debug'
 include ':Demo_Kotlin'
 include ':Demo_Java'
 include ':Demo_Picture'
+include ':Demo_Chivox'
 include ':Lib_FileProvider'
+include ':Lib_AvoidResult'
 include ':app'
 rootProject.name = "LearnDemo"
