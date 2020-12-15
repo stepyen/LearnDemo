@@ -7,6 +7,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import com.stepyen.demo.base.App
+import com.stepyen.demo.base.common.CommonPath
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.picture.constant.DemoPictureConst
 import com.stepyen.lib.avoidresult.AvoidOnResult
@@ -42,6 +43,9 @@ class TakePictureManager {
         AvoidOnResult(activity).startForResult(intent, DemoPictureConst.REQUEST_CODE_TAKE_PICKTURE) { requestCode, resultCode, data ->
             when (requestCode) {
                 DemoPictureConst.REQUEST_CODE_TAKE_PICKTURE -> {
+
+                    L.d(DemoPictureConst.TAG, "拍照，resultCode：$resultCode")
+
                     if (resultCode == Activity.RESULT_OK) {
                         L.d(DemoPictureConst.TAG, "拍照成功")
                         saveIntoPhotoAlbum(imagePath)
@@ -81,7 +85,7 @@ class TakePictureManager {
     private fun createImagePath(): String {
         val format = SimpleDateFormat("yyyyMMddHHmmss")
         val date = Date(System.currentTimeMillis())
-        val file = File("${App.get().getExternalFilesDir(Environment.DIRECTORY_PICTURES)}",
+        val file = File("${CommonPath.imagePathDir}",
                 "${format.format(date)}.jpg")
         if (!file.parentFile.exists()) {
             file.parentFile.mkdirs()

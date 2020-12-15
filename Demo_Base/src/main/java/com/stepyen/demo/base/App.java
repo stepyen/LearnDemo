@@ -11,6 +11,7 @@ import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.stepyen.demo.base.common.CommonPath;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
 
@@ -67,6 +68,7 @@ public class App extends Application {
 
         packName = getPackageName();
 
+        CommonPath.INSTANCE.init();
     }
 
     /**

@@ -44,20 +44,14 @@ public class FileProvider7 {
      * @param intent
      * @param type
      * @param file
-     * @param writeAble
      */
     public static void setIntentDataAndType(Context context,
                                             Intent intent,
                                             String type,
-                                            File file,
-                                            boolean writeAble) {
-        if (Build.VERSION.SDK_INT >= 24) {
+                                            File file) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.setDataAndType(getUriForFile(context, file), type);
-            // 授临时权限
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            if (writeAble) {
-                intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            }
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
         } else {
             intent.setDataAndType(Uri.fromFile(file), type);
         }

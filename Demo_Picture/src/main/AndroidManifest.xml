@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.CAMERA"></uses-permission>
 
     <application>
-        <activity android:name=".activity.DemoSystemPictureActivity"></activity>
+        <activity android:name=".activity.DemoPictureActivity"></activity>
     </application>
 
 </manifest>

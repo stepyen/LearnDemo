@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="demo_cropimage_activity_horizontal_margin">16dp</dimen>
+    <dimen name="demo_cropimage_activity_vertical_margin">16dp</dimen>
+
+
+    <!-- 通用字体大小Start -->
+    <dimen name="demo_cropimage_common_textsize_huge">55dp</dimen>
+    <dimen name="demo_cropimage_common_textsize_bigger">35dp</dimen>
+    <dimen name="demo_cropimage_common_textsize_big">25dp</dimen>
+    <dimen name="demo_cropimage_common_textsize_normal">20dp</dimen>
+    <dimen name="demo_cropimage_common_textsize_small">16dp</dimen>
+    <dimen name="demo_cropimage_common_textsize_smaller">12dp</dimen>
+</resources>

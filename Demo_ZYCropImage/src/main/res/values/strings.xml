@@ -1,0 +1,12 @@
+<resources>
+    <string name="demo_cropimage_app_name">Plugin_CropImage</string>
+    <string name="demo_cropimage_title">图片截取</string>
+    <string name="demo_cropimage_toast_sdcard_no_find">未找到SD卡</string>
+
+
+    <string name="demo_cropimage_cropImage_local_img">本地图片</string>
+    <string name="demo_cropimage_cropImage_take_photo">拍照</string>
+    <string name="demo_cropimage_cropImage_cancel">取消</string>
+    <string name="demo_cropimage_cropImage_confirm">确定</string>
+    <string name="demo_cropimage_start">开始</string>
+</resources>

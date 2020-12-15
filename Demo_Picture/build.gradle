@@ -1,1 +1,9 @@
 apply from:'../common_demo.gradle'
+
+
+
+dependencies {
+
+    implementation project(':Demo_ZYCropImage')
+
+}

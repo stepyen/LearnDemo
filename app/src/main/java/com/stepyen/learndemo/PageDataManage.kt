@@ -8,7 +8,8 @@ import com.stepyen.demo.androidmanifest.activity.task.TaskActivity
 import com.stepyen.demo.animation.activity.DemoFrameAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
-import com.stepyen.demo.picture.activity.DemoSystemPictureActivity
+import com.stepyen.demo.picture.activity.DemoPictureActivity
+import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
 import com.stepyen.learndemo.bean.PageBean
 
 /**
@@ -65,21 +66,23 @@ object PageDataManage {
 //        })
 //
 //
-//        put("kotlin", arrayListOf<PageBean>().apply {
+        put("组件", arrayListOf<PageBean>().apply {
+
+            add(PageBean("Activity"))
+            add(PageBean("别名", TaskActivity::class.java))
+            add(PageBean("生命周期", TaskActivity::class.java))
+            add(PageBean("屏幕方向", TaskActivity::class.java))
+
+
+            add(PageBean("ContentProvider"))
+
+
+            add(PageBean("Intent"))
+            add(PageBean("1", TaskActivity::class.java))
+
+        })
 //
 //
-//
-//        })
-//
-//
-//        put("App", arrayListOf<PageBean>().apply {
-//
-//            add(PageBean("配置清单", ManifestActivity::class.java))
-//            add(PageBean("手机参数", PhoneParamActivity::class.java))
-//            add(PageBean("WindowSoftInputMode", WindowSoftInputModeActivity::class.java))
-//
-//
-//        })
 //
 //        put("View", arrayListOf<PageBean>().apply {
 //            add(PageBean("ConstraintLayout", ConstraintLayoutActivity::class.java))
@@ -128,7 +131,12 @@ object PageDataManage {
 
         put("图片", arrayListOf<PageBean>().apply {
 
-            add(PageBean("系统-图片", DemoSystemPictureActivity::class.java))
+            add(PageBean("系统-图片", DemoPictureActivity::class.java))
+
+        })
+        put("View 基础", arrayListOf<PageBean>().apply {
+
+            add(PageBean("Bitmap", DemoBitmapActivity::class.java))
 
         })
 

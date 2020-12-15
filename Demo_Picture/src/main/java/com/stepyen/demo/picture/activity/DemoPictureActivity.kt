@@ -5,19 +5,23 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
+import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore
-import android.widget.ImageView
-import com.stepyen.demo.base.App
 import com.stepyen.demo.base.base.BasePageActivity
+import com.stepyen.demo.base.common.CommonPath
+import com.stepyen.demo.base.utils.FileUtil
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.picture.R
 import com.stepyen.demo.picture.constant.DemoPictureConst
 import com.stepyen.demo.picture.manager.TakePictureManager
 import com.stepyen.demo.picture.utils.AlbumUtil
+import com.stepyen.demo.zycropimage.Const
+import com.stepyen.demo.zycropimage.cropimage.CropImageActivity
 import com.stepyen.lib.avoidresult.AvoidOnResult
 import com.stepyen.lib.fileprovider.FileProvider7
 import com.stepyen.xutil.file.FileUtils
-import kotlinx.android.synthetic.main.activity_demo_system_picture.*
+import kotlinx.android.synthetic.main.activity_demo_picture.*
 import java.io.File
 
 /**
@@ -26,14 +30,16 @@ import java.io.File
  * description：系统的图片处理
  *
  */
-class DemoSystemPictureActivity : BasePageActivity() {
+class DemoPictureActivity : BasePageActivity() {
 
     private var path: String = ""
 
     override fun initView() {
 
 
-        addView(R.layout.activity_demo_system_picture)
+        path = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "house.jpg").path
+
+        addView(R.layout.activity_demo_picture)
 
         takePictureBtn.setOnClickListener {
             takePicture()
@@ -52,14 +58,14 @@ class DemoSystemPictureActivity : BasePageActivity() {
 
         }
 
-        customCropBtn.setOnClickListener {
+        customZYCropBtn.setOnClickListener {
             L.d(DemoPictureConst.TAG, "文件路径：$path")
             if (!FileUtils.isFileExists(path)) {
                 L.d(DemoPictureConst.TAG, "crop 失败，文件不存在")
                 return@setOnClickListener
             }
 
-            // 裁剪
+            zyCrop(Uri.fromFile(File(path)))
 
         }
 
@@ -75,10 +81,13 @@ class DemoSystemPictureActivity : BasePageActivity() {
             resultCode,
             data ->
 
+            L.d(DemoPictureConst.TAG, "选取图片，resultCode：$resultCode")
+
             if (requestCode == DemoPictureConst.REQUEST_CODE_PICK && resultCode == Activity.RESULT_OK) {
+
                 if (data != null) {
                     val uri = data.data
-                    val imagePath = AlbumUtil.getPhotoPathFromAlbum(this@DemoSystemPictureActivity, uri)
+                    val imagePath = AlbumUtil.getPhotoPathFromAlbum(this@DemoPictureActivity, uri)
 
                     path = imagePath
                     resultIv.setImageURI(Uri.fromFile(File(path)))
@@ -90,7 +99,7 @@ class DemoSystemPictureActivity : BasePageActivity() {
 
     private fun takePicture() {
         TakePictureManager().startSystemTakePicture(this, { path ->
-            this@DemoSystemPictureActivity.path = path
+            this@DemoPictureActivity.path = path
         }, {})
     }
 
@@ -99,20 +108,22 @@ class DemoSystemPictureActivity : BasePageActivity() {
             getCropIntent(path), DemoPictureConst.REQUEST_CODE_CROP
         ) { requestCode, resultCode, data ->
 
+            L.d(DemoPictureConst.TAG, "裁剪，resultCode：$resultCode")
+
             val bitmap = data.getParcelableExtra<Bitmap>("data")
             resultIv.setImageBitmap(bitmap)
 
+            FileUtil.saveImageFile(CommonPath.imagePathDir,"crop.jpg",bitmap)
         }
     }
 
     private fun getCropIntent(path: String): Intent {
         return Intent("com.android.camera.action.CROP")?.apply {
             FileProvider7.setIntentDataAndType(
-                this@DemoSystemPictureActivity,
+                this@DemoPictureActivity,
                 this,
                 "image/*",
-                File(path),
-                true
+                File(path)
             )
             putExtra("crop", "true") //就会调用裁剪，如果不设置，就会跳过裁剪的过程。
             //剪裁框大小，不指定的话就可以随意设置大小
@@ -133,6 +144,28 @@ class DemoSystemPictureActivity : BasePageActivity() {
             putExtra("return-data", true) //是否要返回值，这个一定要
         }
 
+    }
+
+    private fun zyCrop(uri: Uri) {
+        val intent = Intent(this, CropImageActivity::class.java)
+        val bundle = Bundle()
+//		bundle.putBoolean(CropImageActivity.CUSTOM_ICON, true);
+//		bundle.putFloat(CropImageActivity.CUSTOM_ICON_ASPECT, 1);
+//		bundle.putFloat(CropImageActivity.CUSTOM_ICON_MINWIDTH,UPLOAD_IMAGE_SIZE);
+//		bundle.putBoolean(CropImageActivity.CUSTOM_ICON, true);
+//		bundle.putFloat(CropImageActivity.CUSTOM_ICON_ASPECT, 1);
+//		bundle.putFloat(CropImageActivity.CUSTOM_ICON_MINWIDTH,UPLOAD_IMAGE_SIZE);
+        bundle.putParcelable(CropImageActivity.CUSTOM_URI, uri)
+        bundle.putString(CropImageActivity.CUSTOM_SAVENAME, Const.CROP_FILE_NAME)
+        bundle.putString(CropImageActivity.CUSTOM_SAVEPATH, CommonPath.imagePathDir)
+        bundle.putFloat(CropImageActivity.CUSTOM_RATIO, 1.0f)
+        bundle.putInt(CropImageActivity.CUSTOM_MINWIDTH, 300)
+//		bundle.putString(CropImageActivity.CUSTOM_ICON_PATH, PERSONALCENTER_CAPTURE_PATH);
+//		bundle.putString(CropImageActivity.CUSTOM_ICON_NAME, CUSTOM_IMAGE_FILE);
+//		bundle.putString(CropImageActivity.CUSTOM_ICON_PATH, PERSONALCENTER_CAPTURE_PATH);
+//		bundle.putString(CropImageActivity.CUSTOM_ICON_NAME, CUSTOM_IMAGE_FILE);
+        intent.putExtras(bundle)
+        startActivityForResult(intent, Const.REQUEST_CROP_IMAGE)
     }
 
 }

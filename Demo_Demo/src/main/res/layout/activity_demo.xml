@@ -11,34 +11,12 @@
 
     <TextView
         style="@style/TextView_hint_tag"
-        android:text="系统页面"/>
+        android:text="TextView"/>
 
     <Button
-        android:id="@+id/takePictureBtn"
+        android:id="@+id/Btn"
         style="@style/CommonButton"
-        android:text="系统-拍照"
-        />
-
-    <Button
-        android:id="@+id/pickBtn"
-        style="@style/CommonButton"
-        android:text="系统-选取"
-        />
-
-    <Button
-        android:id="@+id/cropBtn"
-        style="@style/CommonButton"
-        android:text="系统-裁剪"
-        />
-
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="自定义页面"/>
-
-    <Button
-        android:id="@+id/customCropBtn"
-        style="@style/CommonButton"
-        android:text="自定义-裁剪"
+        android:text="TextView"
         />
 
     <ImageView
