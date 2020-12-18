@@ -7,6 +7,7 @@
         <item name="android:textSize">@dimen/public_content</item>
         <item name="android:layout_marginLeft">@dimen/public_margin</item>
         <item name="android:layout_marginTop">@dimen/public_margin</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 
@@ -35,6 +36,13 @@
 
     </style>
 
+
+    <style name="CommonDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
 
 
 </resources>

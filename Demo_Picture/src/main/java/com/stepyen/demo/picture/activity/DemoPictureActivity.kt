@@ -37,7 +37,10 @@ class DemoPictureActivity : BasePageActivity() {
     override fun initView() {
 
 
-        path = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "house.jpg").path
+        path = File(
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+            "house.jpg"
+        ).path
 
         addView(R.layout.activity_demo_picture)
 
@@ -113,7 +116,7 @@ class DemoPictureActivity : BasePageActivity() {
             val bitmap = data.getParcelableExtra<Bitmap>("data")
             resultIv.setImageBitmap(bitmap)
 
-            FileUtil.saveImageFile(CommonPath.imagePathDir,"crop.jpg",bitmap)
+            FileUtil.saveImageFile(CommonPath.imagePathDir, "crop.jpg", bitmap)
         }
     }
 
@@ -125,7 +128,10 @@ class DemoPictureActivity : BasePageActivity() {
                 "image/*",
                 File(path)
             )
-            putExtra("crop", "true") //就会调用裁剪，如果不设置，就会跳过裁剪的过程。
+
+            //就会调用裁剪，如果不设置，就会跳过裁剪的过程。
+            putExtra("crop", "true")
+
             //剪裁框大小，不指定的话就可以随意设置大小
             if (Build.MANUFACTURER == "HUAWEI") {
                 putExtra("aspectX", 9998)
@@ -134,14 +140,14 @@ class DemoPictureActivity : BasePageActivity() {
                 putExtra("aspectX", 1)
                 putExtra("aspectY", 1)
             }
-            //输出的图片，返回的是像素大小
+            //生成的图片大小
             putExtra("outputX", 250)
             putExtra("outputY", 250)
-            //上面两个值会生成一个bitmap
+
             putExtra("scale", true)
             putExtra("outputFormat", "JPG")
             putExtra("noFaceDetection", true) //人脸识别
-            putExtra("return-data", true) //是否要返回值，这个一定要
+            putExtra("return-data", true) //是否要返回值
         }
 
     }
@@ -167,5 +173,7 @@ class DemoPictureActivity : BasePageActivity() {
         intent.putExtras(bundle)
         startActivityForResult(intent, Const.REQUEST_CROP_IMAGE)
     }
+
+
 
 }

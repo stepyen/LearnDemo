@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="Dialog的生命周期"/>
+
+    <Button
+        android:id="@+id/dialogLifeCycleShowBtn"
+        style="@style/CommonButton"
+        android:text="Dialog 展示"
+        />
+    <Button
+        android:id="@+id/dialogLifeCycleDismissBtn"
+        style="@style/CommonButton"
+        android:text="Dialog 隐藏"
+        />
+
+
+</LinearLayout>

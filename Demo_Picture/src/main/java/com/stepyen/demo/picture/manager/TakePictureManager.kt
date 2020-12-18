@@ -2,9 +2,9 @@ package com.stepyen.demo.picture.manager
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
-import android.os.Environment
 import android.provider.MediaStore
 import com.stepyen.demo.base.App
 import com.stepyen.demo.base.common.CommonPath
@@ -34,13 +34,24 @@ class TakePictureManager {
     /**
      * 打开系统拍照
      */
-    fun startSystemTakePicture(activity: Activity,succeedAction:(String)->Unit,failAction:()->Unit )  {
+    fun startSystemTakePicture(
+        activity: Activity,
+        succeedAction: (String) -> Unit,
+        failAction: () -> Unit
+    ) {
 
         imagePath = createImagePath()
         L.d(DemoPictureConst.TAG, "图片地址：$imagePath")
         val intent = getSystemTakePictureIntent(imagePath)
 
-        AvoidOnResult(activity).startForResult(intent, DemoPictureConst.REQUEST_CODE_TAKE_PICKTURE) { requestCode, resultCode, data ->
+        AvoidOnResult(activity).startForResult(
+            intent,
+            DemoPictureConst.REQUEST_CODE_TAKE_PICKTURE
+        ) { requestCode, resultCode, data ->
+
+
+            val bitmap = data.getParcelableExtra<Bitmap>("data")
+
             when (requestCode) {
                 DemoPictureConst.REQUEST_CODE_TAKE_PICKTURE -> {
 
@@ -67,10 +78,10 @@ class TakePictureManager {
     private fun getSystemTakePictureIntent(path: String): Intent {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
-         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-         }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+        }
 
         val uri = FileProvider7.getUriForFile(App.get(), File(path))
 
@@ -85,8 +96,10 @@ class TakePictureManager {
     private fun createImagePath(): String {
         val format = SimpleDateFormat("yyyyMMddHHmmss")
         val date = Date(System.currentTimeMillis())
-        val file = File("${CommonPath.imagePathDir}",
-                "${format.format(date)}.jpg")
+        val file = File(
+            "${CommonPath.imagePathDir}",
+            "${format.format(date)}.jpg"
+        )
         if (!file.parentFile.exists()) {
             file.parentFile.mkdirs()
         }
@@ -101,8 +114,7 @@ class TakePictureManager {
         val file = File(path)
         // 文件插入系统图库
         try {
-            MediaStore.Images.Media.insertImage(App.get().contentResolver,
-                    file.absolutePath, file.name, null)
+            MediaStore.Images.Media.insertImage(App.get().contentResolver, file.absolutePath, file.name, null)
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
         }

@@ -9,11 +9,6 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
-/**
- * @author LYB
- * @time 16/6/22 上午10:26
- * @des
- */
 public class AlbumUtil {
     /**
      * Get a file path from a Uri. This will get the the path for Storage Access
@@ -139,42 +134,4 @@ public class AlbumUtil {
         return "com.android.providers.media.documents".equals(uri
                 .getAuthority());
     }
-
-//    public static void saveImageToAlbum(Context context, String path) {
-//
-//        try {
-//            L.d("相册", "保存到相册");
-//            File srcFile = new File(path);
-//            File desFile = null;
-//            String savePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath() + "/Camera/";
-//            //如果dcim/camera文件夹不存在则放置在dcim文件夹下 目前先按照这个逻辑走
-//            if(!SDCardUtil.checkDirExist(savePath)){
-//                savePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath() + "/";
-//                if (!SDCardUtil.checkDirExist(savePath)) {
-//                    SDCardUtil.createDir2SDCard(savePath);
-//                }
-//            }
-//
-//            desFile = new File(savePath + System.currentTimeMillis() + C.FileSuffixName.PNG);
-//            BBFileUtil.copyFile(srcFile, desFile);
-//            // 刷新相册
-//            Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-//            Uri uri = Uri.fromFile(desFile);
-//            intent.setData(uri);
-//            context.sendBroadcast(intent);
-//            BBLogUtil.e("相册", "保存成功");
-//            //保存成功
-//            GameCallbackManager.gameCallback(AlbumConst.SAVE_ALBUM_CALLBACK, "", AlbumConst.SaveCode.SUCCESS);
-//
-//        } catch (Exception e) {
-//            System.out.println("==========================================");
-//            System.out.println("[BBAblumUtil] saveImageToAlbum exception");
-//            System.out.println("==========================================");
-//            e.printStackTrace();
-//            //未知错误
-//            BBLogUtil.e("相册", "未知错误");
-//            GameCallbackManager.gameCallback(AlbumConst.SAVE_ALBUM_CALLBACK, "", AlbumConst.SaveCode.ERROR_UNKNOWN);
-//        }
-//
-//    }
 }
