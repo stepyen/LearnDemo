@@ -6,6 +6,7 @@
     <application>
 
         <activity android:name=".activity.DemoBitmapActivity"></activity>
+        <activity android:name=".activity.DemoViewCoverActivity"></activity>
 
     </application>
 

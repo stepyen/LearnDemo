@@ -12,6 +12,7 @@ import com.stepyen.demo.picture.activity.DemoPictureActivity
 import com.stepyen.demo.view.activity.DemoDialogActivity
 import com.stepyen.demo.view.activity.DemoPopWindowActivity
 import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
+import com.stepyen.demo.viewbase.activity.DemoViewCoverActivity
 import com.stepyen.demo.viewcustom.activity.GuideViewActivity
 import com.stepyen.learndemo.bean.PageBean
 
@@ -89,6 +90,7 @@ object PageDataManage {
         put("View 基础", arrayListOf<PageBean>().apply {
 
             add(PageBean("Bitmap", DemoBitmapActivity::class.java))
+            add(PageBean("View 遮盖", DemoViewCoverActivity::class.java))
 
         })
 

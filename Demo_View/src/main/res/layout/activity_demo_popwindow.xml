@@ -8,7 +8,7 @@
 
     <TextView
         style="@style/TextView_hint_tag"
-        android:text="PopWindow"/>
+        android:text="PopWindow 展示"/>
 
     <Button
         android:id="@+id/bottomPopBtn"
@@ -17,10 +17,17 @@
         />
 
     <Button
+        android:id="@+id/topPopBtn"
+        style="@style/CommonButton"
+        android:text="目标View上方展示pop"
+        />
+
+    <Button
         android:id="@+id/parentPopBtn"
         style="@style/CommonButton"
         android:text="父布局左边展示pop"
         />
+
 
     <Button
         android:id="@+id/dialogShowPopBtn"
@@ -28,10 +35,44 @@
         android:text="对话框上展示pop"
         />
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="PopWindow 属性"/>
+
+
+    <Button
+        android:id="@+id/setFocusableBtn"
+        style="@style/CommonButton"
+        android:text="setFocusable"
+        />
+
+    <Button
+        android:id="@+id/setOutsideTouchableBtn"
+        style="@style/CommonButton"
+        android:text="setOutsideTouchable"
+        />
+
+    <Button
+        android:id="@+id/setTouchableBtn"
+        style="@style/CommonButton"
+        android:text="setTouchable"
+        />
+
+    <Button
+        android:id="@+id/setBackgroundDrawableBtn"
+        style="@style/CommonButton"
+        android:text="setBackgroundDrawable"
+        />
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="PopWindow 隐藏"/>
+
+
     <Button
         android:id="@+id/dismissPopBtn"
         style="@style/CommonButton"
-        android:text="取消展示"
+        android:text="隐藏"
         />
 
     <FrameLayout
@@ -41,8 +82,8 @@
 
         <ImageView
             android:id="@+id/targetView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:background="@color/aqua"
             />

@@ -1,12 +1,10 @@
 package com.stepyen.demo.view.dialog
 
 import android.content.Context
-import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.WindowManager
+import android.view.View
 import android.view.animation.ScaleAnimation
-import android.widget.ImageView
 import android.widget.PopupWindow
 import com.stepyen.demo.base.App
 import com.stepyen.demo.base.base.BaseDialog
@@ -58,7 +56,7 @@ class TestDialogShowPopDialog(context: Context) : BaseDialog<TestDialogShowPopDi
 
         pop?.showAsDropDown(targetView, Gravity.LEFT,20,20)
 
-        view.findViewById<ImageView>(R.id.iv).startAnimation(showAnimation)
+        view.findViewById<View>(R.id.view).startAnimation(showAnimation)
     }
 
 
