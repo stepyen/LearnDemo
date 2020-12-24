@@ -5,8 +5,14 @@
 
     <application>
 
-        <activity android:name=".activity.DemoPopWindowActivity"></activity>
-        <activity android:name=".activity.DemoDialogActivity"></activity>
+
+        <activity android:name=".dialog.DemoDialogActivity"></activity>
+
+        <activity android:name=".popwindow.DemoPopWindowActivity"></activity>
+
+        <activity android:name=".recycleview.RecycleViewActivity"></activity>
+        <activity android:name=".recycleview.RecycleViewDiffActivity"></activity>
+
     </application>
 
 </manifest>

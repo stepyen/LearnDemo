@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <declare-styleable name="PictureLoadingView">
+<!--        背景图-->
+        <attr name="bgDrawable" format="reference"></attr>
+<!--        前景图-->
+        <attr name="frontDrawable" format="reference"></attr>
+<!--        宽-->
+        <attr name="auto_width"></attr>
+<!--        高-->
+        <attr name="auto_height"></attr>
+    </declare-styleable>
 </resources>

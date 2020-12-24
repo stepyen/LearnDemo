@@ -1,19 +1,12 @@
-package com.stepyen.demo.view.activity
+package com.stepyen.demo.view.popwindow
 
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.View
-import android.view.animation.ScaleAnimation
-import android.widget.ImageView
+import android.view.WindowManager
 import android.widget.PopupWindow
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.view.R
-import com.stepyen.demo.view.dialog.TestDialogShowPopDialog
 import com.stepyen.xui.utils.DensityUtils
 import kotlinx.android.synthetic.main.activity_demo_popwindow.*
 
@@ -55,7 +48,6 @@ class DemoPopWindowActivity : BasePageActivity() {
         setFocusableBtn.setOnClickListener {
             initCommonPop()
             pop?.isFocusable = true
-            pop?.isOutsideTouchable = false
             pop?.showAsDropDown(targetView, 20, 20)
         }
 
@@ -82,10 +74,16 @@ class DemoPopWindowActivity : BasePageActivity() {
             pop?.showAsDropDown(targetView, 20, 20)
         }
 
+        softInputModeBtn.setOnClickListener {
+            initCommonPop()
+            pop?.inputMethodMode = PopupWindow.INPUT_METHOD_NOT_NEEDED
+            pop?.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING
+            pop?.showAsDropDown(targetView, 20, 20)
+        }
+
 
         dismissPopBtn.setOnClickListener {
             pop?.dismiss()
-            pop?.width
         }
 
     }

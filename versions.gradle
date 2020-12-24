@@ -1,6 +1,6 @@
 def addRepos(RepositoryHandler handler) {
-//    handler.maven { url "http://nexus.baby-bus.com/repository/maven-public/" }
-//    handler.maven {url "http://maven.baby-bus.com/repository/maven-public/"}
+    handler.maven { url "http://nexus.baby-bus.com/repository/maven-public/" }
+    handler.maven {url "http://maven.baby-bus.com/repository/maven-public/"}
     handler.google()
     handler.jcenter()
     handler.mavenCentral()

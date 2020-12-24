@@ -64,6 +64,24 @@
         android:text="setBackgroundDrawable"
         />
 
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="PopWindow 输入法"/>
+
+    <Button
+        android:id="@+id/softInputModeBtn"
+        style="@style/CommonButton"
+        android:text="softInputMode"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入"
+        />
+
+
     <TextView
         style="@style/TextView_hint_tag"
         android:text="PopWindow 隐藏"/>

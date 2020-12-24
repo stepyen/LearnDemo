@@ -1,9 +1,7 @@
-package com.stepyen.demo.view.activity
+package com.stepyen.demo.view.dialog
 
-import android.view.WindowManager
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.view.R
-import com.stepyen.demo.view.dialog.DialogLifeCycleDialog
 import com.stepyen.xutil.display.DensityUtils
 import kotlinx.android.synthetic.main.activity_demo_dialog.*
 

@@ -12,8 +12,10 @@ import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 import com.stepyen.demo.base.common.CommonPath;
+import com.stepyen.demo.base.config.PhoneConf;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
+import com.superdo.magina.autolayout.AutoLayout;
 
 /**
  * date：2019/6/24
@@ -26,6 +28,7 @@ public class App extends Application {
     public static App app;
     public String packName;
     public static Handler handler = new Handler();
+    private static PhoneConf phoneConf;
 
 
 
@@ -51,6 +54,7 @@ public class App extends Application {
         XUtil.init(this);
 
         XUI.init(this);
+        initAutoLayout();
 //        initPage();
 
         initAOP();
@@ -71,6 +75,20 @@ public class App extends Application {
         CommonPath.INSTANCE.init();
     }
 
+
+    private void initAutoLayout() {
+        AutoLayout.init(this, 1920, 1080);
+        AutoLayout.setPhoneSize(App.getPhoneConf().getHeight(), App.getPhoneConf().getWidth());
+        AutoLayout.setScreenOrientation(AutoLayout.ScreenOrientation.LANDSCAPE);
+    }
+
+
+    public static PhoneConf getPhoneConf() {
+        if (phoneConf == null) {
+            phoneConf = new PhoneConf(app);
+        }
+        return phoneConf;
+    }
     /**
      * 初始化日志
      */

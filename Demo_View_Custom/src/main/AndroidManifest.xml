@@ -6,6 +6,7 @@
     <application>
 
         <activity android:name=".activity.GuideViewActivity"></activity>
+        <activity android:name=".activity.CustomViewActivity"></activity>
     </application>
 
 </manifest>

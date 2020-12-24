@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="圆形图片进度View"/>
+
+    <Button
+        android:id="@+id/pictureLoadingViewBtn"
+        style="@style/CommonButton"
+        android:text="增加进度10%"
+        />
+
+   <com.stepyen.demo.viewcustom.widget.DownloadProgressView
+       android:id="@+id/downloadProgressView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:bgDrawable="@drawable/ic_loading_bg"
+       app:frontDrawable="@drawable/ic_loading_front"
+       app:auto_width="209"
+       app:auto_height="209"
+       />
+
+
+
+</LinearLayout>

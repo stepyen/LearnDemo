@@ -39,6 +39,8 @@ dependencies {
     api "$library.material"
     api "$library.androidx_constraintlayout"
     api "$library.androidx_multidex"
+    api "$library.androidx_recyclerview"
+
     api 'androidx.core:core-ktx:1.3.2'
 
     // stepyen
@@ -49,7 +51,7 @@ dependencies {
     api "$library.orhanobut_logger"
 
     // BB
-//    api "$library.autolayout"
+    api "$library.autolayout"
 
     api project(":Lib_FileProvider")
     api project(":Lib_AvoidResult")

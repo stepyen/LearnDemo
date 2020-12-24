@@ -9,10 +9,12 @@ import com.stepyen.demo.animation.activity.DemoFrameAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
 import com.stepyen.demo.picture.activity.DemoPictureActivity
-import com.stepyen.demo.view.activity.DemoDialogActivity
-import com.stepyen.demo.view.activity.DemoPopWindowActivity
+import com.stepyen.demo.view.dialog.DemoDialogActivity
+import com.stepyen.demo.view.popwindow.DemoPopWindowActivity
+import com.stepyen.demo.view.recycleview.RecycleViewActivity
 import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
 import com.stepyen.demo.viewbase.activity.DemoViewCoverActivity
+import com.stepyen.demo.viewcustom.activity.CustomViewActivity
 import com.stepyen.demo.viewcustom.activity.GuideViewActivity
 import com.stepyen.learndemo.bean.PageBean
 
@@ -84,6 +86,7 @@ object PageDataManage {
 
             add(PageBean("Dialog", DemoDialogActivity::class.java))
             add(PageBean("PopWindow", DemoPopWindowActivity::class.java))
+            add(PageBean("RecycleView", RecycleViewActivity::class.java))
 
         })
 
@@ -96,6 +99,7 @@ object PageDataManage {
 
         put("View 自定义", arrayListOf<PageBean>().apply {
 
+            add(PageBean("自定义View", CustomViewActivity::class.java))
             add(PageBean("引导图", GuideViewActivity::class.java))
 
         })

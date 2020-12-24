@@ -15,6 +15,7 @@ ext {
     versions = [
             network_cookie              : '1.2.0',
             androidX                    : '1.0.0',
+            autolayout                    : '2.0.1-beta',
             adcolony_sdk                : '4.1.0',
             bugly_crashreport           : '3.2.3',
             bugly_nativecrashreport     : '3.7.3',
@@ -82,7 +83,7 @@ ext {
             "google_play_core"            : "com.google.android.play:core:$versions.google_play_core",
             "play_licensing"              : "com.github.google:play-licensing:$versions.play_licensing",
             "conscrypt_android"           : "org.conscrypt:conscrypt-android:$versions.conscrypt_android",
-            "autolayout"                  : "com.sinyee.babybus.autolayout:autolayout:2.0.1-beta",
+            "autolayout"                  : "com.sinyee.babybus.autolayout:autolayout:$versions.autolayout",
             // kotlin
             "kotlin_gradle_plugin"        : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_version",
             "kotlin_android_extensions"   : "org.jetbrains.kotlin:kotlin-android-extensions:$versions.kotlin_version",
