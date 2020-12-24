@@ -14,6 +14,7 @@ class RecycleViewActivity : BasePageActivity() {
     override fun initView() {
 
         addPageButton("DiffUtil 数据刷新",RecycleViewDiffActivity::class.java)
+        addPageButton("水平方向",RecycleViewHorizontalActivity::class.java)
 
     }
 }

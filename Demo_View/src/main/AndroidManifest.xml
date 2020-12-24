@@ -12,6 +12,9 @@
 
         <activity android:name=".recycleview.RecycleViewActivity"></activity>
         <activity android:name=".recycleview.RecycleViewDiffActivity"></activity>
+        <activity android:name=".recycleview.RecycleViewHorizontalActivity"></activity>
+
+
 
     </application>
 
