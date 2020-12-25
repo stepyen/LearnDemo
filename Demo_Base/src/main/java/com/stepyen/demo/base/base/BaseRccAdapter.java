@@ -16,7 +16,7 @@ import java.util.List;
  * author：stepyen
  * description：
  */
-public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerViewHolder> {
+public abstract class BaseRccAdapter<T> extends RecyclerView.Adapter<BaseRccViewHolder> {
 
     protected final List<T> mData = new ArrayList<>();
     private OnItemClickListener mClickListener;
@@ -27,11 +27,11 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
      */
     private int mLastPosition = -1;
 
-    public BaseRecyclerAdapter() {
+    public BaseRccAdapter() {
         this(null);
     }
 
-    public BaseRecyclerAdapter(List<T> list) {
+    public BaseRccAdapter(List<T> list) {
         if (list != null) {
             mData.addAll(list);
         }
@@ -41,8 +41,8 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
 
     @NonNull
     @Override
-    public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final RecyclerViewHolder holder = new RecyclerViewHolder(LayoutInflater.from(parent.getContext()).inflate(getItemLayoutId(viewType), parent, false));
+    public BaseRccViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        final BaseRccViewHolder holder = new BaseRccViewHolder(LayoutInflater.from(parent.getContext()).inflate(getItemLayoutId(viewType), parent, false));
         if (mClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -64,7 +64,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder holder, int position) {
+    public void onBindViewHolder(BaseRccViewHolder holder, int position) {
         bindData(holder, position, mData.get(position));
     }
 
@@ -77,19 +77,19 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         return mData.size();
     }
 
-    public BaseRecyclerAdapter add(int pos, T item) {
+    public BaseRccAdapter add(int pos, T item) {
         mData.add(pos, item);
         notifyItemInserted(pos);
         return this;
     }
 
-    public BaseRecyclerAdapter delete(int pos) {
+    public BaseRccAdapter delete(int pos) {
         mData.remove(pos);
         notifyItemRemoved(pos);
         return this;
     }
 
-    public BaseRecyclerAdapter<T> refresh(Collection<T> collection) {
+    public BaseRccAdapter<T> refresh(Collection<T> collection) {
         if (collection != null) {
             mData.clear();
             mData.addAll(collection);
@@ -99,7 +99,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         return this;
     }
 
-    public BaseRecyclerAdapter<T> loadMore(Collection<T> collection) {
+    public BaseRccAdapter<T> loadMore(Collection<T> collection) {
         if (collection != null) {
             mData.addAll(collection);
             notifyDataSetChanged();
@@ -107,7 +107,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         return this;
     }
 
-    public BaseRecyclerAdapter<T> load(T item) {
+    public BaseRccAdapter<T> load(T item) {
         if (item != null) {
             mData.add(item);
             notifyDataSetChanged();
@@ -115,12 +115,12 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         return this;
     }
 
-    public BaseRecyclerAdapter setOnItemClickListener(OnItemClickListener listener) {
+    public BaseRccAdapter setOnItemClickListener(OnItemClickListener listener) {
         mClickListener = listener;
         return this;
     }
 
-    public BaseRecyclerAdapter setOnItemLongClickListener(OnItemLongClickListener listener) {
+    public BaseRccAdapter setOnItemLongClickListener(OnItemLongClickListener listener) {
         mLongClickListener = listener;
         return this;
     }
@@ -137,7 +137,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         return mLastPosition;
     }
 
-    public BaseRecyclerAdapter<T> setLastPosition(int lastPosition) {
+    public BaseRccAdapter<T> setLastPosition(int lastPosition) {
         mLastPosition = lastPosition;
         return this;
     }
@@ -149,7 +149,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
      * @param position
      * @param item
      */
-    abstract public void bindData(RecyclerViewHolder holder, int position, T item);
+    abstract public void bindData(BaseRccViewHolder holder, int position, T item);
 
     public interface OnItemClickListener {
         /**

@@ -14,6 +14,8 @@
         <activity android:name=".recycleview.RecycleViewDiffActivity"></activity>
         <activity android:name=".recycleview.RecycleViewHorizontalActivity"></activity>
 
+        <activity android:name=".textview.DemoTextViewActivity"></activity>
+
 
 
     </application>

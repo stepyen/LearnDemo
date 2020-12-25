@@ -17,10 +17,10 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+public class BaseRccViewHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;
 
-    public RecyclerViewHolder(View itemView) {
+    public BaseRccViewHolder(View itemView) {
         super(itemView);
         mViews = new SparseArray<>();
     }
@@ -75,7 +75,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param sequence
      * @return
      */
-    public RecyclerViewHolder text(int id, CharSequence sequence) {
+    public BaseRccViewHolder text(int id, CharSequence sequence) {
         View view = findView(id);
         if (view instanceof TextView) {
             ((TextView) view).setText(sequence);
@@ -90,7 +90,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param stringRes
      * @return
      */
-    public RecyclerViewHolder text(@IdRes int id, @StringRes int stringRes) {
+    public BaseRccViewHolder text(@IdRes int id, @StringRes int stringRes) {
         View view = findView(id);
         if (view instanceof TextView) {
             ((TextView) view).setText(stringRes);
@@ -105,7 +105,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param colorId
      * @return
      */
-    public RecyclerViewHolder textColorId(@IdRes int id, @ColorRes int colorId) {
+    public BaseRccViewHolder textColorId(@IdRes int id, @ColorRes int colorId) {
         View view = findView(id);
         if (view instanceof TextView) {
             ((TextView) view).setTextColor(ContextCompat.getColor(view.getContext(), colorId));
@@ -120,7 +120,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param imageId
      * @return
      */
-    public RecyclerViewHolder image(@IdRes int id, int imageId) {
+    public BaseRccViewHolder image(@IdRes int id, int imageId) {
         View view = findView(id);
         if (view instanceof ImageView) {
             ((ImageView) view).setImageResource(imageId);
@@ -129,34 +129,13 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     }
 
     /**
-     * 设置布局内控件的点击事件【包含索引】
-     *
-     * @param id
-     * @param listener
-     * @param position
-     * @return
-     */
-//    public RecyclerViewHolder viewClick(@IdRes int id, final SmartViewHolder.OnViewItemClickListener listener, final int position) {
-//        View view = findView(id);
-//        if (listener != null) {
-//            view.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    listener.onViewItemClick(v, position);
-//                }
-//            });
-//        }
-//        return this;
-//    }
-
-    /**
      * 设置控件的点击监听
      *
      * @param id
      * @param listener
      * @return
      */
-    public RecyclerViewHolder click(@IdRes int id, final View.OnClickListener listener) {
+    public BaseRccViewHolder click(@IdRes int id, final View.OnClickListener listener) {
         View view = findView(id);
         if (listener != null) {
             view.setOnClickListener(listener);
@@ -171,7 +150,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param visibility
      * @return
      */
-    public RecyclerViewHolder visible(@IdRes int id, int visibility) {
+    public BaseRccViewHolder visible(@IdRes int id, int visibility) {
         View view = findView(id);
         view.setVisibility(visibility);
         return this;
@@ -184,7 +163,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param enable
      * @return
      */
-    public RecyclerViewHolder enable(@IdRes int id, boolean enable) {
+    public BaseRccViewHolder enable(@IdRes int id, boolean enable) {
         View view = findView(id);
         view.setEnabled(enable);
         if (view instanceof EditText) {
@@ -201,7 +180,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param checked
      * @return
      */
-    public RecyclerViewHolder checked(@IdRes int id, boolean checked) {
+    public BaseRccViewHolder checked(@IdRes int id, boolean checked) {
         View view = findView(id);
         if (view instanceof CompoundButton) {
             ((CheckBox) view).setChecked(checked);
@@ -216,7 +195,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param listener
      * @return
      */
-    public RecyclerViewHolder checkedListener(@IdRes int id, CompoundButton.OnCheckedChangeListener listener) {
+    public BaseRccViewHolder checkedListener(@IdRes int id, CompoundButton.OnCheckedChangeListener listener) {
         View view = findView(id);
         if (view instanceof CompoundButton) {
             ((CheckBox) view).setOnCheckedChangeListener(listener);
@@ -231,7 +210,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param watcher
      * @return
      */
-    public RecyclerViewHolder textListener(@IdRes int id, TextWatcher watcher) {
+    public BaseRccViewHolder textListener(@IdRes int id, TextWatcher watcher) {
         View view = findView(id);
         if (view instanceof TextView) {
             ((TextView) view).addTextChangedListener(watcher);
@@ -246,7 +225,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
      * @param resId
      * @return
      */
-    public RecyclerViewHolder backgroundResId(int viewId, int resId) {
+    public BaseRccViewHolder backgroundResId(int viewId, int resId) {
         View view = findView(viewId);
         view.setBackgroundResource(resId);
         return this;

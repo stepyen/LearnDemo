@@ -12,6 +12,7 @@ import com.stepyen.demo.picture.activity.DemoPictureActivity
 import com.stepyen.demo.view.dialog.DemoDialogActivity
 import com.stepyen.demo.view.popwindow.DemoPopWindowActivity
 import com.stepyen.demo.view.recycleview.RecycleViewActivity
+import com.stepyen.demo.view.textview.DemoTextViewActivity
 import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
 import com.stepyen.demo.viewbase.activity.DemoViewCoverActivity
 import com.stepyen.demo.viewbase.canvas.DemoViewCanvasActivity
@@ -87,6 +88,7 @@ object PageDataManage {
         put("View", arrayListOf<PageBean>().apply {
 
             add(PageBean("Dialog", DemoDialogActivity::class.java))
+            add(PageBean("TextView", DemoTextViewActivity::class.java))
             add(PageBean("PopWindow", DemoPopWindowActivity::class.java))
             add(PageBean("RecycleView", RecycleViewActivity::class.java))
 

@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.stepyen.demo.base.base.BasePageActivity
-import com.stepyen.demo.base.base.BaseRecyclerAdapter
-import com.stepyen.demo.base.base.RecyclerViewHolder
+import com.stepyen.demo.base.base.BaseRccAdapter
+import com.stepyen.demo.base.base.BaseRccViewHolder
 import com.stepyen.demo.view.R
 import kotlinx.android.synthetic.main.view_recycleview_common.*
 import java.util.*
@@ -58,11 +58,11 @@ class RecycleViewDiffActivity : BasePageActivity() {
     }
 
 
-    class Adapter : BaseRecyclerAdapter<String>() {
+    class Adapter : BaseRccAdapter<String>() {
 
         override fun getItemLayoutId(viewType: Int): Int = R.layout.vh_recycleview_normal
 
-        override fun bindData(holder: RecyclerViewHolder?, position: Int, item: String?) {
+        override fun bindData(holder: BaseRccViewHolder?, position: Int, item: String?) {
             holder?.text(R.id.tv_rcc, item)
         }
 
