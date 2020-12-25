@@ -30,10 +30,4 @@ class CanvasLineView @JvmOverloads constructor(private val mContext: Context, pr
         canvas?.drawLine(100f,100f,200f,200f,paint)
     }
 
-
-    override fun onDetachedFromWindow() {
-        // 释放资源
-        // ...
-        super.onDetachedFromWindow()
-    }
 }

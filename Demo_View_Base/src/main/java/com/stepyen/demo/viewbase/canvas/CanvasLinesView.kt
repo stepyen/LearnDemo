@@ -44,10 +44,4 @@ class CanvasLinesView @JvmOverloads constructor(private val mContext: Context, p
 
     }
 
-
-    override fun onDetachedFromWindow() {
-        // 释放资源
-        // ...
-        super.onDetachedFromWindow()
-    }
 }
