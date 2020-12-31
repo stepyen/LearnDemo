@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="补间动画"/>
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img_house"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Scale"
+            style="@style/CommonButton"
+            android:text="缩放" />
+
+        <Button
+            android:id="@+id/btn_Rotate"
+            style="@style/CommonButton"
+            android:text="旋转" />
+
+        <Button
+            android:id="@+id/btn_Alpha"
+            style="@style/CommonButton"
+            android:text="透明度" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Translate"
+            style="@style/CommonButton"
+            android:text="开始移动" />
+
+        <Button
+            android:id="@+id/btn_cancle_translate"
+            style="@style/CommonButton"
+            android:text="取消移动" />
+
+        <Button
+            android:id="@+id/btn_reset_translate"
+            style="@style/CommonButton"
+            android:text="重置移动" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Scale_xml"
+            style="@style/CommonButton"
+            android:text="Xml实现缩放" />
+
+        <Button
+            android:id="@+id/btn_Scale_and_translate"
+            style="@style/CommonButton"
+            android:text="多个动画集" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

@@ -12,7 +12,9 @@
 
         <activity android:name=".recycleview.RecycleViewActivity"></activity>
         <activity android:name=".recycleview.RecycleViewDiffActivity"></activity>
-        <activity android:name=".recycleview.RecycleViewHorizontalActivity"></activity>
+        <activity android:name=".recycleview.RecycleViewHorizontalActivity"
+            android:screenOrientation="landscape"
+            ></activity>
 
         <activity android:name=".textview.DemoTextViewActivity"></activity>
 

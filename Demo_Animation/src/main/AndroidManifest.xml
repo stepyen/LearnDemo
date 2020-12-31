@@ -7,6 +7,7 @@
     <application>
         <activity android:name=".activity.DemoTestAnimationActivity"></activity>
         <activity android:name=".activity.DemoFrameAnimationActivity"></activity>
+        <activity android:name=".activity.DemoTweenAnimotionActivity"></activity>
     </application>
 
 </manifest>
