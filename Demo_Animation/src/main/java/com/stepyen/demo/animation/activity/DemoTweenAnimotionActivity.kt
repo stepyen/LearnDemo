@@ -17,6 +17,9 @@ Scale Animation：缩放动画
 Translate Animation：平移动画
 Rotate Animation：旋转动画
 
+
+
+
  */
 class DemoTweenAnimotionActivity : BasePageActivity() {
 

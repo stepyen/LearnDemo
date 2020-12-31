@@ -6,6 +6,7 @@ import com.stepyen.demo.androidmanifest.activity.AdjustUnspecifiedActivity
 import com.stepyen.demo.androidmanifest.activity.MetaDataActivity
 import com.stepyen.demo.androidmanifest.activity.task.TaskActivity
 import com.stepyen.demo.animation.activity.DemoFrameAnimationActivity
+import com.stepyen.demo.animation.activity.DemoPropertyAnimotionActivity
 import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTweenAnimotionActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
@@ -78,6 +79,7 @@ object PageDataManage {
             add(PageBean("测试动画", DemoTestAnimationActivity::class.java))
             add(PageBean("帧动画", DemoFrameAnimationActivity::class.java))
             add(PageBean("补间动画", DemoTweenAnimotionActivity::class.java))
+            add(PageBean("属性动画", DemoPropertyAnimotionActivity::class.java))
 
         })
 
