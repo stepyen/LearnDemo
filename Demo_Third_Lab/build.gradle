@@ -1,0 +1,7 @@
+apply from:'../common_demo.gradle'
+
+
+dependencies {
+
+    api "$library.autolayout"
+}

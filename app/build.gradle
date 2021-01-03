@@ -47,4 +47,5 @@ dependencies {
     implementation project(":Demo_View")
     implementation project(":Demo_View_Base")
     implementation project(":Demo_View_Custom")
+    implementation project(":Demo_Third_Lab")
 }

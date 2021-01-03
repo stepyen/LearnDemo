@@ -11,6 +11,7 @@ import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTweenAnimotionActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
 import com.stepyen.demo.picture.activity.DemoPictureActivity
+import com.stepyen.demo.thirdlab.autolayout.DemoAutoLayoutActivity
 import com.stepyen.demo.view.dialog.DemoDialogActivity
 import com.stepyen.demo.view.popwindow.DemoPopWindowActivity
 import com.stepyen.demo.view.recycleview.RecycleViewActivity
@@ -111,6 +112,12 @@ object PageDataManage {
 
             add(PageBean("自定义View", CustomViewActivity::class.java))
             add(PageBean("引导图", GuideViewActivity::class.java))
+
+        })
+
+        put("第三方库", arrayListOf<PageBean>().apply {
+
+            add(PageBean("AutoLayout", DemoAutoLayoutActivity::class.java))
 
         })
 

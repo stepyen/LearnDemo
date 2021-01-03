@@ -13,6 +13,7 @@ include ':Demo_ZYCropImage'
 include ':Demo_View'
 include ':Demo_View_Base'
 include ':Demo_View_Custom'
+include ':Demo_Third_Lab'
 
 include ':Lib_FileProvider'
 include ':Lib_AvoidResult'
