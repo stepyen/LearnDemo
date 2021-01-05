@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
+import android.widget.ScrollView
 import com.stepyen.demo.base.utils.L
 
 /**
@@ -25,6 +26,7 @@ class DrawOrderView @JvmOverloads constructor(private val mContext: Context, pri
             strokeWidth = 5f
             color = Color.BLACK
         }
+
     }
 
     /**

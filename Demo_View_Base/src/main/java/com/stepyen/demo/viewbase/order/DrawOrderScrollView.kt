@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import com.stepyen.demo.base.utils.L
 
 /**
@@ -14,16 +15,16 @@ import com.stepyen.demo.base.utils.L
  * description：绘制顺序 - LinearLayout
  *
  */
-class DrawOrderLinearLayout @JvmOverloads constructor(private val mContext: Context, private val mAttrs: AttributeSet? = null, private val mDefStyleAttr: Int = 0)
-    : LinearLayout(mContext, mAttrs, mDefStyleAttr){
+class DrawOrderScrollView @JvmOverloads constructor(private val mContext: Context, private val mAttrs: AttributeSet? = null, private val mDefStyleAttr: Int = 0)
+    : ScrollView(mContext, mAttrs, mDefStyleAttr){
 
     companion object{
-        const val TAG = "DrawOrderLinearLayout_TAG"
+        const val TAG = "DrawOrderScrollView_TAG"
     }
 
 
     init {
-        setWillNotDraw(true)
+
     }
 
     private val paint: Paint by lazy{

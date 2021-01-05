@@ -26,6 +26,19 @@
 
     <TextView
         style="@style/TextView_hint_tag"
+        android:text="ViewGroup 绘制顺序"/>
+
+    <com.stepyen.demo.viewbase.order.DrawOrderViewGroup
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        >
+
+    </com.stepyen.demo.viewbase.order.DrawOrderViewGroup>
+
+    <TextView
+        style="@style/TextView_hint_tag"
         android:text="LinearLayout 绘制顺序"/>
 
     <com.stepyen.demo.viewbase.order.DrawOrderLinearLayout
@@ -36,6 +49,21 @@
         >
 
     </com.stepyen.demo.viewbase.order.DrawOrderLinearLayout>
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="ScrollView 绘制顺序"/>
+
+    <com.stepyen.demo.viewbase.order.DrawOrderScrollView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        >
+
+    </com.stepyen.demo.viewbase.order.DrawOrderScrollView>
+
+
 
 
     <TextView

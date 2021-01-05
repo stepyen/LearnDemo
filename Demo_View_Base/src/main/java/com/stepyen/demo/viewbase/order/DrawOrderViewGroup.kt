@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.stepyen.demo.base.utils.L
 
@@ -14,16 +15,11 @@ import com.stepyen.demo.base.utils.L
  * description：绘制顺序 - LinearLayout
  *
  */
-class DrawOrderLinearLayout @JvmOverloads constructor(private val mContext: Context, private val mAttrs: AttributeSet? = null, private val mDefStyleAttr: Int = 0)
-    : LinearLayout(mContext, mAttrs, mDefStyleAttr){
+class DrawOrderViewGroup @JvmOverloads constructor(private val mContext: Context, private val mAttrs: AttributeSet? = null, private val mDefStyleAttr: Int = 0)
+    : ViewGroup(mContext, mAttrs, mDefStyleAttr){
 
     companion object{
-        const val TAG = "DrawOrderLinearLayout_TAG"
-    }
-
-
-    init {
-        setWillNotDraw(true)
+        const val TAG = "DrawOrderViewGroup_TAG"
     }
 
     private val paint: Paint by lazy{
@@ -70,5 +66,8 @@ class DrawOrderLinearLayout @JvmOverloads constructor(private val mContext: Cont
         L.d(TAG,"onDrawForeground   前")
         super.onDrawForeground(canvas)
         L.d(TAG,"onDrawForeground   后")
+    }
+
+    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
     }
 }
