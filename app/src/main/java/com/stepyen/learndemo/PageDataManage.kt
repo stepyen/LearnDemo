@@ -19,6 +19,7 @@ import com.stepyen.demo.view.textview.DemoTextViewActivity
 import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
 import com.stepyen.demo.viewbase.activity.DemoViewCoverActivity
 import com.stepyen.demo.viewbase.canvas.DemoViewCanvasActivity
+import com.stepyen.demo.viewbase.order.DemoDrawOrderActivity
 import com.stepyen.demo.viewbase.paint.DemoViewPaintActivity
 import com.stepyen.demo.viewcustom.activity.CustomViewActivity
 import com.stepyen.demo.viewcustom.activity.GuideViewActivity
@@ -105,6 +106,7 @@ object PageDataManage {
             add(PageBean("View 遮盖", DemoViewCoverActivity::class.java))
             add(PageBean("Paint", DemoViewPaintActivity::class.java))
             add(PageBean("Canvas", DemoViewCanvasActivity::class.java))
+            add(PageBean("绘制顺序", DemoDrawOrderActivity::class.java))
 
         })
 

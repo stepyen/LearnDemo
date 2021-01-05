@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="绘制顺序"/>
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="View 绘制顺序"/>
+
+    <com.stepyen.demo.viewbase.order.DrawOrderView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        >
+
+    </com.stepyen.demo.viewbase.order.DrawOrderView>
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="LinearLayout 绘制顺序"/>
+
+    <com.stepyen.demo.viewbase.order.DrawOrderLinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        >
+
+    </com.stepyen.demo.viewbase.order.DrawOrderLinearLayout>
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="dispatchDraw->绘制红点->onDrawForeground"/>
+
+
+    <com.stepyen.demo.viewbase.order.DrawRedAfterDispatchDrawView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:foreground="#4DFFFFFF"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_batman"
+            />
+    </com.stepyen.demo.viewbase.order.DrawRedAfterDispatchDrawView>
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="onDrawForeground->绘制红点"/>
+
+
+    <com.stepyen.demo.viewbase.order.DrawRedAfterForegroundView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:foreground="#4DFFFFFF"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_batman"
+            />
+    </com.stepyen.demo.viewbase.order.DrawRedAfterForegroundView>
+
+
+</LinearLayout>
