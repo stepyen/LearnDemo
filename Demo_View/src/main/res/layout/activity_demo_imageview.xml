@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="展示图片，出现锯齿"/>
+
+    <ImageView
+        android:id="@+id/antiAliasImageView"
+        android:layout_width="180dp"
+        android:layout_height="108dp"
+        android:src="@drawable/jojo_recommend_right_top_tree"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/antiAliasImageView2"
+        android:layout_width="180dp"
+        android:layout_height="108dp"
+        android:src="@mipmap/jojo_recommend_right_top_tree"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        />
+
+    <com.superdo.magina.autolayout.widget.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jojo_recommend_right_top_tree"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            app:auto_width="360"
+            app:auto_height="216"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jojo_recommend_right_top_tree"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            app:auto_width="360"
+            app:auto_height="216"
+            />
+    </com.superdo.magina.autolayout.widget.AutoLinearLayout>
+
+</LinearLayout>

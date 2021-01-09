@@ -10,10 +10,6 @@
 
     <TextView
         style="@style/TextView_hint_tag"
-        android:text="AutoLayout" />
-
-    <TextView
-        style="@style/TextView_hint_tag"
         android:text="XML 实现" />
 
     <TextView
@@ -30,7 +26,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:src="@drawable/img_house"
+            android:src="@mipmap/img_house"
 
             app:auto_padding_left="20"
             app:auto_padding_right="20" />
@@ -78,7 +74,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_house" />
+                android:src="@mipmap/img_house" />
 
         </com.superdo.magina.autolayout.widget.AutoFrameLayout>
 
@@ -99,7 +95,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:src="@drawable/img_house"
+            android:src="@mipmap/img_house"
             app:auto_margin_left="20"
             app:auto_margin_right="20" />
 
@@ -125,7 +121,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            android:src="@drawable/img_house" />
+            android:src="@mipmap/img_house" />
 
     </com.superdo.magina.autolayout.widget.AutoLinearLayout>
 

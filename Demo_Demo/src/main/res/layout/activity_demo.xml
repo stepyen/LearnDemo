@@ -23,7 +23,7 @@
         android:id="@+id/resultIv"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/img_house"
+        android:src="@mipmap/img_house"
         />
 
 

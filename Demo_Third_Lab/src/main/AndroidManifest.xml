@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.stepyen.demo.demo">
+    package="com.stepyen.demo.thirdlab">
 
 
     <application>
 
-        <activity android:name="com.stepyen.demo.thirdlab.autolayout.DemoAutoLayoutActivity"></activity>
-
+        <activity android:name="com.stepyen.demo.thirdlab.autolayout.DemoAutoLayoutActivity"
+            android:label="AutoLayout"
+            ></activity>
+        <activity android:name="com.stepyen.demo.thirdlab.glide.DemoGlideActivity"
+            android:label="Glide"
+            ></activity>
+        <activity android:name=".gifdrawable.DemoGifDrawableActivity"
+            android:label="Gif Drawable"
+            ></activity>
     </application>
 
 </manifest>

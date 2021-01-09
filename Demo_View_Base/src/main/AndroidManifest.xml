@@ -5,8 +5,8 @@
 
     <application>
 
-        <activity android:name=".activity.DemoBitmapActivity"></activity>
-        <activity android:name=".activity.DemoViewCoverActivity"></activity>
+        <activity android:name=".bitmap.DemoBitmapActivity"></activity>
+        <activity android:name=".cover.DemoViewCoverActivity"></activity>
         <activity android:name=".canvas.DemoViewCanvasActivity"></activity>
         <activity android:name=".paint.DemoViewPaintActivity"></activity>
         <activity android:name=".order.DemoDrawOrderActivity"></activity>

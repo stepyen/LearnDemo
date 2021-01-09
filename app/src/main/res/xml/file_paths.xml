@@ -9,4 +9,8 @@
     <external-files-path
         name="external_file_path"
         path="." />
+    <external-path
+        name="external_path_Android"
+        path="/Android/"/>
+
 </paths>

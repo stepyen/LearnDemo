@@ -14,8 +14,4 @@ class DemoActivity :BasePageActivity(){
     override fun initView() {
         addView(R.layout.activity_demo)
     }
-
-
-
-
 }

@@ -1,6 +1,6 @@
 ext {
     release = [
-            package_name: "com.stepyen.learndemo",  // 奇妙农场
+            package_name: "com.stepyen.learndemo",
             versionName : "1.0.0",
             versionCode : 1000
     ]

@@ -4,4 +4,8 @@ apply from:'../common_demo.gradle'
 dependencies {
 
     api "$library.autolayout"
+    api "$library.glide"
+    implementation "$library.gif_drawable"
+    
+
 }

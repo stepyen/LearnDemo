@@ -3,6 +3,7 @@ package com.stepyen.demo.viewbase.canvas
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.ColorMatrix
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
@@ -16,8 +17,13 @@ import android.view.View
 class CanvasLineView @JvmOverloads constructor(private val mContext: Context, private val mAttrs: AttributeSet? = null, private val mDefStyleAttr: Int = 0)
     : View(mContext, mAttrs, mDefStyleAttr){
 
+    init {
+
+    }
+
     private val paint:Paint by lazy{
         Paint().apply {
+            flags = Paint.ANTI_ALIAS_FLAG
             style = Paint.Style.FILL
             strokeWidth = 5f
             color = Color.BLACK
@@ -28,6 +34,9 @@ class CanvasLineView @JvmOverloads constructor(private val mContext: Context, pr
         super.onDraw(canvas)
 //        绘制（100，100）到（200，200）的线
         canvas?.drawLine(100f,100f,200f,200f,paint)
+
+
+        animate().rotation(90f).withLayer()
     }
 
 }

@@ -6,17 +6,31 @@
     <application>
 
 
-        <activity android:name=".dialog.DemoDialogActivity"></activity>
+        <activity android:name=".dialog.DemoDialogActivity"
+            android:label="Dialog"
+            ></activity>
 
-        <activity android:name=".popwindow.DemoPopWindowActivity"></activity>
+        <activity android:name=".popwindow.DemoPopWindowActivity"
+            android:label="PopWindow"
+            ></activity>
 
-        <activity android:name=".recycleview.RecycleViewActivity"></activity>
-        <activity android:name=".recycleview.RecycleViewDiffActivity"></activity>
+        <activity android:name=".recycleview.RecycleViewActivity"
+            android:label="RecycleView"
+            ></activity>
+        <activity android:name=".recycleview.RecycleViewDiffActivity"
+            android:label="RecycleView DiffUtil数据更新"
+            ></activity>
         <activity android:name=".recycleview.RecycleViewHorizontalActivity"
             android:screenOrientation="landscape"
+            android:label="RecycleView 水平方向"
             ></activity>
 
         <activity android:name=".textview.DemoTextViewActivity"></activity>
+
+        <activity android:name=".imageview.DemoImageViewActivity"
+            android:label="ImageView"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            ></activity>
 
 
 

@@ -1,12 +1,19 @@
-include ':Demo_AndroidManifest'
-include ':Demo_Animation'
-include ':Demo_Template'
+include ':app'
 include ':Demo_Base'
 include ':Demo_Debug'
 include ':Demo_Demo'
-include ':Demo_Function'
 include ':Demo_Kotlin'
 include ':Demo_Java'
+
+include ':Lib_FileProvider'
+include ':Lib_AvoidResult'
+
+
+
+include ':Demo_AndroidManifest'
+include ':Demo_Animation'
+include ':Demo_Template'
+include ':Demo_Function'
 include ':Demo_Picture'
 include ':Demo_Chivox'
 include ':Demo_ZYCropImage'
@@ -15,10 +22,5 @@ include ':Demo_View_Base'
 include ':Demo_View_Custom'
 include ':Demo_Third_Lab'
 
-include ':Lib_FileProvider'
-include ':Lib_AvoidResult'
-
-
-include ':app'
 
 rootProject.name = "LearnDemo"

@@ -23,5 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="范围裁剪-clipRect"/>
+
+    <com.stepyen.demo.viewbase.canvas.CanvasClipRectView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
 
 </LinearLayout>

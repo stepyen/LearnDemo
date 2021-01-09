@@ -2,8 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stepyen.demo.function">
 
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
 
     <application>
+
+        <activity android:name=".softinput.DemoSoftInputActivity"
+            android:label="软键盘"
+            ></activity>
+        <activity android:name=".countdown.DemoCountDownActivity"
+            android:label="倒计时"
+            ></activity>
+        <activity android:name=".install.DemoInstallActivity"
+            android:label="安装"
+            ></activity>
+
+        <activity android:name=".permission.DemoPermissionActivity"
+            android:label="权限"
+            ></activity>
 
     </application>
 

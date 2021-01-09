@@ -4,6 +4,8 @@
 
 
     <application>
-        <activity android:name=".activity.DemoDebugActivity"></activity>
+        <activity android:name=".activity.DemoDebugActivity"
+            android:label="设备信息"
+            ></activity>
     </application>
 </manifest>

@@ -11,11 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <TextView
+            style="@style/TextView_hint_tag"
+            android:singleLine="false"
+            android:text="未指定模式，会是以下其中一种，
+            \n1、调整窗口尺寸，为软键盘腾出空间
+            \n2、平移窗口内容以显示当前焦点。
+            \n如果布局里有可滚动的视图，能够看到窗口的所有内容，优先选择方式1
+" />
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="5"
             ></View>
         <TextView
             android:layout_width="wrap_content"

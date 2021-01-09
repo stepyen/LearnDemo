@@ -1,23 +1,29 @@
 package com.stepyen.learndemo
 
-import com.stepyen.demo.androidmanifest.activity.AdjustPanActivity
-import com.stepyen.demo.androidmanifest.activity.AdjustResizeActivity
-import com.stepyen.demo.androidmanifest.activity.AdjustUnspecifiedActivity
-import com.stepyen.demo.androidmanifest.activity.MetaDataActivity
-import com.stepyen.demo.androidmanifest.activity.task.TaskActivity
+import com.stepyen.demo.androidmanifest.metadata.DemoMetaDataActivity
+import com.stepyen.demo.androidmanifest.launchmode.DemoLaunchModeActivity
+import com.stepyen.demo.androidmanifest.screen_orientation.DemoScreenOrientationActivity
+import com.stepyen.demo.androidmanifest.windowsoftinputmode.DemoWindowSoftInputModeActivity
 import com.stepyen.demo.animation.activity.DemoFrameAnimationActivity
 import com.stepyen.demo.animation.activity.DemoPropertyAnimotionActivity
 import com.stepyen.demo.animation.activity.DemoTestAnimationActivity
 import com.stepyen.demo.animation.activity.DemoTweenAnimotionActivity
 import com.stepyen.demo.debug.activity.DemoDebugActivity
+import com.stepyen.demo.function.countdown.DemoCountDownActivity
+import com.stepyen.demo.function.install.DemoInstallActivity
+import com.stepyen.demo.function.permission.DemoPermissionActivity
+import com.stepyen.demo.function.softinput.DemoSoftInputActivity
 import com.stepyen.demo.picture.activity.DemoPictureActivity
 import com.stepyen.demo.thirdlab.autolayout.DemoAutoLayoutActivity
+import com.stepyen.demo.thirdlab.gifdrawable.DemoGifDrawableActivity
+import com.stepyen.demo.thirdlab.glide.DemoGlideActivity
 import com.stepyen.demo.view.dialog.DemoDialogActivity
+import com.stepyen.demo.view.imageview.DemoImageViewActivity
 import com.stepyen.demo.view.popwindow.DemoPopWindowActivity
 import com.stepyen.demo.view.recycleview.RecycleViewActivity
 import com.stepyen.demo.view.textview.DemoTextViewActivity
-import com.stepyen.demo.viewbase.activity.DemoBitmapActivity
-import com.stepyen.demo.viewbase.activity.DemoViewCoverActivity
+import com.stepyen.demo.viewbase.bitmap.DemoBitmapActivity
+import com.stepyen.demo.viewbase.cover.DemoViewCoverActivity
 import com.stepyen.demo.viewbase.canvas.DemoViewCanvasActivity
 import com.stepyen.demo.viewbase.order.DemoDrawOrderActivity
 import com.stepyen.demo.viewbase.paint.DemoViewPaintActivity
@@ -46,33 +52,26 @@ object PageDataManage {
 
         put("配置清单", arrayListOf<PageBean>().apply {
 
-            add(PageBean("属性：WindowSoftInputMode"))
-            add(PageBean("adjustUnspecified", AdjustUnspecifiedActivity::class.java))
-            add(PageBean("adjustResize", AdjustResizeActivity::class.java))
-            add(PageBean("adjustPan", AdjustPanActivity::class.java))
-
-            add(PageBean("meta-data"))
-            add(PageBean("meta-data", MetaDataActivity::class.java))
-
-            add(PageBean("activity 启动模式"))
-            add(PageBean("启动模式", TaskActivity::class.java))
-
+            add(PageBean("launchMode", DemoLaunchModeActivity::class.java))
+            add(PageBean("windowSoftInputMode", DemoWindowSoftInputModeActivity::class.java))
+            add(PageBean("screenOrientation", DemoScreenOrientationActivity::class.java))
+            add(PageBean("meta-data", DemoMetaDataActivity::class.java))
 
         })
 
         put("组件", arrayListOf<PageBean>().apply {
 
             add(PageBean("Activity"))
-            add(PageBean("别名", TaskActivity::class.java))
-            add(PageBean("生命周期", TaskActivity::class.java))
-            add(PageBean("屏幕方向", TaskActivity::class.java))
+            add(PageBean("别名", DemoLaunchModeActivity::class.java))
+            add(PageBean("生命周期", DemoLaunchModeActivity::class.java))
+            add(PageBean("屏幕方向", DemoLaunchModeActivity::class.java))
 
 
             add(PageBean("ContentProvider"))
 
 
             add(PageBean("Intent"))
-            add(PageBean("1", TaskActivity::class.java))
+            add(PageBean("1", DemoLaunchModeActivity::class.java))
 
         })
 
@@ -97,6 +96,7 @@ object PageDataManage {
             add(PageBean("TextView", DemoTextViewActivity::class.java))
             add(PageBean("PopWindow", DemoPopWindowActivity::class.java))
             add(PageBean("RecycleView", RecycleViewActivity::class.java))
+            add(PageBean("ImageView", DemoImageViewActivity::class.java))
 
         })
 
@@ -120,6 +120,18 @@ object PageDataManage {
         put("第三方库", arrayListOf<PageBean>().apply {
 
             add(PageBean("AutoLayout", DemoAutoLayoutActivity::class.java))
+            add(PageBean("Glide", DemoGlideActivity::class.java))
+            add(PageBean("GifDrawable", DemoGifDrawableActivity::class.java))
+
+        })
+
+
+        put("功能", arrayListOf<PageBean>().apply {
+
+            add(PageBean("倒计时", DemoCountDownActivity::class.java))
+            add(PageBean("软键盘", DemoSoftInputActivity::class.java))
+            add(PageBean("安装", DemoInstallActivity::class.java))
+            add(PageBean("权限", DemoPermissionActivity::class.java))
 
         })
 

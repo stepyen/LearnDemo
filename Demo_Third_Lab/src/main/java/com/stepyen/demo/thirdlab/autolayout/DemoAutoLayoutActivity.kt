@@ -1,7 +1,7 @@
 package com.stepyen.demo.thirdlab.autolayout
 
 import com.stepyen.demo.base.base.BasePageActivity
-import com.stepyen.demo.demo.R
+import com.stepyen.demo.thirdlab.R
 import com.superdo.magina.autolayout.util.LayoutUtil
 import kotlinx.android.synthetic.main.activity_demo_autolayout.*
 
