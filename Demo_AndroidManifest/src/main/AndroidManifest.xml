@@ -6,9 +6,7 @@
     <application>
 
 
-        <activity
-            android:name=".metadata.DemoMetaDataActivity"
-           >
+        <activity android:name=".metadata.DemoMetaDataActivity">
             <meta-data
                 android:name="activity.test"
                 android:resource="@string/test_meta_info" />
@@ -22,11 +20,27 @@
             android:name="application.test.manifestPlaceholders"
             android:value="${test_value}" />
 
-        
-<!--        启动模式-->
-        <activity android:name=".launchmode.DemoLaunchModeActivity"
-            android:label="launchMode"
-            ></activity>
+
+        <!--       configChanges -->
+        <activity
+            android:name=".configchanges.DemoConfigChangesActivity"
+            android:label="configChanges"></activity>
+
+        <activity
+            android:name=".configchanges.DemoSmallestScreenSizeActivity"
+            android:configChanges="smallestScreenSize|screenSize|orientation|screenLayout"
+            android:label="smallestScreenSize"></activity>
+
+        <activity
+            android:name=".configchanges.DemoOrientationActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:label="orientation"></activity>
+
+
+        <!--        启动模式-->
+        <activity
+            android:name=".launchmode.DemoLaunchModeActivity"
+            android:label="launchMode"></activity>
 
         <activity android:name=".launchmode.AActivity"></activity>
         <activity android:name=".launchmode.BActivity"></activity>
@@ -55,36 +69,43 @@
 
 
         <!--        android:screenOrientation 属性-->
-        <activity android:name=".screen_orientation.DemoScreenOrientationActivity"
-            android:screenOrientation="landscape"
+        <activity
+            android:name=".screen_orientation.DemoScreenOrientationActivity"
             android:label="screenOrientation"
-            ></activity>
-        <activity android:name=".screen_orientation.DemoBehindActivity"
-            android:screenOrientation="behind"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".screen_orientation.DemoBehindActivity"
             android:label="behind"
-            ></activity>
+            android:screenOrientation="behind"></activity>
 
-<!--    android:windowSoftInputMode 属性-->
-        <activity android:name=".windowsoftinputmode.DemoWindowSoftInputModeActivity"
-            android:label="WindowSoftInputMode"
-            ></activity>
+        <!--    android:windowSoftInputMode 属性-->
+        <activity
+            android:name=".windowsoftinputmode.DemoWindowSoftInputModeActivity"
+            android:label="WindowSoftInputMode"></activity>
 
         <activity
             android:name=".windowsoftinputmode.AdjustUnspecifiedActivity"
-            android:windowSoftInputMode="adjustUnspecified"
             android:label="adjustUnspecified"
-            ></activity>
+            android:windowSoftInputMode="adjustUnspecified"></activity>
         <activity
             android:name=".windowsoftinputmode.AdjustResizeActivity"
-            android:windowSoftInputMode="adjustResize"
             android:label="adjustResize"
-            ></activity>
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".windowsoftinputmode.AdjustPanActivity"
-            android:windowSoftInputMode="adjustPan"
             android:label="adjustPan"
-            ></activity>
+            android:windowSoftInputMode="adjustPan"></activity>
 
+        <!--        屏幕的最大宽高比-->
+<!--        <meta-data-->
+<!--            android:name="android.max_aspect"-->
+<!--            android:value="2.4" />-->
+        <activity
+            android:name=".max_aspect.DemoMaxAspectActivity"
+            android:label="max_aspect"
+            android:maxAspectRatio="2.4"
+            android:resizeableActivity="false"
+            ></activity>
 
     </application>
 </manifest>

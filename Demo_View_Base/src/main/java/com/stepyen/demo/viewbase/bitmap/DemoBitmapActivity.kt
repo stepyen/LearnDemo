@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.os.Environment
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.common.CommonPath
-import com.stepyen.demo.base.utils.BitmapUtil
 import com.stepyen.demo.base.utils.FileUtil
 import com.stepyen.demo.viewbase.R
 import com.stepyen.xutil.display.ImageUtils
@@ -21,7 +20,7 @@ class DemoBitmapActivity : BasePageActivity() {
 
     override fun initView() {
 
-        addTagTextView("尺寸压缩后，再缩放到1024")
+        addTag("尺寸压缩后，再缩放到1024")
 
         addButton("图的分辨率：629*300") {
 

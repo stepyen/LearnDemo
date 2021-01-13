@@ -4,7 +4,6 @@ import android.animation.Keyframe
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.view.View
-import android.widget.ImageView
 import com.stepyen.demo.animation.R
 import com.stepyen.demo.base.base.BasePageActivity
 import kotlinx.android.synthetic.main.activity_demo_test_animotion.*
@@ -23,7 +22,7 @@ class DemoTestAnimationActivity : BasePageActivity() {
 
         addView(R.layout.activity_demo_test_animotion)
 
-        addTagTextView("测试动画")
+        addTag("测试动画")
 
         addButton("缩放") {
             val keyframe1 = Keyframe.ofFloat(0f, 1f)

@@ -20,6 +20,20 @@
             android:label="权限"
             ></activity>
 
+        <activity android:name=".uri.DemoUriActivity"
+            android:label="Uri"
+            ></activity>
+
+        <activity android:name=".scheme.DemoSchemeUrlActivity"
+            android:label="SchemeUrl"
+            ></activity>
+
+        <activity android:name=".json.DemoJsonActivity"
+            android:label="Json"
+            ></activity>
+        <activity android:name=".handle.DemoHandleActivity"
+            android:label="Handle"
+            ></activity>
     </application>
 
 </manifest>

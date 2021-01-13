@@ -121,7 +121,7 @@ open class BasePageActivity :AppCompatActivity() {
     }
 
 
-    protected fun addTagTextView(txt: CharSequence): TextView? {
+    protected fun addTag(txt: CharSequence): TextView? {
         val tv = TextView(this@BasePageActivity).apply {
             text = txt
             setTextColor(ContextCompat.getColor(this@BasePageActivity,R.color.xui_config_main_theme))

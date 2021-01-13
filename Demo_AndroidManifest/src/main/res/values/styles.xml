@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+
+
+
+
+    <declare-styleable name="TestDeclare">
+        <attr name="test" format="color"></attr>
+    </declare-styleable>
+
+
 </resources>

@@ -1,9 +1,9 @@
-package com.stepyen.learndemo
+package com.stepyen.demo.base
 
 import android.content.Intent
 import android.view.View
 import com.stepyen.demo.base.base.BasePageActivity
-import com.stepyen.learndemo.bean.PageBean
+import com.stepyen.demo.base.bean.PageBean
 
 /**
  * date：2020-02-12

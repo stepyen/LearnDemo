@@ -2,6 +2,7 @@ package com.stepyen.learndemo
 
 import android.content.Intent
 import android.view.View
+import com.stepyen.demo.base.PageListActivity
 import com.stepyen.demo.base.base.BasePageActivity
 class MainActivity : BasePageActivity() {
     override var TAG =  "MainActivityTAG"
@@ -17,7 +18,7 @@ class MainActivity : BasePageActivity() {
                     startActivity(Intent(this@MainActivity, pageBeanList[0].cls))
                 }else{
                     startActivity(Intent(this@MainActivity, PageListActivity::class.java).apply {
-                        putExtra(PageListActivity.KEY_PAGE_LIST , pageBeanList)
+                        putExtra(PageListActivity.KEY_PAGE_LIST, pageBeanList)
                     })
                 }
             })

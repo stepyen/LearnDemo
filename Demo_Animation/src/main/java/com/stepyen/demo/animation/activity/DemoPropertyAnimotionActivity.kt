@@ -20,7 +20,7 @@ class DemoPropertyAnimotionActivity : BasePageActivity() {
     override fun initView() {
         addView(R.layout.demo_activity_property_animotion)
 
-        addTagTextView("属性动画")
+        addTag("属性动画")
 
         addButton("alpha-ValueAnimator方式实现") { v ->
             val animator = ValueAnimator.ofFloat(0f, 1f)

@@ -11,7 +11,7 @@ import com.stepyen.demo.base.base.BasePageActivity
 class DemoBehindActivity : BasePageActivity(){
 
     override fun initView() {
-        addTagTextView("屏幕的方向跟随上个页面")
+        addTag("屏幕的方向跟随上个页面")
     }
 }
 

@@ -43,6 +43,7 @@ dependencies {
 
     implementation project(":Demo_AndroidManifest")
     implementation project(":Demo_Animation")
+    implementation project(":Demo_App")
     implementation project(":Demo_Function")
     implementation project(":Demo_Picture")
     implementation project(":Demo_View")

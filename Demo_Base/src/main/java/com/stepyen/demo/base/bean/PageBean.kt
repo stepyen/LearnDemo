@@ -1,4 +1,4 @@
-package com.stepyen.learndemo.bean
+package com.stepyen.demo.base.bean
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

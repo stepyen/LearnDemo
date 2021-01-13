@@ -32,6 +32,14 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
             ></activity>
 
+        <activity android:name=".notification.DemoNotificationActivity"></activity>
+        <activity android:name=".notification.NoificationReceiveStandardActivitity"></activity>
+        <activity android:name=".notification.NoificationReceiveSingleTaskActivitity"
+            android:launchMode="singleTask"
+            ></activity>
+        <activity android:name=".notification.NotificationTestParentActivity"
+            android:parentActivityName="com.stepyen.demo.base.PageListActivity"
+            ></activity>
 
 
     </application>

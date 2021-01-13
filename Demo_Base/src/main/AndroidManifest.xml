@@ -5,6 +5,9 @@
 
     <application>
 
+        <activity android:name=".PageListActivity" />
+
+
     </application>
 
 

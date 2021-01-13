@@ -25,7 +25,7 @@ class RecycleViewHorizontalActivity : BasePageActivity() {
 
     override fun initView() {
 
-        addTagTextView("Item超出自身布局")
+        addTag("Item超出自身布局")
         addView(R.layout.view_recycleview_clipchildren)
 
         rcc.apply {
