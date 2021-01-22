@@ -1,6 +1,7 @@
 package com.stepyen.demo.app.resource
 
-import com.stepyen.demo.app.R
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -11,6 +12,7 @@ import com.stepyen.demo.base.base.BasePageActivity
  * 资源别名
  *
  */
+@Route(path = PagePathHub.DemoResourceAliasActivity)
 class DemoResourceAliasActivity : BasePageActivity(){
 
     override var TAG: String = "DemoResourceAliasActivity_TAG"

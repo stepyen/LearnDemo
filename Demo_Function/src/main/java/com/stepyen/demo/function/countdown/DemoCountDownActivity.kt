@@ -1,5 +1,7 @@
 package com.stepyen.demo.function.countdown
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 
@@ -9,7 +11,7 @@ import com.stepyen.demo.base.utils.L
  * description：计时
  *
  */
-
+@Route(path = PagePathHub.DemoCountDownActivity)
 class DemoCountDownActivity : BasePageActivity() {
     override var TAG: String = "CountDownTAG"
 

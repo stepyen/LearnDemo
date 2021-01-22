@@ -10,7 +10,9 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PageListActivity
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.view.R
 
@@ -20,6 +22,7 @@ import com.stepyen.demo.view.R
  * description：
  *
  */
+@Route(path = PagePathHub.DemoNotificationActivity)
 class DemoNotificationActivity : BasePageActivity() {
 
     companion object {
@@ -128,7 +131,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：无所不能")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -154,7 +157,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：常规页面")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -185,7 +188,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
             // 发送通知
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("标题")
                 .setContentText("内容：显示图标数量")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -208,7 +211,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：接收页面是 Standard")
                 .setContentIntent(pendingIntent)
@@ -231,7 +234,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：接收页面是 Standard")
                 .setContentIntent(pendingIntent)
@@ -252,7 +255,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：接收页面是 SingleTask")
                 .setContentIntent(pendingIntent)
@@ -274,7 +277,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：接收页面是 SingleTask")
                 .setContentIntent(pendingIntent)
@@ -360,7 +363,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
         // 发送通知
         var builder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.mipmap.img_house)
+            .setSmallIcon(R.drawable.ic_house)
             .setContentTitle("标题")
             .setContentText("内容：$name")
             .setPriority(priority)
@@ -400,7 +403,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
         // 发送通知
         var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-            .setSmallIcon(R.mipmap.img_house)
+            .setSmallIcon(R.drawable.ic_house)
             .setContentTitle("标题")
             .setContentText("内容：$content")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -498,7 +501,7 @@ class DemoNotificationActivity : BasePageActivity() {
         addButton("震动", View.OnClickListener {
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：震动")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -514,7 +517,7 @@ class DemoNotificationActivity : BasePageActivity() {
         addButton("铃声", View.OnClickListener {
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：铃声")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -528,7 +531,7 @@ class DemoNotificationActivity : BasePageActivity() {
         addButton("铃声、震动", View.OnClickListener {
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：铃声、震动")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -551,8 +554,8 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
-                .setLargeIcon(BitmapFactory.decodeResource(resources, R.mipmap.icon_tiger))
+                .setSmallIcon(R.drawable.ic_house)
+                .setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.icon_tiger))
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：测试铃声、震动")
                 .setSubText("这是摘要")
@@ -585,7 +588,7 @@ class DemoNotificationActivity : BasePageActivity() {
                 .setSummaryText("这是摘要")
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：多文本通知")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -616,7 +619,7 @@ class DemoNotificationActivity : BasePageActivity() {
             }
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：扩展布局")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -636,7 +639,7 @@ class DemoNotificationActivity : BasePageActivity() {
             }
             val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
 
-            val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.icon_tiger)
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.icon_tiger)
 
             val style = NotificationCompat.BigPictureStyle()
                 .setBigContentTitle("展开后的标题")
@@ -645,7 +648,7 @@ class DemoNotificationActivity : BasePageActivity() {
 
 
             var builder = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setLargeIcon(bitmap)
                 .setContentTitle("通知标题")
                 .setContentText("通知内容：大图样式")
@@ -666,7 +669,7 @@ class DemoNotificationActivity : BasePageActivity() {
             val builder = NotificationCompat.Builder(this)
                 .setContentTitle("这是标题")
                 .setContentText("这是正文")
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
 
             Thread(Runnable {
                 var progress = 0
@@ -694,7 +697,7 @@ class DemoNotificationActivity : BasePageActivity() {
             val notificationLayoutExpanded = RemoteViews(packageName, R.layout.view_custom_notification_large)
 
             val customNotification = NotificationCompat.Builder(this, CHANNEL_ID_MESSAGE)
-                .setSmallIcon(R.mipmap.img_house)
+                .setSmallIcon(R.drawable.ic_house)
                 .setStyle(NotificationCompat.DecoratedCustomViewStyle())
                 .setCustomContentView(notificationLayout)
                 .setCustomBigContentView(notificationLayoutExpanded)

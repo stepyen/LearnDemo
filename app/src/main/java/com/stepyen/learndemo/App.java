@@ -1,18 +1,24 @@
-package com.stepyen.demo.base;
+package com.stepyen.learndemo;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.stepyen.demo.base.AppManager;
 import com.stepyen.demo.base.common.CommonPath;
 import com.stepyen.demo.base.config.PhoneConf;
+import com.stepyen.demo.thirdlab.msa.MsaHelp;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
 import com.superdo.magina.autolayout.AutoLayout;
@@ -22,19 +28,11 @@ import com.superdo.magina.autolayout.AutoLayout;
  * author：stepyen
  * description：
  */
-public class App extends Application {
+public class App extends Application implements Application.ActivityLifecycleCallbacks {
 
     private static final String TAG = "AppTAG";
-    public static App app;
-    public String packName;
     public static Handler handler = new Handler();
     private static PhoneConf phoneConf;
-
-
-
-    public static App get() {
-        return app;
-    }
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -48,13 +46,14 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate: ");
-
-        app = this;
+        AppManager.INSTANCE.setApp(this);
+        registerActivityLifecycleCallbacks(this);
 
         XUtil.init(this);
 
         XUI.init(this);
         initAutoLayout();
+        initARouter();
 //        initPage();
 
         initAOP();
@@ -70,9 +69,8 @@ public class App extends Application {
 //        }
 //        LeakCanary.install(this);
 
-        packName = getPackageName();
-
         CommonPath.INSTANCE.init();
+
     }
 
 
@@ -85,7 +83,7 @@ public class App extends Application {
 
     public static PhoneConf getPhoneConf() {
         if (phoneConf == null) {
-            phoneConf = new PhoneConf(app);
+            phoneConf = new PhoneConf(AppManager.INSTANCE.getApp());
         }
         return phoneConf;
     }
@@ -102,6 +100,14 @@ public class App extends Application {
                 .build();
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
 
+    }
+
+    private void initARouter() {
+//        if (isDebug()) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效
+            ARouter.openLog();     // 打印日志
+            ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+//        }
+        ARouter.init(this); // 尽可能早，推荐在Application中初始化
     }
 
     private void initUmeng() {
@@ -166,4 +172,41 @@ public class App extends Application {
 
     }
 
+
+    @Override
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+        if (activity!= null&& TextUtils.equals(activity.getClass().getName(),"com.stepyen.demo.base.MainActivity")) {
+            AppManager.INSTANCE.setMainActivity(activity);
+        }
+    }
+
+    @Override
+    public void onActivityStarted(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityResumed(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityPaused(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityStopped(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+    }
+
+    @Override
+    public void onActivityDestroyed(Activity activity) {
+
+    }
 }

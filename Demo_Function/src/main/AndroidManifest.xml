@@ -3,6 +3,7 @@
     package="com.stepyen.demo.function">
 
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application>
 

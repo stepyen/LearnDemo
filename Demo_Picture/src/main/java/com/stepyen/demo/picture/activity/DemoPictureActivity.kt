@@ -8,6 +8,8 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.common.CommonPath
 import com.stepyen.demo.base.utils.FileUtil
@@ -30,6 +32,7 @@ import java.io.File
  * description：系统的图片处理
  *
  */
+@Route(path = PagePathHub.DemoPictureActivity)
 class DemoPictureActivity : BasePageActivity() {
 
     private var path: String = ""

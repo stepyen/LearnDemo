@@ -1,7 +1,9 @@
 package com.stepyen.demo.animation.activity
 
 import android.view.animation.*
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.animation.R
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import kotlinx.android.synthetic.main.demo_activity_tween_animotion.*
 
@@ -21,6 +23,7 @@ Rotate Animation：旋转动画
 
 
  */
+@Route(path = PagePathHub.DemoTweenAnimotionActivity)
 class DemoTweenAnimotionActivity : BasePageActivity() {
 
     private var translateAnimation: TranslateAnimation? = null

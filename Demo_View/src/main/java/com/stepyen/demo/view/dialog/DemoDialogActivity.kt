@@ -1,5 +1,7 @@
 package com.stepyen.demo.view.dialog
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.view.R
 import com.stepyen.xutil.display.DensityUtils
@@ -11,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_demo_dialog.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoDialogActivity)
 class DemoDialogActivity : BasePageActivity() {
 
 

@@ -1,5 +1,7 @@
 package com.stepyen.demo.view.textview
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.view.R
 
@@ -9,6 +11,7 @@ import com.stepyen.demo.view.R
  * description：
  *
  */
+@Route(path = PagePathHub.DemoTextViewActivity)
 class DemoTextViewActivity : BasePageActivity() {
 
 

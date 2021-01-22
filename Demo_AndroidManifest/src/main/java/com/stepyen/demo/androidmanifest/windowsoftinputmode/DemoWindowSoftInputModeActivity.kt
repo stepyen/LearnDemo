@@ -1,5 +1,7 @@
 package com.stepyen.demo.androidmanifest.windowsoftinputmode
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -8,11 +10,12 @@ import com.stepyen.demo.base.base.BasePageActivity
  * description：
  *
  */
+@Route(path = PagePathHub.DemoWindowSoftInputModeActivity)
 class DemoWindowSoftInputModeActivity : BasePageActivity(){
 
     override fun initView() {
-        addPageButton("adjustUnspecified", AdjustUnspecifiedActivity::class.java)
-        addPageButton("adjustResize", AdjustResizeActivity::class.java)
-        addPageButton("adjustPan", AdjustPanActivity::class.java)
+        addPageButton("adjustUnspecified", PagePathHub.AdjustUnspecifiedActivity)
+        addPageButton("adjustResize", PagePathHub.AdjustResizeActivity)
+        addPageButton("adjustPan",PagePathHub.AdjustPanActivity)
     }
 }

@@ -4,6 +4,8 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.base.BaseRccAdapter
 import com.stepyen.demo.base.base.BaseRccViewHolder
@@ -18,6 +20,7 @@ import java.util.*
  * 使用 DiffUtil 进行数据刷新 （未有效，待研究）
  *
  */
+@Route(path = PagePathHub.RecycleViewDiffActivity)
 class RecycleViewDiffActivity : BasePageActivity() {
 
 

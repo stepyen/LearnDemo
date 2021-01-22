@@ -1,6 +1,8 @@
 package com.stepyen.demo.androidmanifest.configchanges
 
 import android.content.res.Configuration
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 
@@ -14,6 +16,7 @@ import com.stepyen.demo.base.utils.L
  * 折叠屏使用此属性进行适配
  *
  */
+@Route(path = PagePathHub.DemoSmallestScreenSizeActivity)
 class DemoSmallestScreenSizeActivity : BasePageActivity(){
 
     override var TAG: String = "DemoSmallestScreenSizeActivity_TAG"
@@ -24,7 +27,7 @@ class DemoSmallestScreenSizeActivity : BasePageActivity(){
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        L.d(TAG,newConfig?.toString())
+        L.d(TAG,newConfig.toString())
 
 
 

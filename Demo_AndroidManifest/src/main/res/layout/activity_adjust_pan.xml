@@ -13,7 +13,7 @@
         android:orientation="vertical">
         <TextView
             style="@style/TextView_hint_tag"
-            android:text="不调整布局大小，会移动内容，是焦点不被软键盘遮挡"/>
+            android:text="布局向上平移，使焦点不被软键盘遮挡"/>
 
         <View
             android:layout_width="match_parent"

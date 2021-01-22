@@ -1,5 +1,7 @@
 package com.stepyen.demo.androidmanifest.screen_orientation
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -8,6 +10,7 @@ import com.stepyen.demo.base.base.BasePageActivity
  * description：
  *
  */
+@Route(path = PagePathHub.DemoBehindActivity)
 class DemoBehindActivity : BasePageActivity(){
 
     override fun initView() {

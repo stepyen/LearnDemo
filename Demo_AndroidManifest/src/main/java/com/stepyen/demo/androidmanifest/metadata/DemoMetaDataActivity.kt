@@ -1,6 +1,8 @@
 package com.stepyen.demo.androidmanifest.metadata
 
 import android.content.pm.PackageManager
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 
@@ -10,6 +12,7 @@ import com.stepyen.demo.base.utils.L
  * description：
  *
  */
+@Route(path = PagePathHub.DemoMetaDataActivity)
 class DemoMetaDataActivity : BasePageActivity() {
 
     override var TAG: String = "MetaData_TAG"

@@ -32,6 +32,13 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
 dependencies {
     api "$library.kotlin_stdlib"
     api "$library.androidx_appcompat"

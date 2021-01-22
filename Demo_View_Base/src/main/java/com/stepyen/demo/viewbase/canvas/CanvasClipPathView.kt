@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import com.stepyen.demo.base.App
+import com.stepyen.demo.base.AppManager
 import com.stepyen.demo.viewbase.R
 
 /**
@@ -27,7 +27,7 @@ class CanvasClipPathView @JvmOverloads constructor(private val mContext: Context
     }
 
     private val bitmap:Bitmap by lazy{
-        BitmapFactory.decodeResource(App.get().resources, R.drawable.ic_batman)
+        BitmapFactory.decodeResource(AppManager.app?.resources, R.drawable.ic_batman)
     }
 
     override fun onDraw(canvas: Canvas?) {

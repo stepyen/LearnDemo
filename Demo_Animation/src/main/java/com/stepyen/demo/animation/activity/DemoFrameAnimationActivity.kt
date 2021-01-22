@@ -1,7 +1,9 @@
 package com.stepyen.demo.animation.activity
 
 import android.graphics.drawable.AnimationDrawable
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.animation.R
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import kotlinx.android.synthetic.main.activity_demo_frame_animotion.*
 
@@ -11,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_demo_frame_animotion.*
  * description：帧动画
  *
  */
+@Route(path = PagePathHub.DemoFrameAnimationActivity)
 class DemoFrameAnimationActivity : BasePageActivity() {
     private var isXml = true
     private var animationDrawable: AnimationDrawable? = null

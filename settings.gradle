@@ -1,3 +1,4 @@
+include ':Demo_Lint'
 include ':app'
 include ':Demo_Base'
 include ':Demo_Debug'
@@ -22,6 +23,7 @@ include ':Demo_View'
 include ':Demo_View_Base'
 include ':Demo_View_Custom'
 include ':Demo_Third_Lab'
+
 
 
 rootProject.name = "LearnDemo"

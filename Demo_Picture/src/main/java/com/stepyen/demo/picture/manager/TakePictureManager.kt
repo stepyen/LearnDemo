@@ -6,7 +6,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
-import com.stepyen.demo.base.App
+import com.stepyen.demo.base.AppManager
 import com.stepyen.demo.base.common.CommonPath
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.picture.constant.DemoPictureConst
@@ -83,7 +83,7 @@ class TakePictureManager {
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
         }
 
-        val uri = FileProvider7.getUriForFile(App.get(), File(path))
+        val uri = FileProvider7.getUriForFile(AppManager.app, File(path))
 
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri)
 
@@ -114,11 +114,11 @@ class TakePictureManager {
         val file = File(path)
         // 文件插入系统图库
         try {
-            MediaStore.Images.Media.insertImage(App.get().contentResolver, file.absolutePath, file.name, null)
+            MediaStore.Images.Media.insertImage(AppManager.app?.contentResolver, file.absolutePath, file.name, null)
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
         }
         // 通知图库更新
-        App.get().sendBroadcast(Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)))
+        AppManager.app?.sendBroadcast(Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)))
     }
 }

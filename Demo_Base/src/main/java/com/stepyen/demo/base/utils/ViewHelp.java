@@ -6,7 +6,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.stepyen.demo.base.App;
+import com.stepyen.demo.base.AppManager;
+
 
 /**
  * date：2019/6/11
@@ -78,7 +79,7 @@ public class ViewHelp {
         if (view == null) {
             return;
         }
-        InputMethodManager imm = (InputMethodManager) App.get().getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) AppManager.INSTANCE.getApp().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm == null) return;
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }

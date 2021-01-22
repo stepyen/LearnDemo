@@ -12,4 +12,9 @@
 <!--        高-->
         <attr name="auto_height"></attr>
     </declare-styleable>
+
+    <declare-styleable name="CustomDemoView">
+
+        <attr name="cdv_title" format="string"></attr>
+    </declare-styleable>
 </resources>

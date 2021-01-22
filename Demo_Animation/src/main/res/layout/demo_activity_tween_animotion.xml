@@ -18,7 +18,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:src="@mipmap/img_house"
+        android:src="@drawable/ic_house"
         />
 
 

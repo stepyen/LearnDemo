@@ -1,5 +1,7 @@
 package com.stepyen.demo.androidmanifest.max_aspect
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -8,6 +10,7 @@ import com.stepyen.demo.base.base.BasePageActivity
  * description：
  *
  */
+@Route(path = PagePathHub.DemoMaxAspectActivity)
 class DemoMaxAspectActivity : BasePageActivity(){
 
     override var TAG: String = "DemoMaxAspectActivity_TAG"

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.ScaleAnimation
 import android.widget.PopupWindow
-import com.stepyen.demo.base.App
+import com.stepyen.demo.base.AppManager
 import com.stepyen.demo.base.base.BaseDialog
 import com.stepyen.demo.view.R
 import com.stepyen.xui.utils.DensityUtils
@@ -39,7 +39,7 @@ class TestDialogShowPopDialog(context: Context) : BaseDialog<TestDialogShowPopDi
     override fun show() {
         super.show()
 //        App.handler.postDelayed({showPop()},100)
-        App.handler.postDelayed({showPop()},0)
+        AppManager.handle.postDelayed({showPop()},0)
 
 
     }

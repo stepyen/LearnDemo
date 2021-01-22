@@ -1,5 +1,7 @@
 package com.stepyen.demo.function.install
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.function.R
 import com.stepyen.xutil.app.PackageUtils
@@ -10,6 +12,7 @@ import com.stepyen.xutil.app.PackageUtils
  * description：学习-安装程序
  *
  */
+@Route(path = PagePathHub.DemoInstallActivity)
 class DemoInstallActivity : BasePageActivity() {
 
 

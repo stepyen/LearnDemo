@@ -1,5 +1,7 @@
 package com.stepyen.demo.viewbase.cover
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.viewbase.R
@@ -11,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_demo_view_cover.*
  * description：研究View遮盖问题
  *
  */
+@Route(path = PagePathHub.DemoViewPaintActivity)
 class DemoViewCoverActivity : BasePageActivity() {
 
     override var TAG: String = "DemoViewCover_TAG"

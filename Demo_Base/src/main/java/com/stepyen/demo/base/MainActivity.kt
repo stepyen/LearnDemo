@@ -1,21 +1,25 @@
-package com.stepyen.learndemo
+package com.stepyen.demo.base
 
 import android.content.Intent
 import android.view.View
-import com.stepyen.demo.base.PageListActivity
+import com.alibaba.android.arouter.launcher.ARouter
 import com.stepyen.demo.base.base.BasePageActivity
+
+
 class MainActivity : BasePageActivity() {
-    override var TAG =  "MainActivityTAG"
+    override var TAG =  "MainActivity_TAG"
 
     override fun initView() {
-        for (data in PageDataManage.data) {
+
+
+        for (data in PageManager.data) {
             val pageBean = data.key
             val pageBeanList = data.value
             addButton(pageBean.title, View.OnClickListener {
 
                 // 只有一个选项时，直接跳转过去
                 if (pageBeanList.size ==1) {
-                    startActivity(Intent(this@MainActivity, pageBeanList[0].cls))
+                    ARouter.getInstance().build(pageBeanList[0].path).navigation()
                 }else{
                     startActivity(Intent(this@MainActivity, PageListActivity::class.java).apply {
                         putExtra(PageListActivity.KEY_PAGE_LIST, pageBeanList)
@@ -31,4 +35,5 @@ class MainActivity : BasePageActivity() {
     private fun initDataSource() {
 //        DataResouceManager.copyALL()
     }
+
 }

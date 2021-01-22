@@ -9,6 +9,8 @@ buildscript {
         classpath "$library.build_gradle"
         classpath "$library.kotlin_gradle_plugin"
         classpath "$library.kotlin_android_extensions"
+
+        classpath "com.android.tools.lint:lint:26.3.2"
     }
 }
 

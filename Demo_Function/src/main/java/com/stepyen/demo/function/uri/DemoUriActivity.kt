@@ -1,6 +1,8 @@
 package com.stepyen.demo.function.uri
 
 import android.net.Uri
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.function.R
 import kotlinx.android.synthetic.main.demo_activity_uri.*
@@ -8,6 +10,7 @@ import kotlinx.android.synthetic.main.demo_activity_uri.*
 /**
  *
  */
+@Route(path = PagePathHub.DemoUriActivity)
 class DemoUriActivity : BasePageActivity() {
 
 

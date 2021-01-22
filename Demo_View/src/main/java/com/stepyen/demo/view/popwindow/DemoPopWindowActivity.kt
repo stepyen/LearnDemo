@@ -4,6 +4,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.PopupWindow
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.view.R
@@ -16,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_demo_popwindow.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoPopWindowActivity)
 class DemoPopWindowActivity : BasePageActivity() {
 
     override var TAG: String = "DemoPopWindow_TAG"

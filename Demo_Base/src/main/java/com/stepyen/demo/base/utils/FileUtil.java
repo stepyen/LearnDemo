@@ -3,7 +3,8 @@ package com.stepyen.demo.base.utils;
 import android.graphics.Bitmap;
 import android.os.Environment;
 
-import com.stepyen.demo.base.App;
+
+import com.stepyen.demo.base.AppManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,7 +50,7 @@ public class FileUtil {
     public static String createImagePath() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         Date date = new Date(System.currentTimeMillis());
-        File file = new File(App.get().getExternalFilesDir(Environment.DIRECTORY_PICTURES),sdf.format(date)+ ".jpg");
+        File file = new File(AppManager.INSTANCE.getApp().getExternalFilesDir(Environment.DIRECTORY_PICTURES),sdf.format(date)+ ".jpg");
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
         }

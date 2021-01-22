@@ -4,6 +4,8 @@ import android.graphics.RectF
 import android.view.View
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.viewcustom.R
@@ -18,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_guide_view.*
  * description：
  *
  */
+@Route(path = PagePathHub.CustomViewActivity)
 class CustomViewActivity:BasePageActivity() {
 
     override var TAG: String = "CustomView_TAG"

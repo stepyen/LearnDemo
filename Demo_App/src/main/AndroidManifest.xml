@@ -7,6 +7,17 @@
         <activity android:name=".resource.DemoResourceActivity"></activity>
         <activity android:name=".resource.DemoResourceAliasActivity"></activity>
 
+
+
+<!--        -->
+        <activity android:name=".drawable.DemoDrawableActivity"
+            android:label="Drawable"
+            ></activity>
+
+        <activity android:name=".tools.DemoToolsActivity"
+            android:label="Tools"
+            ></activity>
+
     </application>
 
 </manifest>

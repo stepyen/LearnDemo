@@ -1,7 +1,9 @@
 package com.stepyen.demo.thirdlab.glide
 
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.thirdlab.R
 import kotlinx.android.synthetic.main.activity_demo_glide.*
@@ -13,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_demo_glide.*
  * description：学习 Glide
  *
  */
+@Route(path = PagePathHub.DemoGlideActivity)
 class DemoGlideActivity : BasePageActivity(){
 
     override fun initView() {

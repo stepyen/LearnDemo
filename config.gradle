@@ -1,6 +1,7 @@
 ext {
     release = [
-            package_name: "com.stepyen.learndemo",
+//            package_name: "com.stepyen.learndemo",
+            package_name: "com.sinyee.babybus.travelsafety",
             versionName : "1.0.0",
             versionCode : 1000
     ]
@@ -64,6 +65,7 @@ ext {
             um_crash                    : "0.0.5",
             mintegral                   : "15.3.02",
             account                     : '0.4.6-SNAPSHOT',
+            arouter                     : '1.5.1',
             "stepyen_xutil"             : "1.0.7"
     ]
 
@@ -155,7 +157,10 @@ ext {
             "stepyen_xutil_core"          : "com.github.stepyen.XUtil:xutil-core:$versions.stepyen_xutil",
             "stepyen_xutil_sub"           : "com.github.stepyen.XUtil:xutil-sub:$versions.stepyen_xutil",
             "stepyen_xui"                 : "com.github.stepyen:XUI:1.4.1",
-            "orhanobut_logger"                 : "com.orhanobut:logger:2.2.0"
+            "orhanobut_logger"                 : "com.orhanobut:logger:2.2.0",
 
+            // arouter
+            "arouter":"com.alibaba:arouter-api:$versions.arouter",
+            "arouter_compiler":"com.alibaba:arouter-compiler:$versions.arouter"
     ]
 }

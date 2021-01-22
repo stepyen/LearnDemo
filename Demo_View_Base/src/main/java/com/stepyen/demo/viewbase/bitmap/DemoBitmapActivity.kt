@@ -2,6 +2,8 @@ package com.stepyen.demo.viewbase.bitmap
 
 import android.graphics.Bitmap
 import android.os.Environment
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.common.CommonPath
 import com.stepyen.demo.base.utils.FileUtil
@@ -15,6 +17,7 @@ import java.io.File
  * description：
  *
  */
+@Route(path = PagePathHub.DemoBitmapActivity)
 class DemoBitmapActivity : BasePageActivity() {
 
 

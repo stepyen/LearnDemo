@@ -1,6 +1,8 @@
 package com.stepyen.demo.debug.activity
 
 import android.os.Build
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.base.utils.PermissionUtil
@@ -15,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_demo_debug.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoDebugActivity)
 class DemoDebugActivity:BasePageActivity(){
 
     override fun initView() {

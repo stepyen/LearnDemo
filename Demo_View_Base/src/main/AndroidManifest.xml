@@ -5,11 +5,37 @@
 
     <application>
 
-        <activity android:name=".bitmap.DemoBitmapActivity"></activity>
-        <activity android:name=".cover.DemoViewCoverActivity"></activity>
-        <activity android:name=".canvas.DemoViewCanvasActivity"></activity>
-        <activity android:name=".paint.DemoViewPaintActivity"></activity>
-        <activity android:name=".order.DemoDrawOrderActivity"></activity>
+        <activity android:name=".bitmap.DemoBitmapActivity"
+            android:label="位图"
+            ></activity>
+        <activity android:name=".cover.DemoViewCoverActivity"
+            android:label="视图遮盖"
+            ></activity>
+        <activity android:name=".canvas.DemoViewCanvasActivity"
+            android:label="绘画"
+            ></activity>
+        <activity android:name=".paint.DemoViewPaintActivity"
+            android:label="画笔"
+            ></activity>
+        <activity android:name=".order.DemoDrawOrderActivity"
+            android:label="绘制顺序"
+            ></activity>
+        <activity android:name=".measure.DemoViewMeasureActivity"
+            android:label="测量"
+            ></activity>
+
+        <activity android:name=".lifecycle.DemoViewLifecycleActivity"
+            android:label="生命周期"
+            ></activity>
+
+        <activity android:name=".gesture.DemoViewGestureActivity"
+            android:label="手势"
+            ></activity>
+
+        <activity android:name=".scroll.DemoViewScrollActivity"
+            android:label="滚动"
+            ></activity>
+
 
     </application>
 

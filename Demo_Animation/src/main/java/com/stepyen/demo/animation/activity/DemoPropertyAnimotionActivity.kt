@@ -1,7 +1,9 @@
 package com.stepyen.demo.animation.activity
 
 import android.animation.*
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.animation.R
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import kotlinx.android.synthetic.main.demo_activity_property_animotion.*
@@ -12,6 +14,7 @@ import kotlinx.android.synthetic.main.demo_activity_property_animotion.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoPropertyAnimotionActivity)
 class DemoPropertyAnimotionActivity : BasePageActivity() {
 
     override var TAG: String = "DemoPropertyAnimotion_TAG"

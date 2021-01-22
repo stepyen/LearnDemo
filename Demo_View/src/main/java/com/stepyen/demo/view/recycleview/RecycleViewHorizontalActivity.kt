@@ -6,6 +6,8 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.base.BaseRccAdapter
 import com.stepyen.demo.base.base.BaseRccViewHolder
@@ -20,6 +22,7 @@ import java.util.*
  * description：RecycleView 水平视图研究
  *
  */
+@Route(path = PagePathHub.RecycleViewHorizontalActivity)
 class RecycleViewHorizontalActivity : BasePageActivity() {
 
 

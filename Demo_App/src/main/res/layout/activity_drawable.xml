@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="TransitionDrawable 转换可绘制对象"/>
+
+    <ImageView
+        android:id="@+id/iv_transition"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/transition"
+        />
+
+    <Button
+        android:id="@+id/btn_transition_start"
+        style="@style/CommonButton"
+        android:text="转换"
+        />
+
+    <Button
+        android:id="@+id/btn_transition_reverse"
+        style="@style/CommonButton"
+        android:text="反转换"
+        />
+
+    <Button
+        android:id="@+id/btn_transition_reset"
+        style="@style/CommonButton"
+        android:text="重置"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="InsetDrawable 插入可绘制对象"/>
+
+    <ImageView
+        android:id="@+id/iv_inset"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/inset"
+        android:background="@drawable/ic_house"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="ClipDrawable 裁剪可绘制对象"/>
+
+    <ImageView
+        android:id="@+id/iv_clip"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/clip"
+        />
+
+    <Button
+        android:id="@+id/btn_clip"
+        style="@style/CommonButton"
+        android:text="增加进度"
+        />
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="ScaleDrawable 缩放可绘制对象"/>
+
+    <ImageView
+        android:id="@+id/iv_scale"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/scale"
+        />
+
+</LinearLayout>

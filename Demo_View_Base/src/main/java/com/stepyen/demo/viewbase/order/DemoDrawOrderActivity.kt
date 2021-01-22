@@ -1,5 +1,7 @@
 package com.stepyen.demo.viewbase.order
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.viewbase.R
 
@@ -9,6 +11,7 @@ import com.stepyen.demo.viewbase.R
  * description：
  *
  */
+@Route(path = PagePathHub.DemoDrawOrderActivity)
 class DemoDrawOrderActivity: BasePageActivity() {
 
     override fun initView() {

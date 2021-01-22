@@ -1,7 +1,9 @@
 package com.stepyen.demo.base
 
-import android.content.Intent
+import android.text.TextUtils
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.bean.PageBean
 
@@ -11,7 +13,7 @@ import com.stepyen.demo.base.bean.PageBean
  * description：
  *
  */
-
+@Route(path = PagePathHub.PageListActivity)
 class PageListActivity : BasePageActivity() {
     override var TAG =  "PageListActivityTAG"
 
@@ -22,13 +24,11 @@ class PageListActivity : BasePageActivity() {
     override fun initView() {
 
         for (pageBean in intent.getParcelableArrayListExtra<PageBean>(KEY_PAGE_LIST)) {
-
-            if (pageBean.cls == null) {
+            if (TextUtils.isEmpty(pageBean.path)) {
                 addTextView(pageBean.title)
             }else{
                 addButton(pageBean.title, View.OnClickListener {
-                    startActivity(Intent(this@PageListActivity, pageBean.cls).apply {
-                    })
+                    ARouter.getInstance().build(pageBean.path).navigation();
                 })
             }
         }

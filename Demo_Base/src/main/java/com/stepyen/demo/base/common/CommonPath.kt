@@ -1,6 +1,7 @@
 package com.stepyen.demo.base.common
 
-import com.stepyen.demo.base.App
+import com.stepyen.demo.base.AppManager
+
 
 /**
  * date：2020/12/14
@@ -17,6 +18,6 @@ object CommonPath {
 
 
     fun init() {
-        imagePathDir = App.get().getExternalFilesDir("image").path
+        imagePathDir = AppManager.app?.getExternalFilesDir("image")?.path?:""
     }
 }

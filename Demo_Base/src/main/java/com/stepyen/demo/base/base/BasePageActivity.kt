@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.stepyen.demo.base.R
+import com.stepyen.demo.base.utils.GlobalUtis
 import com.stepyen.demo.base.utils.IntentLogUtil
 import com.stepyen.demo.base.utils.L
 import com.stepyen.xui.utils.DensityUtils
@@ -26,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_base_page.*
  * description：
  *
  */
-open class BasePageActivity :AppCompatActivity() {
+open class BasePageActivity : AppCompatActivity() {
 
     open var TAG = "BaseLifePageTAG"
 
@@ -47,9 +48,9 @@ open class BasePageActivity :AppCompatActivity() {
 
     }
 
-    open fun initView(){}
+    open fun initView() {}
 
-    open fun initData(){}
+    open fun initData() {}
 
 
     protected fun addView(layoutId: Int): View {
@@ -63,18 +64,16 @@ open class BasePageActivity :AppCompatActivity() {
         return view
     }
 
-    protected fun addView(layoutId: Int,lp:ViewGroup.LayoutParams): View {
+    protected fun addView(layoutId: Int, lp: ViewGroup.LayoutParams): View {
         val view = LayoutInflater.from(this).inflate(layoutId, null)
-        ll_parent.addView(view,lp)
+        ll_parent.addView(view, lp)
         return view
     }
 
-    protected fun addView(view: View,lp:ViewGroup.LayoutParams): View {
-        ll_parent.addView(view,lp)
+    protected fun addView(view: View, lp: ViewGroup.LayoutParams): View {
+        ll_parent.addView(view, lp)
         return view
     }
-
-
 
 
     protected fun addPageButton(title: String, cls: Class<*>, marginTop: Int = 0) {
@@ -86,6 +85,16 @@ open class BasePageActivity :AppCompatActivity() {
 
         }, marginTop)
     }
+
+    protected fun addPageButton(title: String, path:String, marginTop: Int = 0) {
+
+        addButton(title, View.OnClickListener {
+
+            GlobalUtis.gotoPage(path)
+
+        }, marginTop)
+    }
+
 
     protected fun addButton(title: String, clickAction: (View) -> Unit) {
         val clickListener = View.OnClickListener { v -> clickAction(v) }
@@ -109,7 +118,7 @@ open class BasePageActivity :AppCompatActivity() {
         setLpMarginTop(button, marginTop)
     }
 
-    protected fun addTextView(txt: CharSequence, marginTop: Int=10): TextView? {
+    protected fun addTextView(txt: CharSequence, marginTop: Int = 10): TextView? {
         val tv = TextView(this@BasePageActivity).apply {
             text = txt
         }
@@ -124,11 +133,24 @@ open class BasePageActivity :AppCompatActivity() {
     protected fun addTag(txt: CharSequence): TextView? {
         val tv = TextView(this@BasePageActivity).apply {
             text = txt
-            setTextColor(ContextCompat.getColor(this@BasePageActivity,R.color.xui_config_main_theme))
+            setTextColor(
+                ContextCompat.getColor(
+                    this@BasePageActivity,
+                    R.color.xui_config_main_theme
+                )
+            )
             textSize = 15f
             gravity = Gravity.CENTER_VERTICAL
-            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
-                setMargins(DensityUtils.dp2px(this@BasePageActivity, 15f), DensityUtils.dp2px(this@BasePageActivity,15f), DensityUtils.dp2px(this@BasePageActivity,15f), DensityUtils.dp2px(this@BasePageActivity,15f))
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply {
+                setMargins(
+                    DensityUtils.dp2px(this@BasePageActivity, 15f),
+                    DensityUtils.dp2px(this@BasePageActivity, 15f),
+                    DensityUtils.dp2px(this@BasePageActivity, 15f),
+                    DensityUtils.dp2px(this@BasePageActivity, 15f)
+                )
             }
         }
 
@@ -138,23 +160,19 @@ open class BasePageActivity :AppCompatActivity() {
     }
 
 
-
-
     private fun setLpMarginTop(view: View, marginTop: Int) {
 
-        view?.run {
+        view.run {
             val lp = layoutParams as LinearLayout.LayoutParams
-            if (lp != null) {
-                lp.setMargins(0, DensityUtils.dp2px(this@BasePageActivity, marginTop.toFloat()), 0, 0)
-                view.layoutParams = lp
-            }
+            lp.setMargins(0, DensityUtils.dp2px(this@BasePageActivity, marginTop.toFloat()), 0, 0)
+            view.layoutParams = lp
         }
     }
 
 
-    fun toast(str:String) {
+    fun toast(str: String) {
 
-        Toast.makeText(this,str, Toast.LENGTH_SHORT)
+        Toast.makeText(this, str, Toast.LENGTH_SHORT)
 
     }
 
@@ -191,13 +209,13 @@ open class BasePageActivity :AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
 
-        var orientation =""
+        var orientation = ""
 
-        when(newConfig.orientation) {
-            Configuration.ORIENTATION_PORTRAIT->{
-                orientation =  "ORIENTATION_PORTRAIT"
+        when (newConfig.orientation) {
+            Configuration.ORIENTATION_PORTRAIT -> {
+                orientation = "ORIENTATION_PORTRAIT"
             }
-            Configuration.ORIENTATION_LANDSCAPE->{
+            Configuration.ORIENTATION_LANDSCAPE -> {
                 orientation = "ORIENTATION_LANDSCAPE"
             }
         }

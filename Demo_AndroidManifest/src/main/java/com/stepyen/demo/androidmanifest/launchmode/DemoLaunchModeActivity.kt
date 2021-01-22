@@ -2,6 +2,8 @@ package com.stepyen.demo.androidmanifest.launchmode
 
 import android.content.Intent
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -10,6 +12,7 @@ import com.stepyen.demo.base.base.BasePageActivity
  * description：学习-启动模式
  *
  */
+@Route(path = PagePathHub.DemoLaunchModeActivity)
 class DemoLaunchModeActivity : BasePageActivity() {
     override var TAG =  "DemoLaunchModeActivity_TAG"
 

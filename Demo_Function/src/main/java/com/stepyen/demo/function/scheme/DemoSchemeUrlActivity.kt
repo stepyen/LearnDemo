@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.function.R
 import com.stepyen.xutil.tip.ToastUtils
@@ -16,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_url_scheme.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoSchemeUrlActivity)
 class DemoSchemeUrlActivity:BasePageActivity() {
     companion object {
         const val test_uri = "stepyen://xiaoming@host.com/record/path?address=china&phone=1875912233#fragment=fragment123"

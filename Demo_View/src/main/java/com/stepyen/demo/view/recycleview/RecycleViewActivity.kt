@@ -1,5 +1,7 @@
 package com.stepyen.demo.view.recycleview
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 
 /**
@@ -8,13 +10,14 @@ import com.stepyen.demo.base.base.BasePageActivity
  * description：
  *
  */
+@Route(path = PagePathHub.RecycleViewActivity)
 class RecycleViewActivity : BasePageActivity() {
 
 
     override fun initView() {
 
-        addPageButton("DiffUtil 数据刷新",RecycleViewDiffActivity::class.java)
-        addPageButton("水平方向",RecycleViewHorizontalActivity::class.java)
+        addPageButton("DiffUtil 数据刷新",PagePathHub.RecycleViewDiffActivity)
+        addPageButton("水平方向",PagePathHub.RecycleViewHorizontalActivity)
 
     }
 }

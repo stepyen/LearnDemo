@@ -1,6 +1,8 @@
 package com.stepyen.demo.function.json
 
 import android.util.Log
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.function.R
 import kotlinx.android.synthetic.main.activity_json.*
@@ -22,6 +24,7 @@ import org.json.JSONObject
 1、put value 为"" 会提交到json中；为 null 不提交到json中
 2、解析json时，使用 get 解析到json中没有的字段会抛出异常，稳妥起见，使用 opt
  */
+@Route(path = PagePathHub.DemoJsonActivity)
 class DemoJsonActivity:BasePageActivity() {
 
 

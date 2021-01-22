@@ -2,7 +2,8 @@ package com.stepyen.demo.function.permission;
 
 import android.content.pm.PackageManager;
 
-import com.stepyen.demo.base.App;
+import com.stepyen.demo.base.AppManager;
+
 
 /**
  * date：2021/1/8
@@ -18,7 +19,7 @@ public class PermissionUtils {
      */
     public static boolean hasPermission(String permissionName) {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            int hasSdPermission = App.get().checkSelfPermission(permissionName);
+            int hasSdPermission = AppManager.INSTANCE.getApp().checkSelfPermission(permissionName);
             if (hasSdPermission != PackageManager.PERMISSION_GRANTED) {
                 return false;
             }

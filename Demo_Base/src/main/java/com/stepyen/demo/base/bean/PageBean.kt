@@ -10,5 +10,5 @@ import kotlinx.android.parcel.Parcelize
  *
  */
 @Parcelize
-class PageBean(val title:String,val cls:Class<*>? = null): Parcelable {
+class PageBean(val title:String, val path:String? = null): Parcelable {
 }

@@ -1,5 +1,7 @@
 package com.stepyen.demo.thirdlab.gifdrawable
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.thirdlab.R
 import kotlinx.android.synthetic.main.activity_demo_gif_drawable.*
@@ -13,6 +15,7 @@ import java.io.File
  * description：学习 Glide
  *
  */
+@Route(path = PagePathHub.DemoGifDrawableActivity)
 class DemoGifDrawableActivity : BasePageActivity(){
 
     override fun initView() {

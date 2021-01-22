@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -19,14 +20,32 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
+
+
     }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("../sinyeeandroid.keystore")
+            storePassword "4sinyeeandroidteam"
+            keyAlias "sinyeeandroid_keystore"
+            keyPassword "4sinyeeandroidteam"
+        }
+    }
+
 
     buildTypes {
         release {
+            minifyEnabled true
+            signingConfig signingConfigs.releaseConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -34,9 +53,22 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+
+
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs',
+                '../Demo_Third_Lab/libs'
+
+    }
 }
 
 dependencies {
+
 
     implementation project(":Demo_Base")
     implementation project(":Demo_Debug")
@@ -50,4 +82,6 @@ dependencies {
     implementation project(":Demo_View_Base")
     implementation project(":Demo_View_Custom")
     implementation project(":Demo_Third_Lab")
+
+    lintChecks project(':Demo_Lint')
 }

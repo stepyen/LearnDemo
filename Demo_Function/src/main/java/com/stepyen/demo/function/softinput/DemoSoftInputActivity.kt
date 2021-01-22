@@ -3,6 +3,8 @@ import android.app.Activity
 import android.graphics.Rect
 import android.view.ViewTreeObserver
 import android.widget.FrameLayout
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.function.R
@@ -15,6 +17,7 @@ import com.stepyen.demo.function.R
  *
  *
  */
+@Route(path = PagePathHub.DemoSoftInputActivity)
 class DemoSoftInputActivity : BasePageActivity() {
     override var TAG: String = "DemoSoftInputActivity_TAG"
 

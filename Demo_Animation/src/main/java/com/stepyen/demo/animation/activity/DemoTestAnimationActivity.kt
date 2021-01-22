@@ -4,7 +4,9 @@ import android.animation.Keyframe
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.animation.R
+import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import kotlinx.android.synthetic.main.activity_demo_test_animotion.*
 
@@ -14,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_demo_test_animotion.*
  * description：
  *
  */
+@Route(path = PagePathHub.DemoTestAnimationActivity)
 class DemoTestAnimationActivity : BasePageActivity() {
 
     override var TAG: String = "AnimotionTest"

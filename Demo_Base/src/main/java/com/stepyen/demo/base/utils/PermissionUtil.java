@@ -7,7 +7,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 
-import com.stepyen.demo.base.App;
+import com.stepyen.demo.base.AppManager;
+
 
 /**
  * @author LYB
@@ -56,11 +57,11 @@ public class PermissionUtil {
         }
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         try {
-            App.get().startActivity(intent);
+            AppManager.INSTANCE.getApp().startActivity(intent);
         } catch (Exception ignored) {
             intent = AppSettingIntent();
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            App.get().startActivity(intent);
+            AppManager.INSTANCE.getApp().startActivity(intent);
         }
     }
 
@@ -83,7 +84,7 @@ public class PermissionUtil {
     private static Intent oppoIntent() {
 
         Intent intent = new Intent();
-        intent.putExtra("packageName", App.get().packName);
+        intent.putExtra("packageName", AppManager.INSTANCE.getPackName());
         ComponentName comp = new ComponentName("com.color.safecenter", "com.color.safecenter.permission.PermissionManagerActivity");
         intent.setComponent(comp);
         return intent;
@@ -96,7 +97,7 @@ public class PermissionUtil {
 
         Intent intent = new Intent();
         intent.setClassName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.FloatWindowManager");
-        intent.putExtra("packagename", App.get().packName);
+        intent.putExtra("packagename", AppManager.INSTANCE.getPackName());
         if (hasIntent(intent)) return intent;
 
         intent.setComponent(new ComponentName("com.iqoo.secure", "com.iqoo.secure.safeguard.SoftPermissionDetailActivity"));
@@ -109,7 +110,7 @@ public class PermissionUtil {
     private static Intent meizuIntent() {
 
         Intent intent = new Intent("com.meizu.safe.security.SHOW_APPSEC");
-        intent.putExtra("packageName", App.get().packName);
+        intent.putExtra("packageName", AppManager.INSTANCE.getPackName());
         intent.setComponent(new ComponentName("com.meizu.safe", "com.meizu.safe.security.AppSecActivity"));
         return intent;
     }
@@ -121,7 +122,7 @@ public class PermissionUtil {
     private static Intent xiaomiIntent() {
 
         Intent intent = new Intent("miui.intent.action.APP_PERM_EDITOR");
-        intent.putExtra("extra_pkgname", App.get().packName);
+        intent.putExtra("extra_pkgname", AppManager.INSTANCE.getPackName());
         if (hasIntent(intent)) return intent;
 
         //v6 v7
@@ -133,7 +134,7 @@ public class PermissionUtil {
         if (hasIntent(intent)) return intent;
 
         //兜底
-        Uri packageURI = Uri.parse("package:" + App.get().packName);
+        Uri packageURI = Uri.parse("package:" + AppManager.INSTANCE.getPackName());
         intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, packageURI);
         return intent;
     }
@@ -152,7 +153,7 @@ public class PermissionUtil {
      */
     private static Intent sonyIntent() {
 
-        Intent intent = new Intent(App.get().packName);
+        Intent intent = new Intent(AppManager.INSTANCE.getPackName());
         ComponentName comp = new ComponentName("com.sonymobile.cta", "com.sonymobile.cta.SomcCTAMainActivity");
         intent.setComponent(comp);
         return intent;
@@ -164,9 +165,9 @@ public class PermissionUtil {
      */
     private static Intent lgIntent() {
 
-        Intent intent = new Intent(App.get().packName);
+        Intent intent = new Intent(AppManager.INSTANCE.getPackName());
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra("packageName", App.get().packName);
+        intent.putExtra("packageName", AppManager.INSTANCE.getPackName());
         ComponentName comp = new ComponentName("com.android.settings", "com.android.settings.Settings$AccessLockSummaryActivity");
         intent.setComponent(comp);
         return intent;
@@ -179,7 +180,7 @@ public class PermissionUtil {
     private static Intent letvIntent() {
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra("packageName", App.get().packName);
+        intent.putExtra("packageName", AppManager.INSTANCE.getPackName());
         ComponentName comp = new ComponentName("com.letv.android.letvsafe", "com.letv.android.letvsafe.PermissionAndApps");
         intent.setComponent(comp);
         return intent;
@@ -203,12 +204,12 @@ public class PermissionUtil {
     private static Intent AppSettingIntent() {
         Intent localIntent = new Intent();
         localIntent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        localIntent.setData(Uri.fromParts("package", App.get().packName, null));
+        localIntent.setData(Uri.fromParts("package", AppManager.INSTANCE.getPackName(), null));
         return localIntent;
     }
 
     private static boolean hasIntent(Intent intent) {
-        return App.get().getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY).size() > 0;
+        return AppManager.INSTANCE.getApp().getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY).size() > 0;
     }
 
 
