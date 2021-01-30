@@ -209,26 +209,26 @@ open class BasePageActivity : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
 
-        var orientation = ""
-
-        when (newConfig.orientation) {
-            Configuration.ORIENTATION_PORTRAIT -> {
-                orientation = "ORIENTATION_PORTRAIT"
-            }
-            Configuration.ORIENTATION_LANDSCAPE -> {
-                orientation = "ORIENTATION_LANDSCAPE"
-            }
-        }
-
-        L.d("$TAG   onConfigurationChanged: 屏幕方向：$orientation")
-        L.d("$TAG   onConfigurationChanged: 屏幕大小：宽:${newConfig.screenWidthDp}   高：${newConfig.screenHeightDp}")
-
-
-        val outMetrics = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(outMetrics)
-        val widthPixels: Int = outMetrics.widthPixels
-        val heightPixels: Int = outMetrics.heightPixels
-        L.d("$TAG   widthPixels = $widthPixels,heightPixels = $heightPixels")
+//        var orientation = ""
+//
+//        when (newConfig.orientation) {
+//            Configuration.ORIENTATION_PORTRAIT -> {
+//                orientation = "ORIENTATION_PORTRAIT"
+//            }
+//            Configuration.ORIENTATION_LANDSCAPE -> {
+//                orientation = "ORIENTATION_LANDSCAPE"
+//            }
+//        }
+//
+//        L.d("$TAG   onConfigurationChanged: 屏幕方向：$orientation")
+//        L.d("$TAG   onConfigurationChanged: 屏幕大小：宽:${newConfig.screenWidthDp}   高：${newConfig.screenHeightDp}")
+//
+//
+//        val outMetrics = DisplayMetrics()
+//        windowManager.defaultDisplay.getMetrics(outMetrics)
+//        val widthPixels: Int = outMetrics.widthPixels
+//        val heightPixels: Int = outMetrics.heightPixels
+//        L.d("$TAG   widthPixels = $widthPixels,heightPixels = $heightPixels")
 
 
     }

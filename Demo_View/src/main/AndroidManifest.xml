@@ -6,12 +6,31 @@
     <application>
 
 
+        <activity android:name=".constraintlayout.DemoConstraintLayoutActivity"
+            android:label="ConstraintLayout"
+            ></activity>
+
         <activity android:name=".dialog.DemoDialogActivity"
             android:label="Dialog"
             ></activity>
 
+        <activity android:name=".dialog.DemoInputDialogPortraitActivity"
+            android:screenOrientation="portrait"
+            android:label="竖屏-输入框Dialog"
+            ></activity>
+
+        <activity android:name=".dialog.DemoInputDialogLandscapeActivity"
+            android:screenOrientation="landscape"
+            android:label="横屏-输入框Dialog"
+            ></activity>
+
         <activity android:name=".popwindow.DemoPopWindowActivity"
             android:label="PopWindow"
+            ></activity>
+        <activity android:name=".popwindow.DemoInputDialogShowPopActivity"
+            android:label="带有输入框的Dialog上展示PopWindow"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen"
             ></activity>
 
         <activity android:name=".recycleview.RecycleViewActivity"

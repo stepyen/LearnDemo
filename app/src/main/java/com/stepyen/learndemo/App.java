@@ -3,6 +3,7 @@ package com.stepyen.learndemo;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -15,13 +16,18 @@ import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.stepyen.demo.androidmanifest.configchanges.FoldScreenManager;
 import com.stepyen.demo.base.AppManager;
 import com.stepyen.demo.base.common.CommonPath;
 import com.stepyen.demo.base.config.PhoneConf;
+import com.stepyen.demo.base.utils.L;
 import com.stepyen.demo.thirdlab.msa.MsaHelp;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
 import com.superdo.magina.autolayout.AutoLayout;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
 
 /**
  * date：2019/6/24
@@ -70,7 +76,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
 //        LeakCanary.install(this);
 
         CommonPath.INSTANCE.init();
-
+        FoldScreenManager.INSTANCE.init(this);
     }
 
 
@@ -208,5 +214,36 @@ public class App extends Application implements Application.ActivityLifecycleCal
     @Override
     public void onActivityDestroyed(Activity activity) {
 
+    }
+
+
+    /**
+     * 折叠屏处理方案1
+     * @param newConfig
+     */
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//
+////        FoldScreenManager.INSTANCE.onConfigurationChanged(newConfig, new Function0<Unit>() {
+////            @Override
+////            public Unit invoke() {
+////                L.d(FoldScreenManager.TAG,"App#onConfigurationChanged 折叠了");
+////                return null;
+////            }
+////        });
+//        L.d(FoldScreenManager.TAG,"App#onConfigurationChanged");
+//        super.onConfigurationChanged(newConfig);
+////        FoldScreenManager.INSTANCE.reset();
+//
+//    }
+
+    /**
+     * 折叠屏处理方案2
+     * @param newConfig
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        L.d(FoldScreenManager.TAG,"App#onConfigurationChanged");
     }
 }

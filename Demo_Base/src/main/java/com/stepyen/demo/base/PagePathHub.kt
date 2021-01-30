@@ -40,13 +40,17 @@ class PagePathHub {
         const val DemoPropertyAnimotionActivity = "/animation/DemoPropertyAnimotionActivity"
 
         // Demo_View
+        const val DemoConstraintLayoutActivity = "/view/DemoConstraintLayoutActivity"
         const val DemoDialogActivity = "/view/DemoDialogActivity"
+        const val DemoInputDialogPortraitActivity = "/view/DemoInputDialogPortraitActivity"
+        const val DemoInputDialogLandscapeActivity = "/view/DemoInputDialogLandscapeActivity"
         const val DemoImageViewActivity = "/view/DemoImageViewActivity"
         const val NotificationTestParentActivity = "/view/NotificationTestParentActivity"
         const val NoificationReceiveStandardActivitity = "/view/NoificationReceiveStandardActivitity"
         const val NoificationReceiveSingleTaskActivitity = "/view/NoificationReceiveSingleTaskActivitity"
         const val DemoNotificationActivity = "/view/DemoNotificationActivity"
         const val DemoPopWindowActivity = "/view/DemoPopWindowActivity"
+        const val DemoInputDialogShowPopActivity = "/view/DemoInputDialogShowPopActivity"
         const val DemoTextViewActivity = "/view/DemoTextViewActivity"
         const val RecycleViewActivity = "/view/RecycleViewActivity"
         const val RecycleViewDiffActivity = "/view/RecycleViewDiffActivity"
@@ -80,12 +84,16 @@ class PagePathHub {
         // Demo_Function
         const val DemoCountDownActivity = "/function/DemoCountDownActivity"
         const val DemoSoftInputActivity = "/function/DemoSoftInputActivity"
+        const val DemoSoftInputHeightActivity = "/function/DemoSoftInputHeightActivity"
+        const val DemoSoftInputWebViewNoFullScreenActivity = "/function/DemoSoftInputWebViewNoFullScreenActivity"
+        const val DemoSoftInputWebViewFullScreenActivity = "/function/DemoSoftInputWebViewFullScreenActivity"
         const val DemoInstallActivity = "/function/DemoInstallActivity"
         const val DemoPermissionActivity = "/function/DemoPermissionActivity"
         const val DemoUriActivity = "/function/DemoUriActivity"
         const val DemoSchemeUrlActivity = "/function/DemoSchemeUrlActivity"
         const val DemoJsonActivity = "/function/DemoJsonActivity"
         const val DemoHandleActivity = "/function/DemoHandleActivity"
+        const val DemoJavaActivity = "/function/DemoJavaActivity"
 
 
 

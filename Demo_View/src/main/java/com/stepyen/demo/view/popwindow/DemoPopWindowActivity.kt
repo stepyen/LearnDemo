@@ -7,6 +7,7 @@ import android.widget.PopupWindow
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
+import com.stepyen.demo.base.utils.GlobalUtis
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.view.R
 import com.stepyen.xui.utils.DensityUtils
@@ -26,7 +27,7 @@ class DemoPopWindowActivity : BasePageActivity() {
     var pop: PopupWindow? = null
 
     override fun initView() {
-        addView(R.layout.activity_demo_popwindow)
+        setContentView(R.layout.activity_demo_popwindow)
 
         bottomPopBtn.setOnClickListener {
             initCommonPop()
@@ -45,8 +46,13 @@ class DemoPopWindowActivity : BasePageActivity() {
         }
 
         dialogShowPopBtn.setOnClickListener {
-            TestDialogShowPopDialog(this).show()
+            ShowPopupWindowDialog(this).show()
         }
+
+        etPopBtn.setOnClickListener {
+            GlobalUtis.gotoPage(PagePathHub.DemoInputDialogShowPopActivity)
+        }
+
 
         setFocusableBtn.setOnClickListener {
             initCommonPop()

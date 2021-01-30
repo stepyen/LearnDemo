@@ -88,8 +88,9 @@ object PageManager {
             "View",
             arrayListOf<PageBean>().apply {
 
-                add(PageBean("Notification", PagePathHub.DemoNotificationActivity))
+                add(PageBean("ConstraintLayout", PagePathHub.DemoConstraintLayoutActivity))
                 add(PageBean("Dialog", PagePathHub.DemoDialogActivity))
+                add(PageBean("Notification", PagePathHub.DemoNotificationActivity))
                 add(PageBean("PopWindow", PagePathHub.DemoPopWindowActivity))
                 add(PageBean("TextView", PagePathHub.DemoTextViewActivity))
                 add(PageBean("RecycleView", PagePathHub.RecycleViewActivity))
@@ -137,6 +138,7 @@ object PageManager {
             "功能",
             arrayListOf<PageBean>().apply {
 
+                add(PageBean("Java", PagePathHub.DemoJavaActivity))
                 add(PageBean("倒计时", PagePathHub.DemoCountDownActivity))
                 add(PageBean("软键盘", PagePathHub.DemoSoftInputActivity))
                 add(PageBean("安装", PagePathHub.DemoInstallActivity))

@@ -1,7 +1,7 @@
-package com.stepyen.demo.demo.activity
+package com.stepyen.demo.abstractmethoderror.activity
 
 import com.stepyen.demo.base.base.BasePageActivity
-import com.stepyen.demo.demo.R
+import com.stepyen.demo.abstractmethoderror.R
 
 /**
  * date：2020/12/15

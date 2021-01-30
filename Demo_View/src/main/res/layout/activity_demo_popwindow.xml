@@ -6,92 +6,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="PopWindow 展示"/>
-
-    <Button
-        android:id="@+id/bottomPopBtn"
-        style="@style/CommonButton"
-        android:text="目标View下方展示pop"
-        />
-
-    <Button
-        android:id="@+id/topPopBtn"
-        style="@style/CommonButton"
-        android:text="目标View上方展示pop"
-        />
-
-    <Button
-        android:id="@+id/parentPopBtn"
-        style="@style/CommonButton"
-        android:text="父布局左边展示pop"
-        />
-
-
-    <Button
-        android:id="@+id/dialogShowPopBtn"
-        style="@style/CommonButton"
-        android:text="对话框上展示pop"
-        />
-
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="PopWindow 属性"/>
-
-
-    <Button
-        android:id="@+id/setFocusableBtn"
-        style="@style/CommonButton"
-        android:text="setFocusable"
-        />
-
-    <Button
-        android:id="@+id/setOutsideTouchableBtn"
-        style="@style/CommonButton"
-        android:text="setOutsideTouchable"
-        />
-
-    <Button
-        android:id="@+id/setTouchableBtn"
-        style="@style/CommonButton"
-        android:text="setTouchable"
-        />
-
-    <Button
-        android:id="@+id/setBackgroundDrawableBtn"
-        style="@style/CommonButton"
-        android:text="setBackgroundDrawable"
-        />
-
-
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="PopWindow 输入法"/>
-
-    <Button
-        android:id="@+id/softInputModeBtn"
-        style="@style/CommonButton"
-        android:text="softInputMode"
-        />
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="PopWindow 展示"/>
+
+            <Button
+                android:id="@+id/bottomPopBtn"
+                style="@style/CommonButton"
+                android:text="目标View下方展示pop"
+                />
+
+            <Button
+                android:id="@+id/topPopBtn"
+                style="@style/CommonButton"
+                android:text="目标View上方展示pop"
+                />
+
+            <Button
+                android:id="@+id/parentPopBtn"
+                style="@style/CommonButton"
+                android:text="父布局左边展示pop"
+                />
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="对话框上展示PopupWindow"/>
+
+            <Button
+                android:id="@+id/dialogShowPopBtn"
+                style="@style/CommonButton"
+                android:text="对话框上展示pop"
+                />
+
+            <Button
+                android:id="@+id/etPopBtn"
+                style="@style/CommonButton"
+                android:text="带输入法的对话框，展示popwindow"
+                />
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="PopWindow 属性"/>
 
 
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="PopWindow 隐藏"/>
+            <Button
+                android:id="@+id/setFocusableBtn"
+                style="@style/CommonButton"
+                android:text="setFocusable"
+                />
+
+            <Button
+                android:id="@+id/setOutsideTouchableBtn"
+                style="@style/CommonButton"
+                android:text="setOutsideTouchable"
+                />
+
+            <Button
+                android:id="@+id/setTouchableBtn"
+                style="@style/CommonButton"
+                android:text="setTouchable"
+                />
+
+            <Button
+                android:id="@+id/setBackgroundDrawableBtn"
+                style="@style/CommonButton"
+                android:text="setBackgroundDrawable"
+                />
 
 
-    <Button
-        android:id="@+id/dismissPopBtn"
-        style="@style/CommonButton"
-        android:text="隐藏"
-        />
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="PopWindow 输入法"/>
+
+            <Button
+                android:id="@+id/softInputModeBtn"
+                style="@style/CommonButton"
+                android:text="softInputMode"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入"
+                />
+
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="PopWindow 隐藏"/>
+
+
+            <Button
+                android:id="@+id/dismissPopBtn"
+                style="@style/CommonButton"
+                android:text="隐藏"
+                />
+        </LinearLayout>
+    </ScrollView>
 
     <FrameLayout
         android:layout_width="match_parent"

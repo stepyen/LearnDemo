@@ -1,1 +1,37 @@
 apply from:'../common_demo.gradle'
+
+dependencies {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    先clear project，再run app
+
+    // NoSuchMethodError
+//    implementation(name: 'Demo_AbstractMethodError_v2_use-debug', ext: 'aar')
+//    implementation(name: 'Demo_AbstractMethodError_v1-debug', ext: 'aar')
+//    implementation(name: 'Demo_AbstractMethodError_v1_impl-debug', ext: 'aar')
+
+
+    // AbstractMethodError
+    implementation(name: 'Demo_AbstractMethodError_v2_use-debug', ext: 'aar')
+    implementation(name: 'Demo_AbstractMethodError_v2-debug', ext: 'aar')
+    implementation(name: 'Demo_AbstractMethodError_v1_impl-debug', ext: 'aar')
+
+
+    // NoClassDefFoundError
+    implementation(name: 'Demo_AbstractMethodError_v2_use-debug', ext: 'aar')
+    implementation(name: 'Demo_AbstractMethodError_v2-debug', ext: 'aar')
+
+}
+

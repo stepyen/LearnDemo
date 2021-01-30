@@ -10,6 +10,17 @@
         <activity android:name=".softinput.DemoSoftInputActivity"
             android:label="软键盘"
             ></activity>
+        <activity android:name=".softinput.DemoSoftInputHeightActivity"
+            android:label="软键盘高度"
+            ></activity>
+        <activity android:name=".softinput.DemoSoftInputWebViewNoFullScreenActivity"
+            android:label="Webview 不是全屏"
+            ></activity>
+        <activity android:name=".softinput.DemoSoftInputWebViewFullScreenActivity"
+
+            android:theme="@style/FullScreen"
+            android:label="Webview 全屏"
+            ></activity>
         <activity android:name=".countdown.DemoCountDownActivity"
             android:label="倒计时"
             ></activity>
@@ -34,6 +45,9 @@
             ></activity>
         <activity android:name=".handle.DemoHandleActivity"
             android:label="Handle"
+            ></activity>
+        <activity android:name=".java.DemoJavaActivity"
+            android:label="Java"
             ></activity>
     </application>
 

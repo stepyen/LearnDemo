@@ -62,7 +62,8 @@ android {
 repositories {
     flatDir {
         dirs 'libs',
-                '../Demo_Third_Lab/libs'
+                '../Demo_Third_Lab/libs',
+                '../Demo_Function/libs'
 
     }
 }

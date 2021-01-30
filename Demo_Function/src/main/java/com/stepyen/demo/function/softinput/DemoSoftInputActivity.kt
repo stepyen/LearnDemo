@@ -22,38 +22,12 @@ class DemoSoftInputActivity : BasePageActivity() {
     override var TAG: String = "DemoSoftInputActivity_TAG"
 
     override fun initView() {
-        addView(R.layout.demo_activity_soft_input)
-        softInputHeightListen()
+        addPageButton("adjustPan",PagePathHub.AdjustPanActivity)
+        addPageButton("adjustResize",PagePathHub.AdjustResizeActivity)
+        addPageButton("软键盘高度",PagePathHub.DemoSoftInputHeightActivity)
+        addPageButton("Webview 不是全屏",PagePathHub.DemoSoftInputWebViewNoFullScreenActivity)
+        addPageButton("Webview 全屏",PagePathHub.DemoSoftInputWebViewFullScreenActivity)
 
-    }
-
-
-    /**
-     * 监听软键盘高度
-     */
-    private fun softInputHeightListen() {
-        val contentView = this.findViewById(android.R.id.content) as FrameLayout
-        contentView.viewTreeObserver
-            .addOnGlobalLayoutListener(ViewTreeObserver.OnGlobalLayoutListener {
-                L.d(TAG,"软件盘高度：${getContentViewInvisibleHeight(this@DemoSoftInputActivity)}")
-            })
-
-    }
-
-
-    /*
-    获取内容视图的可见高度
-     */
-    private fun getContentViewInvisibleHeight(activity: Activity): Int {
-        val contentView = activity.findViewById<FrameLayout>(android.R.id.content)
-        val contentViewChild = contentView.getChildAt(0)
-        val outRect = Rect()
-        contentViewChild.getWindowVisibleDisplayFrame(outRect)
-
-        L.d(TAG,"内容view-bottom：${contentViewChild.bottom}")
-        L.d(TAG,"屏幕可见：${outRect.toString()}")
-
-        return contentViewChild.bottom - outRect.bottom
     }
 
 

@@ -10,17 +10,26 @@ import java.util.List;
  */
 public class JavaGenericity {
     public static class Animal{
-
+        public void cry() {
+            System.out.println("Animal#cry");
+        }
     }
 
     public static class Dog extends Animal {
-
+        public void cry() {
+            System.out.println("Dog#cry");
+        }
     }
 
 
     public static void main(String[] args) {
-        List<Dog> dogList = new ArrayList<Dog>();
-        List<? extends Animal> animalList = dogList;
+
+
+    }
+
+
+    public static void test(Animal animal) {
+
 
 
     }

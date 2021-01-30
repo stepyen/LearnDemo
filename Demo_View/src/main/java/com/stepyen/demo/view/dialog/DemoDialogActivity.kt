@@ -20,10 +20,8 @@ class DemoDialogActivity : BasePageActivity() {
     private var lifeCycleDialog: DialogLifeCycleDialog ?= null
 
     override fun initView() {
-        addView(R.layout.activity_demo_dialog)
-
-
-        dialogLifeCycleShowBtn.setOnClickListener {
+        addTag("Dialog的生命周期")
+        addButton("显示"){
             lifeCycleDialog = DialogLifeCycleDialog(this@DemoDialogActivity)?.apply {
                 setTitle("测试dialog生命周期")
                 setWindowSize(
@@ -35,9 +33,14 @@ class DemoDialogActivity : BasePageActivity() {
             lifeCycleDialog?.show()
         }
 
-        dialogLifeCycleDismissBtn.setOnClickListener {
+        addButton("隐藏"){
             lifeCycleDialog?.dismiss()
         }
+
+        addTag("有输入框的对话框")
+        addPageButton("竖屏", PagePathHub.DemoInputDialogPortraitActivity)
+        addPageButton("横屏", PagePathHub.DemoInputDialogLandscapeActivity)
+
 
     }
 

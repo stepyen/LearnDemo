@@ -40,4 +40,9 @@ class CustomDemoView @JvmOverloads constructor(
 
 
     }
+
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+    }
 }

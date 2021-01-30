@@ -7,20 +7,5 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="Dialog的生命周期"/>
-
-    <Button
-        android:id="@+id/dialogLifeCycleShowBtn"
-        style="@style/CommonButton"
-        android:text="Dialog 展示"
-        />
-    <Button
-        android:id="@+id/dialogLifeCycleDismissBtn"
-        style="@style/CommonButton"
-        android:text="Dialog 隐藏"
-        />
-
 
 </LinearLayout>
