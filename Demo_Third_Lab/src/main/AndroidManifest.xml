@@ -16,10 +16,7 @@
             ></activity>
 
 
-        <activity android:name=".msa.DemoMsaActivity"
-            android:configChanges=""
-            android:label="msa"
-            ></activity>
+
     </application>
 
 </manifest>

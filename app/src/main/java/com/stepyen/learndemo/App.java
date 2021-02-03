@@ -21,7 +21,6 @@ import com.stepyen.demo.base.AppManager;
 import com.stepyen.demo.base.common.CommonPath;
 import com.stepyen.demo.base.config.PhoneConf;
 import com.stepyen.demo.base.utils.L;
-import com.stepyen.demo.thirdlab.msa.MsaHelp;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
 import com.superdo.magina.autolayout.AutoLayout;
@@ -181,7 +180,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        if (activity!= null&& TextUtils.equals(activity.getClass().getName(),"com.stepyen.demo.base.MainActivity")) {
+        if (activity!= null&& TextUtils.equals(activity.getClass().getName(),"com.stepyen.learndemo.MainActivity")) {
             AppManager.INSTANCE.setMainActivity(activity);
         }
     }

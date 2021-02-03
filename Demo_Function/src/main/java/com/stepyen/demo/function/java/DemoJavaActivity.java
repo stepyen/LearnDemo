@@ -17,11 +17,7 @@ public class DemoJavaActivity extends BasePageActivity {
     @Override
     public void initView() {
         addButton("AbstractMethodError", v->{
-//            new A().test();
-
-            A a = new A();
-//            a.b = new BImpl();
-            a.test();
+            new A().test();
         });
     }
 }

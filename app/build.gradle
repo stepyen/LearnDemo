@@ -25,11 +25,11 @@ android {
     }
 
     signingConfigs {
-        releaseConfig {
-            storeFile file("../sinyeeandroid.keystore")
-            storePassword "4sinyeeandroidteam"
-            keyAlias "sinyeeandroid_keystore"
-            keyPassword "4sinyeeandroidteam"
+        debugConfig {
+            storeFile file("./sinyeedebug.keystore")
+            storePassword "babybus"
+            keyAlias "babybus"
+            keyPassword "babybus"
         }
     }
 
@@ -37,12 +37,12 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.releaseConfig
+            signingConfig signingConfigs.debugConfig
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.releaseConfig
+            signingConfig signingConfigs.debugConfig
         }
     }
 

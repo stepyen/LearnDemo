@@ -1,0 +1,4 @@
+apply from:'../../common_demo.gradle'
+dependencies {
+    api(name: 'msa_mdid_1.0.13', ext: 'aar')
+}

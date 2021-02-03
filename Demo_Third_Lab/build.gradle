@@ -5,8 +5,5 @@ apply from:'../common_demo.gradle'
 dependencies {
 
     api "$library.autolayout"
-    api "$library.glide"
-    implementation "$library.gif_drawable"
 
-    api(name: 'msa_mdid_1.0.13', ext: 'aar')
 }
