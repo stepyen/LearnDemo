@@ -26,7 +26,6 @@ dependencies {
     // AbstractMethodError
     implementation(name: 'Demo_AbstractMethodError_v2_use-debug', ext: 'aar')
     implementation(name: 'Demo_AbstractMethodError_v2-debug', ext: 'aar')
-    implementation(name: 'Demo_AbstractMethodError_v2_impl-debug', ext: 'aar')
     implementation(name: 'Demo_AbstractMethodError_v1_impl-debug', ext: 'aar')
 
 

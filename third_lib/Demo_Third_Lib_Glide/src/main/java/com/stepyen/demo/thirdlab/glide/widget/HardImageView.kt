@@ -1,4 +1,4 @@
-package com.stepyen.demo.thirdlab.msa.widget
+package com.stepyen.demo.thirdlab.glide.widget
 
 import android.content.Context
 import android.util.AttributeSet

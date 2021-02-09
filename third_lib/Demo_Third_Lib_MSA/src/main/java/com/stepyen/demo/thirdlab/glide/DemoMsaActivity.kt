@@ -1,4 +1,4 @@
-package com.stepyen.demo.thirdlab.msa
+package com.stepyen.demo.thirdlab.glide
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub

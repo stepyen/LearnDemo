@@ -8,12 +8,6 @@
         <activity android:name="com.stepyen.demo.thirdlab.autolayout.DemoAutoLayoutActivity"
             android:label="AutoLayout"
             ></activity>
-        <activity android:name="com.stepyen.demo.thirdlab.glide.DemoGlideActivity"
-            android:label="Glide"
-            ></activity>
-        <activity android:name=".gifdrawable.DemoGifDrawableActivity"
-            android:label="Gif Drawable"
-            ></activity>
 
 
 

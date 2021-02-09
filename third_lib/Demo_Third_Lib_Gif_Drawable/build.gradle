@@ -1,0 +1,8 @@
+apply from: '../../common_demo.gradle'
+
+dependencies {
+
+ 
+    implementation "$library.gif_drawable"
+
+}

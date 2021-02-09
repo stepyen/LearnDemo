@@ -12,7 +12,6 @@ public class TestCollection {
 
     public static void main(String[] args) {
 //        addNull();
-//        nullException();
     }
 
 
@@ -25,12 +24,4 @@ public class TestCollection {
         System.out.println("addNull succeed");
     }
 
-    /**
-     * 空指针异常
-     */
-    private static void nullException() {
-        ArrayList<String> list = null;
-        list.add("test");
-        System.out.println("nullException succeed");
-    }
 }

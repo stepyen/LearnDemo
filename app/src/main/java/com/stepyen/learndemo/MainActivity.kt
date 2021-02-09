@@ -12,10 +12,6 @@ class MainActivity : BasePageActivity() {
     override var TAG =  "MainActivity_TAG"
 
     override fun initView() {
-        addButton("msa", View.OnClickListener {
-            com.stepyen.demo.msa13impl.Test().init(this@MainActivity)
-//            com.stepyen.demo.msa23impl.Test().init(this@MainActivity)
-        })
 
         for (data in PageManager.data) {
             val pageBean = data.key

@@ -1,5 +1,6 @@
 package com.stepyen.demo.androidmanifest.configchanges
 
+import android.graphics.drawable.NinePatchDrawable
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity

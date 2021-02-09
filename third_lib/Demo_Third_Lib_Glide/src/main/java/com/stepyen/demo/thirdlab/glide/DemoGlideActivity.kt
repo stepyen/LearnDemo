@@ -1,10 +1,9 @@
-package com.stepyen.demo.thirdlab.msa
+package com.stepyen.demo.thirdlab.glide
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.bumptech.glide.Glide
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
-import com.stepyen.demo.thirdlab.glide.R
 import kotlinx.android.synthetic.main.activity_demo_glide.*
 
 /**
