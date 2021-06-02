@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="解析数组" />
+
+
+    <Button
+        android:id="@+id/parceArrayBtn10"
+        style="@style/CommonButton"
+        android:text="解析 空类型"
+        />
+
+
+    <Button
+        android:id="@+id/parceArrayBtn1"
+        style="@style/CommonButton"
+        android:text="@string/parce_array_empty_string"
+        />
+
+    <Button
+        android:id="@+id/parceArrayBtn11"
+        style="@style/CommonButton"
+        android:text="@string/parce_array_null_string"
+        />
+
+    <Button
+        android:id="@+id/parceArrayBtn12"
+        style="@style/CommonButton"
+        android:text="解析 字符串123"
+        />
+
+    <Button
+        android:id="@+id/parceArrayBtn2"
+        style="@style/CommonButton"
+        android:text="解析 数字123"
+        />
+
+
+    <Button
+        android:id="@+id/parceArrayBtn3"
+        style="@style/CommonButton"
+        android:text="解析 [] "
+        />
+
+    <Button
+        android:id="@+id/parceArrayBtn31"
+        style="@style/CommonButton"
+        android:text="解析 [123] "
+        />
+
+    <Button
+        android:id="@+id/parceArrayBtn4"
+        style="@style/CommonButton"
+        android:text="解析 {}"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="解决异常的做法" />
+
+
+    <Button
+        android:id="@+id/resolveExceptionBtn"
+        style="@style/CommonButton"
+        android:text="测试"
+        />
+
+
+
+
+</LinearLayout>
