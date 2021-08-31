@@ -14,6 +14,10 @@
             android:label="Dialog"
             ></activity>
 
+        <activity android:name=".spinner.DemoSpinnerActivity"
+            android:label="Spinner"
+            ></activity>
+
         <activity android:name=".dialog.DemoInputDialogPortraitActivity"
             android:screenOrientation="portrait"
             android:label="竖屏-输入框Dialog"
@@ -43,8 +47,14 @@
             android:screenOrientation="landscape"
             android:label="RecycleView 水平方向"
             ></activity>
+        <activity android:name=".recycleview.DemoRecycleViewCustomScrollbarActivity"
+            android:label="RecycleView 自定义滚动条"
+            ></activity>
 
         <activity android:name=".textview.DemoTextViewActivity"></activity>
+        <activity android:name=".edittext.DemoEditTextActivity"
+            android:screenOrientation="landscape"
+            ></activity>
 
         <activity android:name=".imageview.DemoImageViewActivity"
             android:label="ImageView"
