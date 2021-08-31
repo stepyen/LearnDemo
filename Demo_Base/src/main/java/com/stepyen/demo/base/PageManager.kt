@@ -31,6 +31,7 @@ object PageManager {
 
                 add(PageBean("资源", PagePathHub.DemoResourceActivity))
                 add(PageBean("drawable", PagePathHub.DemoDrawableActivity))
+                add(PageBean("Toast", PagePathHub.DemoToastActivity))
 
             })
 
@@ -44,6 +45,7 @@ object PageManager {
                 add(PageBean("screenOrientation", PagePathHub.DemoScreenOrientationActivity))
                 add(PageBean("meta-data", PagePathHub.DemoMetaDataActivity))
                 add(PageBean("max_aspect", PagePathHub.DemoMaxAspectActivity))
+                add(PageBean("Intent", PagePathHub.DemoIntentActivity))
 
             })
 
@@ -92,7 +94,9 @@ object PageManager {
                 add(PageBean("Dialog", PagePathHub.DemoDialogActivity))
                 add(PageBean("Notification", PagePathHub.DemoNotificationActivity))
                 add(PageBean("PopWindow", PagePathHub.DemoPopWindowActivity))
+                add(PageBean("Spinner", PagePathHub.DemoSpinnerActivity))
                 add(PageBean("TextView", PagePathHub.DemoTextViewActivity))
+                add(PageBean("EditText", PagePathHub.DemoEditTextActivity))
                 add(PageBean("RecycleView", PagePathHub.RecycleViewActivity))
                 add(PageBean("ImageView", PagePathHub.DemoImageViewActivity))
 
@@ -111,6 +115,7 @@ object PageManager {
                 add(PageBean("View 遮盖", PagePathHub.DemoViewCoverActivity))
                 add(PageBean("手势", PagePathHub.DemoViewGestureActivity))
                 add(PageBean("滚动", PagePathHub.DemoViewScrollActivity))
+                add(PageBean("布局填充", PagePathHub.DemoViewInflateActivity))
             })
 
         put(
@@ -128,8 +133,10 @@ object PageManager {
 
                 add(PageBean("AutoLayout", PagePathHub.DemoAutoLayoutActivity))
                 add(PageBean("Glide", PagePathHub.DemoGlideActivity))
+                add(PageBean("Gson", PagePathHub.DemoGsonActivity))
                 add(PageBean("GifDrawable", PagePathHub.DemoGifDrawableActivity))
                 add(PageBean("msa", PagePathHub.DemoMsaActivity))
+                add(PageBean("Retrofit", PagePathHub.DemoRetrofitActivity))
 
             })
 
@@ -140,11 +147,13 @@ object PageManager {
 
                 add(PageBean("Java", PagePathHub.DemoJavaActivity))
                 add(PageBean("倒计时", PagePathHub.DemoCountDownActivity))
+                add(PageBean("Timer", PagePathHub.DemoTimerActivity))
                 add(PageBean("软键盘", PagePathHub.DemoSoftInputActivity))
                 add(PageBean("安装", PagePathHub.DemoInstallActivity))
                 add(PageBean("权限", PagePathHub.DemoPermissionActivity))
                 add(PageBean("uri", PagePathHub.DemoUriActivity))
-                add(PageBean("SchemeUrl", PagePathHub.DemoSchemeUrlActivity))
+                add(PageBean("网页测试SchemeUrl", PagePathHub.WebviewTestSchemeUrlActivity))
+                add(PageBean("生成SchemeUrl", PagePathHub.DemoCreateSchemeUriActivity))
                 add(PageBean("Json", PagePathHub.DemoJsonActivity))
                 add(PageBean("Handle", PagePathHub.DemoHandleActivity))
 

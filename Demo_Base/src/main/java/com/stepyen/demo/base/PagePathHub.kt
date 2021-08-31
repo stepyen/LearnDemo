@@ -27,11 +27,13 @@ class PagePathHub {
         const val DemoMetaDataActivity = "/androidmanifest/DemoMetaDataActivity"
         const val DemoMaxAspectActivity = "/androidmanifest/DemoMaxAspectActivity"
         const val DemoLaunchModeActivity = "/androidmanifest/DemoLaunchModeActivity"
+        const val DemoIntentActivity = "/androidmanifest/DemoIntentActivity"
 
         // Demo_App
         const val DemoResourceActivity = "/app/DemoResourceActivity"
         const val DemoResourceAliasActivity = "/app/DemoResourceAliasActivity"
         const val DemoDrawableActivity = "/app/DemoDrawableActivity"
+        const val DemoToastActivity = "/app/DemoToastActivity"
 
         // Demo_Animation
         const val DemoTestAnimationActivity = "/animation/DemoTestAnimationActivity"
@@ -50,11 +52,14 @@ class PagePathHub {
         const val NoificationReceiveSingleTaskActivitity = "/view/NoificationReceiveSingleTaskActivitity"
         const val DemoNotificationActivity = "/view/DemoNotificationActivity"
         const val DemoPopWindowActivity = "/view/DemoPopWindowActivity"
+        const val DemoSpinnerActivity = "/view/DemoSpinnerActivity"
         const val DemoInputDialogShowPopActivity = "/view/DemoInputDialogShowPopActivity"
         const val DemoTextViewActivity = "/view/DemoTextViewActivity"
+        const val DemoEditTextActivity = "/view/DemoEditTextActivity"
         const val RecycleViewActivity = "/view/RecycleViewActivity"
         const val RecycleViewDiffActivity = "/view/RecycleViewDiffActivity"
         const val RecycleViewHorizontalActivity = "/view/RecycleViewHorizontalActivity"
+        const val DemoRecycleViewCustomScrollbarActivity = "/view/DemoRecycleViewCustomScrollbarActivity"
 
         // Demo_View_Base
         const val DemoViewScrollActivity = "/viewbase/DemoViewScrollActivity"
@@ -66,6 +71,7 @@ class PagePathHub {
         const val DemoBitmapActivity = "/viewbase/DemoBitmapActivity"
         const val DemoViewCoverActivity = "/viewbase/DemoViewCoverActivity"
         const val DemoViewGestureActivity = "/viewbase/DemoViewGestureActivity"
+        const val DemoViewInflateActivity = "/viewbase/DemoViewInflateActivity"
 
         // Demo_View_Custom
         const val CustomViewActivity = "/viewcustom/CustomViewActivity"
@@ -78,8 +84,10 @@ class PagePathHub {
         // Demo_Third_Lab
         const val DemoAutoLayoutActivity = "/thirdlab/DemoAutoLayoutActivity"
         const val DemoGlideActivity = "/thirdlab/DemoGlideActivity"
+        const val DemoGsonActivity = "/thirdlab/DemoGsonActivity"
         const val DemoGifDrawableActivity = "/thirdlab/DemoGifDrawableActivity"
         const val DemoMsaActivity = "/thirdlab/DemoMsaActivity"
+        const val DemoRetrofitActivity = "/thirdlab/DemoRetrofitActivity"
 
         // Demo_Function
         const val DemoCountDownActivity = "/function/DemoCountDownActivity"
@@ -90,10 +98,12 @@ class PagePathHub {
         const val DemoInstallActivity = "/function/DemoInstallActivity"
         const val DemoPermissionActivity = "/function/DemoPermissionActivity"
         const val DemoUriActivity = "/function/DemoUriActivity"
-        const val DemoSchemeUrlActivity = "/function/DemoSchemeUrlActivity"
+        const val WebviewTestSchemeUrlActivity = "/function/WebviewTestSchemeUrlActivity"
+        const val DemoCreateSchemeUriActivity = "/function/DemoCreateSchemeUriActivity"
         const val DemoJsonActivity = "/function/DemoJsonActivity"
         const val DemoHandleActivity = "/function/DemoHandleActivity"
         const val DemoJavaActivity = "/function/DemoJavaActivity"
+        const val DemoTimerActivity = "/function/DemoTimerActivity"
 
 
 
