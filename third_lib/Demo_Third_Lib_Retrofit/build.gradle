@@ -1,0 +1,11 @@
+apply from: '../../common_demo.gradle'
+
+dependencies {
+
+    api 'com.squareup.retrofit2:retrofit:2.2.0'  //基本
+    api 'com.squareup.retrofit2:converter-gson:2.2.0' //Gson解析
+//    api 'com.squareup.retrofit2:adapter-rxjava:2.2.0' //
+//    api 'com.squareup.retrofit2:converter-scalars:2.2.0' //
+    
+
+}

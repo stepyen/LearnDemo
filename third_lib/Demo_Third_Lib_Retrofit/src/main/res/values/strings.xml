@@ -1,0 +1,8 @@
+<resources>
+    
+    
+    
+    <string name="parce_array_empty_string">解析 \"\"</string>
+    <string name="parce_array_null_string">解析 空字符串</string>
+
+</resources>
