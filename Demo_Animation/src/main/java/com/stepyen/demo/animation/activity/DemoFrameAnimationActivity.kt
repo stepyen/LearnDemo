@@ -15,20 +15,33 @@ import kotlinx.android.synthetic.main.activity_demo_frame_animotion.*
  */
 @Route(path = PagePathHub.DemoFrameAnimationActivity)
 class DemoFrameAnimationActivity : BasePageActivity() {
-    private var isXml = true
+
     private var animationDrawable: AnimationDrawable? = null
 
     override fun initView() {
         addView(R.layout.activity_demo_frame_animotion)
 
-        if (isXml) {
+        xml_start_btn.setOnClickListener {
             animationDrawable = iv_animation_scale.drawable as AnimationDrawable?
-        } else {
+            animationDrawable?.run() {
+                stop()
+                start()
+            }
+        }
+        xml_stop_btn.setOnClickListener {
+            animationDrawable?.stop()
+        }
+
+
+
+        // 不起作用，待查！！！！！！
+        code_start_btn.setOnClickListener {
+
             animationDrawable = AnimationDrawable()
             animationDrawable?.isOneShot = false
-            for (i in 0..76) {
+            for (index in 1..77) {
                 val drawableId = resources.getIdentifier(
-                    "ic_frame_anim_" + i + 1,
+                    "ic_frame_anim_$index",
                     "drawable",
                     packageName
                 )
@@ -36,33 +49,17 @@ class DemoFrameAnimationActivity : BasePageActivity() {
                     resources.getDrawable(drawableId)
                 animationDrawable?.addFrame(drawable, 100)
             }
-        }
-
-        tv_status.text = "当前为Xml实现"
-
-        btn_switch.setOnClickListener {
-            isXml = !isXml
-            if (isXml) {
-                tv_status.text = "当前为Xml实现"
-            } else {
-                tv_status.text = "当前为Java实现"
-            }
-        }
-
-        btn_start.setOnClickListener {
-
             animationDrawable?.run() {
                 stop()
                 start()
             }
-
+        }
+        code_stop_btn.setOnClickListener {
+            animationDrawable?.stop()
         }
 
-        btn_stop.setOnClickListener {
-            animationDrawable?.run() {
-                stop()
-            }
-        }
+
+
 
     }
 }

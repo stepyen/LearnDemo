@@ -10,32 +10,39 @@
 
     <TextView
         style="@style/TextView_hint_tag"
-        android:text="帧动画"/>
-
-
-    <TextView
-        android:id="@+id/tv_status"
-        style="@style/TextView_hint_tag"
-        android:text="当前实现"
-        />
+        android:text="xml实现"/>
 
     <Button
-        android:id="@+id/btn_switch"
-        style="@style/CommonButton"
-        android:text="切换实现"
-        />
-
-    <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/xml_start_btn"
         style="@style/CommonButton"
         android:text="开始"
         />
 
     <Button
-        android:id="@+id/btn_stop"
+        android:id="@+id/xml_stop_btn"
         style="@style/CommonButton"
         android:text="停止"
         />
+
+
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="代码实现"/>
+
+    <Button
+        android:id="@+id/code_start_btn"
+        style="@style/CommonButton"
+        android:text="开始"
+        />
+
+    <Button
+        android:id="@+id/code_stop_btn"
+        style="@style/CommonButton"
+        android:text="停止"
+        />
+
 
     <ImageView
         android:id="@+id/iv_animation_scale"

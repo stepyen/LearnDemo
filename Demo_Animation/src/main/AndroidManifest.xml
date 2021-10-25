@@ -6,9 +6,15 @@
 
     <application>
         <activity android:name=".activity.DemoTestAnimationActivity"></activity>
-        <activity android:name=".activity.DemoFrameAnimationActivity"></activity>
-        <activity android:name=".activity.DemoTweenAnimotionActivity"></activity>
-        <activity android:name=".activity.DemoPropertyAnimotionActivity"></activity>
+        <activity android:name=".activity.DemoFrameAnimationActivity"
+            android:label="帧动画"
+            ></activity>
+        <activity android:name=".activity.DemoTweenAnimotionActivity"
+            android:label="补间动画"
+            ></activity>
+        <activity android:name=".activity.DemoPropertyAnimotionActivity"
+            android:label="属性动画"
+            ></activity>
     </application>
 
 </manifest>
