@@ -33,8 +33,6 @@ class DemoFrameAnimationActivity : BasePageActivity() {
         }
 
 
-
-        // 不起作用，待查！！！！！！
         code_start_btn.setOnClickListener {
 
             animationDrawable = AnimationDrawable()
@@ -45,10 +43,12 @@ class DemoFrameAnimationActivity : BasePageActivity() {
                     "drawable",
                     packageName
                 )
-                val drawable =
-                    resources.getDrawable(drawableId)
+                val drawable = resources.getDrawable(drawableId)
                 animationDrawable?.addFrame(drawable, 100)
             }
+
+            iv_animation_scale.setImageDrawable(animationDrawable)
+
             animationDrawable?.run() {
                 stop()
                 start()
