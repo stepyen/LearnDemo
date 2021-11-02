@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     >
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="可见性 visibility "/>
 
 
 
@@ -32,15 +35,39 @@
         style="@style/CommonButton"
         android:text="gone"/>
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="添加移除视图"/>
+
+    <RelativeLayout
+        android:id="@+id/addOrRemoveRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.stepyen.demo.viewbase.lifecycle.LifecycleView
+            android:id="@+id/addOrRemoveView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+
     <Button
-        android:id="@+id/remove_btn"
+        android:id="@+id/addBtn"
+        style="@style/CommonButton"
+        android:text="添加视图"/>
+
+    <Button
+        android:id="@+id/removeBtn"
         style="@style/CommonButton"
         android:text="移除视图"/>
 
     <Button
-        android:id="@+id/add_btn"
+        android:id="@+id/removeAllBtn"
         style="@style/CommonButton"
-        android:text="添加视图"/>
+        android:text="移除全部视图"/>
+
+
 
 
 

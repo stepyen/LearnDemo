@@ -98,6 +98,11 @@
             android:label="adjustPan"
             android:windowSoftInputMode="adjustPan"></activity>
 
+
+        <activity android:name=".intent.DemoIntentActivity"
+            android:label="Intent"
+            android:screenOrientation="portrait"
+            ></activity>
         <!--        屏幕的最大宽高比-->
 <!--        <meta-data-->
 <!--            android:name="android.max_aspect"-->

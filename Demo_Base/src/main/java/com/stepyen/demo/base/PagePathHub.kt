@@ -53,6 +53,8 @@ class PagePathHub {
         const val DemoNotificationActivity = "/view/DemoNotificationActivity"
         const val DemoPopWindowActivity = "/view/DemoPopWindowActivity"
         const val DemoSpinnerActivity = "/view/DemoSpinnerActivity"
+        const val DemoSeekBarActivity = "/view/DemoSeekBarActivity"
+        const val DemoProgressBarActivity = "/view/DemoProgressBarActivity"
         const val DemoInputDialogShowPopActivity = "/view/DemoInputDialogShowPopActivity"
         const val DemoTextViewActivity = "/view/DemoTextViewActivity"
         const val DemoEditTextActivity = "/view/DemoEditTextActivity"
@@ -60,6 +62,7 @@ class PagePathHub {
         const val RecycleViewDiffActivity = "/view/RecycleViewDiffActivity"
         const val RecycleViewHorizontalActivity = "/view/RecycleViewHorizontalActivity"
         const val DemoRecycleViewCustomScrollbarActivity = "/view/DemoRecycleViewCustomScrollbarActivity"
+        const val DemoRelativeLayoutActivity = "/view/DemoRelativeLayoutActivity"
 
         // Demo_View_Base
         const val DemoViewScrollActivity = "/viewbase/DemoViewScrollActivity"

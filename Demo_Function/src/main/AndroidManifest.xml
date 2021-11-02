@@ -36,9 +36,27 @@
             android:label="Uri"
             ></activity>
 
-        <activity android:name=".scheme.DemoSchemeUrlActivity"
-            android:label="SchemeUrl"
+        <activity android:name=".scheme.WebviewTestSchemeUrlActivity"
+            android:label="网页测试SchemeUrl"
             ></activity>
+
+        <activity android:name=".scheme.DemoCreateSchemeUriActivity"
+            android:label="生成SchemeUrl"
+            ></activity>
+
+        <activity android:name=".scheme.SchemeUrlActivity"
+            android:label="scheme url被跳转页面"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="stepyen"
+                    android:host="learn.com"
+                    />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".json.DemoJsonActivity"
             android:label="Json"
@@ -48,6 +66,9 @@
             ></activity>
         <activity android:name=".java.DemoJavaActivity"
             android:label="Java"
+            ></activity>
+        <activity android:name=".timer.DemoTimerActivity"
+            android:label="Timer"
             ></activity>
     </application>
 

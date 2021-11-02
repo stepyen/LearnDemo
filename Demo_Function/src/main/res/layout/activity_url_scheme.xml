@@ -104,6 +104,20 @@
                 android:text="打开 Scheme"
                 />
 
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="宝宝巴士世界，测试sheme uri"
+                />
+
+            <Button
+                android:id="@+id/bb_word_test_uri_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:text="世界测试sheme uri"
+                />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -32,4 +32,46 @@
         android:layout_height="wrap_content"
         />
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="文本超出最大长度，显示更多按钮"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/ellipsisTv1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="可以获取到省略的字符数。"
+            android:ellipsize="end"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            />
+    </LinearLayout>
+
+    <com.stepyen.demo.view.textview.EllipsisTextView
+        android:id="@+id/ellipsisTv2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="50dp"
+        />
+    <com.stepyen.demo.view.textview.EllipsisTextView
+        android:id="@+id/ellipsisTv3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="50dp"
+        />
+
+
+
 </LinearLayout>

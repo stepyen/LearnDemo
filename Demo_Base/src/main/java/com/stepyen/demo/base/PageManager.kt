@@ -90,15 +90,20 @@ object PageManager {
             "View",
             arrayListOf<PageBean>().apply {
 
+                add(PageBean("TextView", PagePathHub.DemoTextViewActivity))
+                add(PageBean("ImageView", PagePathHub.DemoImageViewActivity))
+                add(PageBean("EditText", PagePathHub.DemoEditTextActivity))
+
+                add(PageBean("RelativeLayout", PagePathHub.DemoRelativeLayoutActivity))
                 add(PageBean("ConstraintLayout", PagePathHub.DemoConstraintLayoutActivity))
+                add(PageBean("RecycleView", PagePathHub.RecycleViewActivity))
+
                 add(PageBean("Dialog", PagePathHub.DemoDialogActivity))
-                add(PageBean("Notification", PagePathHub.DemoNotificationActivity))
                 add(PageBean("PopWindow", PagePathHub.DemoPopWindowActivity))
                 add(PageBean("Spinner", PagePathHub.DemoSpinnerActivity))
-                add(PageBean("TextView", PagePathHub.DemoTextViewActivity))
-                add(PageBean("EditText", PagePathHub.DemoEditTextActivity))
-                add(PageBean("RecycleView", PagePathHub.RecycleViewActivity))
-                add(PageBean("ImageView", PagePathHub.DemoImageViewActivity))
+                add(PageBean("SeekBar", PagePathHub.DemoSeekBarActivity))
+                add(PageBean("ProgressBar", PagePathHub.DemoProgressBarActivity))
+                add(PageBean("Notification", PagePathHub.DemoNotificationActivity))
 
             })
 

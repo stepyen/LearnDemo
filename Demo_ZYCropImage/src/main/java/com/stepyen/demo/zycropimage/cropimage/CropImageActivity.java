@@ -109,13 +109,13 @@ public class CropImageActivity extends Activity implements OnClickListener{
 		mConfirmBtn.setText(R.string.demo_cropimage_cropImage_confirm);
 		mConfirmBtn.setOnClickListener(this);
 		
-		mRotateBtn = new Button(this);
-		mRotateBtn.setLayoutParams(new LayoutParams(0, DensityUtils.dp2px( 50), 1));
-		mRotateBtn.setBackgroundColor(Color.GREEN);
-		mRotateBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimensionPixelOffset(R.dimen.demo_cropimage_common_textsize_big));
-		mRotateBtn.setTextColor(Color.WHITE);
-		mRotateBtn.setText("旋转");
-		mRotateBtn.setOnClickListener(this);
+//		mRotateBtn = new Button(this);
+//		mRotateBtn.setLayoutParams(new LayoutParams(0, DensityUtils.dp2px( 50), 1));
+//		mRotateBtn.setBackgroundColor(Color.GREEN);
+//		mRotateBtn.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimensionPixelOffset(R.dimen.demo_cropimage_common_textsize_big));
+//		mRotateBtn.setTextColor(Color.WHITE);
+//		mRotateBtn.setText("旋转");
+//		mRotateBtn.setOnClickListener(this);
 		
 		mCancelBtn = new Button(this);
 		mCancelBtn.setLayoutParams(new LayoutParams(0,DensityUtils.dp2px( 50), 1));
@@ -130,7 +130,7 @@ public class CropImageActivity extends Activity implements OnClickListener{
 		layout.setGravity(Gravity.CENTER);
 		layout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 		layout.addView(mConfirmBtn);
-		layout.addView(mRotateBtn);
+//		layout.addView(mRotateBtn);
 		layout.addView(mCancelBtn);
 		
 		LinearLayout layoutMain = new LinearLayout(this);

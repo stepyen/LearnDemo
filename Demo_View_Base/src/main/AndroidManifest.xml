@@ -36,6 +36,10 @@
             android:label="滚动"
             ></activity>
 
+        <activity android:name=".inflate.DemoViewInflateActivity"
+            android:label="布局填充"
+            ></activity>
+
 
     </application>
 

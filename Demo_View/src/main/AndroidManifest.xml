@@ -10,12 +10,24 @@
             android:label="ConstraintLayout"
             ></activity>
 
+        <activity android:name=".relativeLayout.DemoRelativeLayoutActivity"
+            android:label="RelativeLayout"
+            ></activity>
+
         <activity android:name=".dialog.DemoDialogActivity"
             android:label="Dialog"
             ></activity>
 
         <activity android:name=".spinner.DemoSpinnerActivity"
             android:label="Spinner"
+            ></activity>
+
+        <activity android:name=".seekbar.DemoSeekBarActivity"
+            android:label="SeekBar"
+            ></activity>
+
+        <activity android:name=".progress_bar.DemoProgressBarActivity"
+            android:label="ProgressBar"
             ></activity>
 
         <activity android:name=".dialog.DemoInputDialogPortraitActivity"

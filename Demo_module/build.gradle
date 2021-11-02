@@ -1,0 +1,12 @@
+apply from:'../common_demo.gradle'
+
+//    api "$library.autolayout"
+//    api project(":Lib_FileProvider")
+//    implementation project(":Lib_FileProvider")
+//    api(name: 'msa_mdid_1.0.13', ext: 'aar')
+
+dependencies {
+
+
+
+}

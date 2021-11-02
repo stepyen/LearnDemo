@@ -13,9 +13,9 @@ android {
         targetSdkVersion setup.targetSdk
         versionCode release.versionCode
         versionName release.versionName
-        ndk {
-            abiFilters "armeabi-v7a"
-        }
+//        ndk {
+//            abiFilters "armeabi-v7a"
+//        }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -83,6 +83,10 @@ dependencies {
     implementation project(":Demo_View_Base")
     implementation project(":Demo_View_Custom")
     implementation project(":Demo_Third_Lab")
+    implementation project(":Demo_module")
+
+    implementation project(":third_lib:Demo_Third_Lib_Gson")
+    implementation project(":third_lib:Demo_Third_Lib_Retrofit")
 
     lintChecks project(':Demo_Lint')
 }

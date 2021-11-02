@@ -18,6 +18,11 @@
             android:label="Tools"
             ></activity>
 
+        <activity android:name=".toast.DemoToastActivity"
+            android:screenOrientation="landscape"
+            android:label="Toast"
+            ></activity>
+
     </application>
 
 </manifest>

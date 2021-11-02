@@ -1,7 +1,7 @@
 ext {
     release = [
-//            package_name: "com.stepyen.learndemo",
-            package_name: "com.sinyee.babybus.travelsafety",
+            package_name: "com.stepyen.learndemo",
+//            package_name: "com.sinyee.babybus.travelsafety",
             versionName : "1.0.0",
             versionCode : 1000
     ]
@@ -109,6 +109,7 @@ ext {
             "wechat_sdk"                  : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
 
             "glide"                       : "com.github.bumptech.glide:glide:$versions.glide",
+            "gson"                       : "com.google.code.gson:gson:2.8.6",
 
             "vungle"                      : "com.vungle.early-access:publisher-sdk-android:$versions.vungle",
             "billing"                     : "com.android.billingclient:billing:$versions.billing",

@@ -35,6 +35,16 @@ class DemoPropertyAnimotionActivity : BasePageActivity() {
             animator.start()
         }
 
+        addButton("位移-ValueAnimator方式实现") { v ->
+            val animator = ValueAnimator.ofFloat(0f, 1f)
+            animator.duration = 1000
+            animator.addUpdateListener { animation ->
+                val value = animation.animatedValue as Float
+                iv.translationX = value
+            }
+            animator.start()
+        }
+
         addButton("alpha-ObjectAnimator方式实现") { v ->
             val objectAnimator = ObjectAnimator.ofFloat(iv, "alpha", 0f, 1f)
             objectAnimator.duration = 1000
@@ -46,6 +56,24 @@ class DemoPropertyAnimotionActivity : BasePageActivity() {
             animator.duration = 3000
             animator.start()
         }
+
+        addButton("ObjectAnimator 实现位移") { v ->
+
+            val currentTranslationX = iv.translationX
+            val animator = ObjectAnimator.ofFloat(iv, "translationX",currentTranslationX,currentTranslationX+iv.width )
+            animator.duration = 1000
+            animator.start()
+        }
+
+        addButton("ObjectAnimator 位移回原来位置") { v ->
+
+            val currentTranslationX = iv.translationX
+            val animator = ObjectAnimator.ofFloat(iv, "translationX",currentTranslationX,currentTranslationX - iv.width )
+            animator.duration = 1000
+            animator.start()
+        }
+
+
 
         addButton("PropertyValuesHolder 实现Scale 多个动画效果") { v ->
             val xHolder =

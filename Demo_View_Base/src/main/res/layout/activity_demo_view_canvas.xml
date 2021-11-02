@@ -31,5 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="旋转45度"/>
+
+    <com.stepyen.demo.viewbase.canvas.CanvasRotateView
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+
 
 </LinearLayout>

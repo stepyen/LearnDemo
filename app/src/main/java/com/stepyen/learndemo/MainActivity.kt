@@ -8,6 +8,12 @@ import com.stepyen.demo.base.PageManager
 import com.stepyen.demo.base.base.BasePageActivity
 
 
+/**
+ *
+ *
+ *
+ * 是了，啊
+ */
 class MainActivity : BasePageActivity() {
     override var TAG =  "MainActivity_TAG"
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="目标视图显示在两个视图中间" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="218dp">
+
+        <!--        定位视图1-->
+        <View
+            android:id="@+id/lineView1"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="#2196F3" />
+
+        <!--        定位视图2-->
+        <View
+            android:id="@+id/lineView2"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:background="#2196F3" />
+
+
+        <!--        目标视图-->
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:background="#4CAF50" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

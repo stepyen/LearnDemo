@@ -38,6 +38,7 @@ public class CountTimeHelp {
     private OnCountListener mOnCountListener;
 
     private Timer timer;
+    private TimerTask timerTask;
 
     public static CountTimeHelp newCountDownHelp(int maxCountTime) {
         if (maxCountTime <=0) {
@@ -65,6 +66,8 @@ public class CountTimeHelp {
         }else{
             currentTime = 0;
         }
+
+        timer = new Timer();
     }
 
     /**
@@ -76,29 +79,47 @@ public class CountTimeHelp {
             return;
         }
 
-        if (timer == null) {
-            timer = new Timer();
-            timer.schedule(new TimerTask() {
+        initTask();
+        timer.schedule(timerTask, 0, 1000);
+
+    }
+
+    private void initTask() {
+        if (timerTask == null) {
+            timerTask = new TimerTask() {
                 @Override
                 public void run() {
                     if (isCountDownTime) {
                         countDown();
-                    }else{
+                    } else {
                         countUp();
                     }
                 }
-            }, 0, 1000);
+            };
         }
     }
+
 
     /**
      * 计时结束
      */
     public void stop() {
-        if (timer != null) {
-            timer.cancel();
-            timer = null;
+        if (timerTask != null) {
+            timerTask.cancel();
+            timerTask = null;
         }
+    }
+
+    /**
+     * 设置时间
+     * @param time
+     */
+    public void setMaxCountTime(int time) {
+        if (time <=0) {
+            throw new IllegalStateException("倒计时时间不能小于等于0");
+        }
+        isFinish = false;
+        maxCountTime = time;
     }
 
 

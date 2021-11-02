@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="简单使用" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/simpleSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:secondaryProgress="70" />
+
+    </FrameLayout>
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="自定义progress、thumb" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:secondaryProgress="70"
+
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:thumb="@drawable/icon_flower"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="设置进度条高度" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:thumb="@drawable/icon_flower"
+        android:max="100"
+        android:secondaryProgress="70"
+
+        android:layout_height="wrap_content"
+        android:minHeight="6dp"
+        android:maxHeight="6dp"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="设置滑块不分割进度条" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:thumb="@drawable/icon_flower"
+        android:minHeight="6dp"
+        android:maxHeight="6dp"
+        android:max="100"
+        android:secondaryProgress="70"
+
+        android:splitTrack="false"
+        />
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="去除滑块拖动时，四周出现的阴影" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:thumb="@drawable/icon_flower"
+        android:minHeight="6dp"
+        android:maxHeight="6dp"
+        android:splitTrack="false"
+        android:max="100"
+        android:secondaryProgress="70"
+
+        android:duplicateParentState="true"
+        />
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="设置滑块的水平方向偏移量为 0" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:thumb="@drawable/icon_flower"
+        android:minHeight="6dp"
+        android:maxHeight="6dp"
+        android:splitTrack="false"
+        android:duplicateParentState="true"
+        android:max="100"
+        android:secondaryProgress="70"
+
+        android:thumbOffset="0dp"
+        />
+
+
+
+
+</LinearLayout>

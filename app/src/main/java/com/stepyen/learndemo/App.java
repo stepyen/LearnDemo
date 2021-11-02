@@ -17,6 +17,7 @@ import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 import com.stepyen.demo.androidmanifest.configchanges.FoldScreenManager;
+import com.stepyen.demo.base.ActivityPageManager;
 import com.stepyen.demo.base.AppManager;
 import com.stepyen.demo.base.common.CommonPath;
 import com.stepyen.demo.base.config.PhoneConf;
@@ -24,6 +25,9 @@ import com.stepyen.demo.base.utils.L;
 import com.stepyen.xui.XUI;
 import com.stepyen.xutil.XUtil;
 import com.superdo.magina.autolayout.AutoLayout;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -178,11 +182,15 @@ public class App extends Application implements Application.ActivityLifecycleCal
     }
 
 
+
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
         if (activity!= null&& TextUtils.equals(activity.getClass().getName(),"com.stepyen.learndemo.MainActivity")) {
             AppManager.INSTANCE.setMainActivity(activity);
         }
+
+
+        ActivityPageManager.INSTANCE.addActivity(activity);
     }
 
     @Override
@@ -212,7 +220,7 @@ public class App extends Application implements Application.ActivityLifecycleCal
 
     @Override
     public void onActivityDestroyed(Activity activity) {
-
+        ActivityPageManager.INSTANCE.removeActivity(activity);
     }
 
 

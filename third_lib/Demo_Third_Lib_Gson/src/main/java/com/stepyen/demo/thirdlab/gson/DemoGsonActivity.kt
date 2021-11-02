@@ -10,6 +10,7 @@ import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.base.utils.L
 import com.stepyen.demo.thirdlab.gson.bean.Book
 import com.stepyen.demo.thirdlab.gson.core.TestExclude
+import com.stepyen.demo.thirdlab.gson.core.TestNormal
 import kotlinx.android.synthetic.main.activity_demo_gson.*
 
 
@@ -33,9 +34,14 @@ class DemoGsonActivity : BasePageActivity() {
 //
 //        resolveException()
 
+        addButton("测试正常解析"){
+            TestNormal().test()
+        }
+
         addButton("测试排除字段"){
             TestExclude().test()
         }
+
     }
 
 

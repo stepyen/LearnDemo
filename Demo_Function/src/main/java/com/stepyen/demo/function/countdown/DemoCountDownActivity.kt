@@ -20,8 +20,16 @@ class DemoCountDownActivity : BasePageActivity() {
     override fun initView() {
 
         addButton("开始倒计时", View.OnClickListener {
-            L.d(TAG,"计时开始")
-            mCountTimeHelp = CountTimeHelp.newCountDownHelp(3)
+            L.d(TAG,"开始倒计时")
+            if (mCountTimeHelp != null) {
+                mCountTimeHelp?.stop()
+            }
+
+            if (mCountTimeHelp == null) {
+                mCountTimeHelp = CountTimeHelp.newCountDownHelp(10)
+            }
+
+            mCountTimeHelp?.setMaxCountTime(10)
             mCountTimeHelp?.setOnCountListener(object :CountTimeHelp.OnCountListener{
                 override fun onFinish() {
                     L.d(TAG, "onFinish: ")
@@ -36,7 +44,15 @@ class DemoCountDownActivity : BasePageActivity() {
         })
 
         addButton("开始计时", View.OnClickListener {
-            mCountTimeHelp = CountTimeHelp.newCountUpHelp(3)
+            if (mCountTimeHelp != null) {
+                mCountTimeHelp?.stop()
+            }
+
+            if (mCountTimeHelp == null)  {
+                mCountTimeHelp = CountTimeHelp.newCountUpHelp(10)
+            }
+
+            mCountTimeHelp?.setMaxCountTime(10)
             mCountTimeHelp?.setOnCountListener(object :CountTimeHelp.OnCountListener{
                 override fun onFinish() {
                     L.d(TAG, "onFinish: ")

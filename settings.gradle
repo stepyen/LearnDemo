@@ -8,6 +8,7 @@ include ':Demo_Java'
 
 include ':Lib_FileProvider'
 include ':Lib_AvoidResult'
+include ':Demo_module'
 
 
 // abstract_method_error
@@ -21,7 +22,9 @@ include ':abstract_method_error:Demo_AbstractMethodError_v2_use'
 // 第三方库  
 include ':third_lib:Demo_Third_Lib_MSA'
 include ':third_lib:Demo_Third_Lib_Glide'
+include ':third_lib:Demo_Third_Lib_Gson'
 include ':third_lib:Demo_Third_Lib_Gif_Drawable'
+include ':third_lib:Demo_Third_Lib_Retrofit'
 
 include ':Demo_AndroidManifest'
 include ':Demo_Animation'

@@ -5,6 +5,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import com.stepyen.demo.viewbase.R
+import com.stepyen.xutil.tip.ToastUtils
 import kotlinx.android.synthetic.main.activity_view_lifecycle.*
 
 /**
@@ -20,10 +21,18 @@ class DemoViewLifecycleActivity : BasePageActivity() {
 
         addView(R.layout.activity_view_lifecycle)
 
+        lifecycleView.setOnClickListener {
+            ToastUtils.toast("点击了视图")
+        }
+
         visible_btn.setOnClickListener {
             lifecycleView.visibility = View.VISIBLE
         }
 
+        /**
+         * 当视图可见性为View.INVISIBLE，点击事件无效
+         *
+         */
         invisible_btn.setOnClickListener {
             lifecycleView.visibility = View.INVISIBLE
         }
@@ -32,14 +41,16 @@ class DemoViewLifecycleActivity : BasePageActivity() {
             lifecycleView.visibility = View.GONE
         }
 
-        remove_btn.setOnClickListener {
-            parentLl.removeView(lifecycleView)
+        addBtn.setOnClickListener {
+            addOrRemoveRl.addView(addOrRemoveView)
         }
 
-        add_btn.setOnClickListener {
-            if (lifecycleView.parent == null) {
-                parentLl.addView(lifecycleView, 0)
-            }
+        removeBtn.setOnClickListener {
+            addOrRemoveRl.removeView(addOrRemoveView)
+        }
+
+        removeAllBtn.setOnClickListener {
+            addOrRemoveRl.removeAllViews()
         }
 
 
