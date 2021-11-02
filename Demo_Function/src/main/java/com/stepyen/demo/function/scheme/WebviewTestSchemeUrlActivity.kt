@@ -15,11 +15,11 @@ import kotlinx.android.synthetic.main.activity_url_scheme.*
 /**
  * date：2021/1/9
  * author：stepyen
- * description：
+ * description：网页测试 SchemeUrl 跳转到其他app
  *
  */
-@Route(path = PagePathHub.DemoSchemeUrlActivity)
-class DemoSchemeUrlActivity:BasePageActivity() {
+@Route(path = PagePathHub.WebviewTestSchemeUrlActivity)
+class WebviewTestSchemeUrlActivity:BasePageActivity() {
     companion object {
         const val test_uri = "stepyen://xiaoming@host.com/record/path?address=china&phone=1875912233#fragment=fragment123"
 
@@ -100,6 +100,10 @@ class DemoSchemeUrlActivity:BasePageActivity() {
         }
 
 
+
+        bb_word_test_uri_btn.setOnClickListener {
+            startActivity(Intent(Uri.parse(BBHuaweiPushCreateSchemeUri.testUri).toString()))
+        }
     }
 
 
