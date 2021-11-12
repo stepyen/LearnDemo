@@ -23,6 +23,11 @@
             android:label="Toast"
             ></activity>
 
+        <activity android:name=".DemoTestAndroidActivity"
+            android:screenOrientation="portrait"
+            android:label="测试 android "
+            ></activity>
+
     </application>
 
 </manifest>

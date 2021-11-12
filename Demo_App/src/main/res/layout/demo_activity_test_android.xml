@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+
+
+
+    <Button
+        android:id="@+id/addBtn"
+        style="@style/CommonButton"
+        android:text="添加视图"
+        />
+
+    <Button
+        android:id="@+id/removeAndAddBtn"
+        style="@style/CommonButton"
+        android:text="移除再添加视图"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/testLl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/aquamarine"
+        >
+
+    </LinearLayout>
+
+</LinearLayout>
