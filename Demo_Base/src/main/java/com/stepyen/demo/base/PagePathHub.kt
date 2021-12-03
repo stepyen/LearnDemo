@@ -34,6 +34,7 @@ class PagePathHub {
         const val DemoResourceAliasActivity = "/app/DemoResourceAliasActivity"
         const val DemoDrawableActivity = "/app/DemoDrawableActivity"
         const val DemoToastActivity = "/app/DemoToastActivity"
+        const val DemoTestAndroidActivity = "/app/DemoTestAndroidActivity"
 
         // Demo_Animation
         const val DemoTestAnimationActivity = "/animation/DemoTestAnimationActivity"
@@ -60,8 +61,10 @@ class PagePathHub {
         const val DemoEditTextActivity = "/view/DemoEditTextActivity"
         const val RecycleViewActivity = "/view/RecycleViewActivity"
         const val RecycleViewDiffActivity = "/view/RecycleViewDiffActivity"
+        const val DemoRecycleViewSingleSelectActivity = "/view/DemoRecycleViewSingleSelectActivity"
         const val RecycleViewHorizontalActivity = "/view/RecycleViewHorizontalActivity"
         const val DemoRecycleViewCustomScrollbarActivity = "/view/DemoRecycleViewCustomScrollbarActivity"
+        const val DemoRecycleViewItemExploreActivity = "/view/DemoRecycleViewItemExploreActivity"
         const val DemoRelativeLayoutActivity = "/view/DemoRelativeLayoutActivity"
 
         // Demo_View_Base

@@ -5,16 +5,24 @@
 
 
     <application>
-        <activity android:name=".activity.DemoTestAnimationActivity"></activity>
+        <activity android:name=".activity.DemoTestAnimationActivity"
+            android:screenOrientation="landscape"
+            android:label="测试动画"
+            ></activity>
+
         <activity android:name=".activity.DemoFrameAnimationActivity"
             android:label="帧动画"
             ></activity>
+
         <activity android:name=".activity.DemoTweenAnimotionActivity"
             android:label="补间动画"
             ></activity>
+
         <activity android:name=".activity.DemoPropertyAnimotionActivity"
             android:label="属性动画"
             ></activity>
+
+
     </application>
 
 </manifest>

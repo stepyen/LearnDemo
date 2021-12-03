@@ -25,6 +25,9 @@ object Test {
         println("86399 ${changeDuration(86399)}")
 
 
+        DemoKotlin.test ="123"
+        DemoKotlin.user ="123"
+
     }
 
 

@@ -8,10 +8,8 @@ package com.stepyen.demo.kotlin
  */
 object DemoKotlin {
 
-
-    @JvmStatic
-    fun main(args: Array<String>) {
-
-    }
+    const val name = "stepyen"
+    val age: Int = 1
+    var height = "183"
 
 }

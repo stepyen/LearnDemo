@@ -15,10 +15,9 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        >
+        android:background="@color/white">
 
         <androidx.appcompat.widget.AppCompatSeekBar
             android:id="@+id/simpleSeekBar"
@@ -28,6 +27,29 @@
             android:secondaryProgress="70" />
 
     </FrameLayout>
+
+
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="padding 设置为0" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/aquamarine">
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:padding="0dp"
+            android:progressDrawable="@drawable/bg_seekbar_custom"
+            android:secondaryProgress="70" />
+
+    </FrameLayout>
+
 
     <TextView
         style="@style/TextView_hint_tag"
@@ -39,11 +61,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:max="100"
-        android:secondaryProgress="70"
-
         android:progressDrawable="@drawable/bg_seekbar_custom"
-        android:thumb="@drawable/icon_flower"
-        />
+
+        android:secondaryProgress="70"
+        android:thumb="@drawable/icon_flower" />
 
 
     <TextView
@@ -52,17 +73,16 @@
 
     <androidx.appcompat.widget.AppCompatSeekBar
         android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:progressDrawable="@drawable/bg_seekbar_custom"
-        android:thumb="@drawable/icon_flower"
         android:max="100"
-        android:secondaryProgress="70"
-
-        android:layout_height="wrap_content"
-        android:minHeight="6dp"
         android:maxHeight="6dp"
-        />
+        android:minHeight="6dp"
+
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:secondaryProgress="70"
+        android:thumb="@drawable/icon_flower" />
 
 
     <TextView
@@ -74,15 +94,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:progressDrawable="@drawable/bg_seekbar_custom"
-        android:thumb="@drawable/icon_flower"
-        android:minHeight="6dp"
-        android:maxHeight="6dp"
         android:max="100"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
         android:secondaryProgress="70"
-
         android:splitTrack="false"
-        />
+
+        android:thumb="@drawable/icon_flower" />
 
     <TextView
         style="@style/TextView_hint_tag"
@@ -93,40 +112,35 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:progressDrawable="@drawable/bg_seekbar_custom"
-        android:thumb="@drawable/icon_flower"
-        android:minHeight="6dp"
-        android:maxHeight="6dp"
-        android:splitTrack="false"
-        android:max="100"
-        android:secondaryProgress="70"
-
         android:duplicateParentState="true"
-        />
+        android:max="100"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
+        android:secondaryProgress="70"
+        android:splitTrack="false"
+
+        android:thumb="@drawable/icon_flower" />
 
 
     <TextView
         style="@style/TextView_hint_tag"
-        android:text="设置滑块的水平方向偏移量为 0" />
+        android:text="设置滑块的水平方向偏移量为 15" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:progressDrawable="@drawable/bg_seekbar_custom"
-        android:thumb="@drawable/icon_flower"
-        android:minHeight="6dp"
-        android:maxHeight="6dp"
-        android:splitTrack="false"
         android:duplicateParentState="true"
         android:max="100"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progressDrawable="@drawable/bg_seekbar_custom"
         android:secondaryProgress="70"
-
-        android:thumbOffset="0dp"
-        />
-
-
+        android:splitTrack="false"
+        android:thumb="@drawable/icon_flower"
+        android:thumbOffset="15dp" />
 
 
 </LinearLayout>

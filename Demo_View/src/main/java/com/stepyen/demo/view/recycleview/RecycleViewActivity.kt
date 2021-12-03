@@ -19,6 +19,8 @@ class RecycleViewActivity : BasePageActivity() {
         addPageButton("DiffUtil 数据刷新",PagePathHub.RecycleViewDiffActivity)
         addPageButton("水平方向",PagePathHub.RecycleViewHorizontalActivity)
         addPageButton("自定义滚动条",PagePathHub.DemoRecycleViewCustomScrollbarActivity)
+        addPageButton("单项选择",PagePathHub.DemoRecycleViewSingleSelectActivity)
+        addPageButton("item 曝光",PagePathHub.DemoRecycleViewItemExploreActivity)
 
     }
 }

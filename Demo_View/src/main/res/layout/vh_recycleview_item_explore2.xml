@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.stepyen.demo.view.recycleview.item_explore.ItemExploreItemView2 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemExploreItemView2"
     android:layout_width="wrap_content"
-    android:layout_height="44dp"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="20dp"
-        />
-
 
     <TextView
         android:id="@+id/tv_rcc"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
@@ -27,4 +20,4 @@
         android:textSize="15sp" />
 
 
-</LinearLayout>
+</com.stepyen.demo.view.recycleview.item_explore.ItemExploreItemView2>

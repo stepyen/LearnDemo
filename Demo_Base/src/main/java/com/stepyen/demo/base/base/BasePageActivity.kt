@@ -209,6 +209,7 @@ open class BasePageActivity : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
 
+
 //        var orientation = ""
 //
 //        when (newConfig.orientation) {

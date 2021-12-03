@@ -26,6 +26,14 @@ object PageManager {
             })
 
         put(
+            "测试",
+            arrayListOf<PageBean>().apply {
+
+                add(PageBean("测试android", PagePathHub.DemoTestAndroidActivity))
+
+            })
+
+        put(
             "App",
             arrayListOf<PageBean>().apply {
 
