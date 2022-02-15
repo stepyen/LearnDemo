@@ -4,6 +4,8 @@ import android.net.Uri
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
+import com.stepyen.demo.base.utils.L
+import com.stepyen.demo.base.utils.UriUtils
 import com.stepyen.demo.function.R
 import kotlinx.android.synthetic.main.demo_activity_uri.*
 
@@ -13,11 +15,13 @@ import kotlinx.android.synthetic.main.demo_activity_uri.*
 @Route(path = PagePathHub.DemoUriActivity)
 class DemoUriActivity : BasePageActivity() {
 
+    override var TAG = "DemoUriActivity_TAG"
 
     override fun initView() {
 
         addView(R.layout.demo_activity_uri)
         testUri()
+        testIsPathEndWithGif()
     }
 
 
@@ -45,6 +49,22 @@ class DemoUriActivity : BasePageActivity() {
         tv_uri.text = sb.toString()
 
     }
+
+    private fun testIsPathEndWithGif() {
+
+        fun test(url:String?) {
+            L.d(TAG, "$url path结尾是否是.gif：${UriUtils.isPathEndWithGif(url)}")
+        }
+
+        test("https://example.com")
+        test("https://example.com/image.gif")
+        test("https://example.com/image.png")
+        test("https://example.com?type=202&sckId=71")
+        test("https://example.com/image.gif?type=202&sckId=71")
+
+
+    }
+
 
 
 }
