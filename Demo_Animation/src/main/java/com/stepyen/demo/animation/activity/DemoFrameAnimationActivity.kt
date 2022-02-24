@@ -21,6 +21,16 @@ class DemoFrameAnimationActivity : BasePageActivity() {
     override fun initView() {
         addView(R.layout.activity_demo_frame_animotion)
 
+
+        xmlImplement()
+        codeImplement()
+
+    }
+
+    /**
+     * xml实现
+     */
+    private fun xmlImplement() {
         xml_start_btn.setOnClickListener {
             animationDrawable = iv_animation_scale.drawable as AnimationDrawable?
             animationDrawable?.run() {
@@ -32,7 +42,13 @@ class DemoFrameAnimationActivity : BasePageActivity() {
             animationDrawable?.stop()
         }
 
+    }
 
+
+    /**
+     * code实现
+     */
+    private fun codeImplement() {
         code_start_btn.setOnClickListener {
 
             animationDrawable = AnimationDrawable()
@@ -57,9 +73,5 @@ class DemoFrameAnimationActivity : BasePageActivity() {
         code_stop_btn.setOnClickListener {
             animationDrawable?.stop()
         }
-
-
-
-
     }
 }
