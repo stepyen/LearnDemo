@@ -21,16 +21,9 @@
             android:theme="@style/FullScreen"
             android:label="Webview 全屏"
             ></activity>
-        <activity android:name=".countdown.DemoCountDownActivity"
-            android:label="倒计时"
-            ></activity>
-        <activity android:name=".install.DemoInstallActivity"
-            android:label="安装"
-            ></activity>
 
-        <activity android:name=".permission.DemoPermissionActivity"
-            android:label="权限"
-            ></activity>
+
+
 
         <activity android:name=".scheme.WebviewTestSchemeUrlActivity"
             android:label="网页测试SchemeUrl"
