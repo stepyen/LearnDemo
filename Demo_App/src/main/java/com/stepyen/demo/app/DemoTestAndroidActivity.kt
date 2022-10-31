@@ -1,12 +1,14 @@
 package com.stepyen.demo.app
 
+import android.app.Activity
 import android.os.Bundle
-import android.widget.RelativeLayout
+import android.text.TextUtils
+import android.util.Log
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.base.PagePathHub
-import kotlinx.android.synthetic.main.demo_activity_test_android.*
+import com.stepyen.demo.base.utils.L
+import java.lang.StringBuilder
 
 /**
  * date：2021/11/12
@@ -15,7 +17,7 @@ import kotlinx.android.synthetic.main.demo_activity_test_android.*
  *
  */
 @Route(path = PagePathHub.DemoTestAndroidActivity)
-class DemoTestAndroidActivity : AppCompatActivity(){
+class DemoTestAndroidActivity : Activity(){
 
     var TAG: String = "DemoTestAndroidActivity_TAG"
 
@@ -27,19 +29,51 @@ class DemoTestAndroidActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.demo_activity_test_android)
+//        setContentView(R.layout.demo_activity_test_android)
 
-        addBtn.setOnClickListener {
-            testLl.addView(tv)
-        }
+//        addBtn.setOnClickListener {
+//            testLl.addView(tv)
+//        }
+//
+//        removeAndAddBtn.setOnClickListener {
+//            if (tv.parent != null) {
+//                testLl.removeView(tv)
+//            }
+//
+//            testLl.addView(tv)
+//        }
 
-        removeAndAddBtn.setOnClickListener {
-            if (tv.parent != null) {
-                testLl.removeView(tv)
-            }
+        L.d("haha",StringUtis.urlAppendPara("http://example.com","",""))
+        L.d("haha",StringUtis.urlAppendPara("http://example.com#fragment","name","John"))
+        L.d("haha",StringUtis.urlAppendPara("http://example.com?email=john.doe@email.com","name","John"))
 
-            testLl.addView(tv)
-        }
+
+
+
+
+    }
+
+
+
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("haha","onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("haha","onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("haha","onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("haha","onStop")
     }
 
 

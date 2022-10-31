@@ -32,10 +32,6 @@
             android:label="权限"
             ></activity>
 
-        <activity android:name=".uri.DemoUriActivity"
-            android:label="Uri"
-            ></activity>
-
         <activity android:name=".scheme.WebviewTestSchemeUrlActivity"
             android:label="网页测试SchemeUrl"
             ></activity>

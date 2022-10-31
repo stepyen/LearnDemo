@@ -40,6 +40,15 @@
         android:src="@color/aquamarine"
         />
 
+    <TextView
+        style="@style/TextView_hint_tag"
+        android:text="解决：You cannot start a load for a destroyed activity" />
+
+    <Button
+        android:id="@+id/fixBugLoadDestroyedActivityBtn"
+        style="@style/CommonButton"
+        android:text="测试页面"
+        />
 
 
 </LinearLayout>

@@ -90,6 +90,7 @@ class PagePathHub {
         // Demo_Third_Lab
         const val DemoAutoLayoutActivity = "/thirdlab/DemoAutoLayoutActivity"
         const val DemoGlideActivity = "/thirdlab/DemoGlideActivity"
+        const val DemoGlideLoadDestoryActivity = "/thirdlab/DemoGlideLoadDestoryActivity"
         const val DemoGsonActivity = "/thirdlab/DemoGsonActivity"
         const val DemoGifDrawableActivity = "/thirdlab/DemoGifDrawableActivity"
         const val DemoMsaActivity = "/thirdlab/DemoMsaActivity"

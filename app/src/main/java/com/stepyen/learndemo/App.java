@@ -80,6 +80,10 @@ public class App extends Application implements Application.ActivityLifecycleCal
 
         CommonPath.INSTANCE.init();
         FoldScreenManager.INSTANCE.init(this);
+
+
+
+
     }
 
 

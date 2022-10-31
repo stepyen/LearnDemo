@@ -8,41 +8,6 @@
     android:layout_height="700dp"
     >
 
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="xml实现"/>
-
-    <Button
-        android:id="@+id/xml_start_btn"
-        style="@style/CommonButton"
-        android:text="开始"
-        />
-
-    <Button
-        android:id="@+id/xml_stop_btn"
-        style="@style/CommonButton"
-        android:text="停止"
-        />
-
-
-
-
-    <TextView
-        style="@style/TextView_hint_tag"
-        android:text="代码实现"/>
-
-    <Button
-        android:id="@+id/code_start_btn"
-        style="@style/CommonButton"
-        android:text="开始"
-        />
-
-    <Button
-        android:id="@+id/code_stop_btn"
-        style="@style/CommonButton"
-        android:text="停止"
-        />
-
 
     <ImageView
         android:id="@+id/iv_animation_scale"
@@ -52,6 +17,74 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="xml实现"/>
+
+            <Button
+                android:id="@+id/xml_start_btn"
+                style="@style/CommonButton"
+                android:text="开始"
+                />
+
+            <Button
+                android:id="@+id/xml_stop_btn"
+                style="@style/CommonButton"
+                android:text="停止"
+                />
+
+
+
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="代码实现"/>
+
+            <Button
+                android:id="@+id/code_start_btn"
+                style="@style/CommonButton"
+                android:text="开始"
+                />
+
+            <Button
+                android:id="@+id/code_stop_btn"
+                style="@style/CommonButton"
+                android:text="停止"
+                />
+
+
+            <TextView
+                style="@style/TextView_hint_tag"
+                android:text="测试OOM"/>
+
+            <Button
+                android:id="@+id/oomStartBtn"
+                style="@style/CommonButton"
+                android:text="开始"
+                />
+
+            <Button
+                android:id="@+id/oomStopBtn"
+                style="@style/CommonButton"
+                android:text="停止"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 
 

@@ -146,6 +146,7 @@ object PageManager {
 
                 add(PageBean("AutoLayout", PagePathHub.DemoAutoLayoutActivity))
                 add(PageBean("Glide", PagePathHub.DemoGlideActivity))
+                add(PageBean("Glide t", PagePathHub.DemoGlideLoadDestoryActivity))
                 add(PageBean("Gson", PagePathHub.DemoGsonActivity))
                 add(PageBean("GifDrawable", PagePathHub.DemoGifDrawableActivity))
                 add(PageBean("msa", PagePathHub.DemoMsaActivity))

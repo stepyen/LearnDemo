@@ -1,6 +1,7 @@
 package com.stepyen.demo.java;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 /**
  * date：2021/2/3
@@ -29,9 +30,15 @@ class Test {
      */
     public static void main(String[] args) {
 
-        DecimalFormat df=new DecimalFormat("0000");
-        String str2=df.format(1);
-        System.out.println(str2);
+//        DecimalFormat df=new DecimalFormat("0000");
+//        String str2=df.format(1);
+//        System.out.println(str2);
 
+
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("1");
+
+        System.out.println(list.subList(0,3));
     }
 }

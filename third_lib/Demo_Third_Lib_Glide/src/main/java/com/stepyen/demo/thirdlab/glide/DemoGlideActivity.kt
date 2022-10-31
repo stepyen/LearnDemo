@@ -1,5 +1,6 @@
 package com.stepyen.demo.thirdlab.glide
 
+import android.content.Intent
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.bumptech.glide.Glide
 import com.stepyen.demo.base.PagePathHub
@@ -26,13 +27,18 @@ class DemoGlideActivity : BasePageActivity(){
         gif()
         hardGif()
 
+        fixBugLoadDestroyedActivityBtn.setOnClickListener {
+            startActivity(Intent(this@DemoGlideActivity, DemoGlideLoadDestoryActivity::class.java))
+        }
+
     }
 
     /**
      * 加载 png
      */
     private fun png() {
-        val url = "http://pic.beta.baby-bus.com/storage/image/1/d5b6c748/160982592353278892.png"
+//        val url = "http://pic.beta.baby-bus.com/storage/image/1/d5b6c748/160982592353278892.png"
+        val url = "https://cdn.tuisnake.com/mami-media/img/q4qt7y5edk.gif?type=202&sckId=716&rid=0adca1f6kzi26jyl-11430299&deviceId=7258a1fc-1fb1-449a-82c1-37ee40d2916b&slotId=410537&appId=87880&sckFromType=0&os=unknown&city=%E7%A6%8F%E5%B7%9E%E5%B8%82&region=%E7%A6%8F%E5%BB%BA&timestamp=1644886915876"
         Glide
             .with(this)
             .load(url)

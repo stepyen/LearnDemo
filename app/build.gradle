@@ -70,11 +70,11 @@ repositories {
 
 dependencies {
 
-
+    // 基础
     implementation project(":Demo_Base")
     implementation project(":Demo_Debug")
-
     implementation project(":Demo_AndroidManifest")
+
     implementation project(":Demo_Animation")
     implementation project(":Demo_App")
     implementation project(":Demo_Function")
@@ -87,6 +87,7 @@ dependencies {
 
     implementation project(":third_lib:Demo_Third_Lib_Gson")
     implementation project(":third_lib:Demo_Third_Lib_Retrofit")
+    implementation project(":third_lib:Demo_Third_Lib_Glide")
 
-    lintChecks project(':Demo_Lint')
+//    lintChecks project(':Demo_Lint')
 }

@@ -5,9 +5,13 @@
 
     <application>
 
-        <activity android:name=".DemoGlideActivity"
-            android:label="Glide"
-            ></activity>
+        <activity
+            android:name=".DemoGlideActivity"
+            android:label="Glide" />
+
+        <activity
+            android:name=".DemoGlideLoadDestoryActivity"
+            android:label="test glide load for a destory Activity" />
 
     </application>
 

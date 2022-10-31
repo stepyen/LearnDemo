@@ -3,6 +3,7 @@ package com.stepyen.demo.animation.activity
 import android.graphics.drawable.AnimationDrawable
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.stepyen.demo.animation.R
+import com.stepyen.demo.animation.oom.AnimationsContainer
 import com.stepyen.demo.base.PagePathHub
 import com.stepyen.demo.base.base.BasePageActivity
 import kotlinx.android.synthetic.main.activity_demo_frame_animotion.*
@@ -24,6 +25,7 @@ class DemoFrameAnimationActivity : BasePageActivity() {
 
         xmlImplement()
         codeImplement()
+        oomTest()
 
     }
 
@@ -72,6 +74,20 @@ class DemoFrameAnimationActivity : BasePageActivity() {
         }
         code_stop_btn.setOnClickListener {
             animationDrawable?.stop()
+        }
+    }
+
+    private fun oomTest() {
+
+        var framesSequenceAnimation: AnimationsContainer.FramesSequenceAnimation?= null
+
+        oomStartBtn.setOnClickListener {
+            framesSequenceAnimation = AnimationsContainer.getInstance(R.array.loading_anim,60).createProgressDialogAnim(iv_animation_scale)
+            framesSequenceAnimation?.start()
+        }
+
+        oomStopBtn.setOnClickListener {
+            framesSequenceAnimation?.stop()
         }
     }
 }

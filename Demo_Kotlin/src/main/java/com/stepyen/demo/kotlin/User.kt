@@ -6,9 +6,11 @@ package com.stepyen.demo.kotlin
  * description：
  *
  */
-class User {
-    var name: String? = ""
+object User {
 
-    var test: Boolean? = false
+    private const val test = "test"
 
+    fun log() {
+        println("$test")
+    }
 }

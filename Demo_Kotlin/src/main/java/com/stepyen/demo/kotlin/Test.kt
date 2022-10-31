@@ -11,26 +11,38 @@ import java.util.concurrent.TimeUnit
  */
 object Test {
 
+    val glass:Glass?=null
 
     @JvmStatic
     fun main(args: Array<String>) {
 
 
-        println("1 ${changeDuration(1)}")
-        println("61 ${changeDuration(61)}")
-        println("3601 ${changeDuration(3601)}")
-        println("3600 ${changeDuration(3600)}")
-        println("-1 ${changeDuration(-1)}")
-        println("3599 ${changeDuration(3599)}")
-        println("86399 ${changeDuration(86399)}")
 
 
-        DemoKotlin.test ="123"
-        DemoKotlin.user ="123"
+
+
 
     }
 
 
+    class Glass {
+        var name:String?=""
+
+    }
+
+
+    /**
+     * test
+     *
+    println("1 ${changeDuration(1)}")
+    println("61 ${changeDuration(61)}")
+    println("3601 ${changeDuration(3601)}")
+    println("3600 ${changeDuration(3600)}")
+    println("-1 ${changeDuration(-1)}")
+    println("3599 ${changeDuration(3599)}")
+    println("86399 ${changeDuration(86399)}")
+     *
+     */
     private fun changeDuration(duration: Int?): String {
 
         if (duration == null || duration <= 0) {

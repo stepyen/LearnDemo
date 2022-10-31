@@ -1,3 +1,83 @@
 <resources>
     <string name="app_name">录音评测</string>
+
+    <string-array name="loading_anim">
+        <item>@drawable/ic_frame_anim_1 </item>
+        <item>@drawable/ic_frame_anim_2 </item>
+        <item>@drawable/ic_frame_anim_3 </item>
+        <item>@drawable/ic_frame_anim_4 </item>
+        <item>@drawable/ic_frame_anim_5 </item>
+        <item>@drawable/ic_frame_anim_6 </item>
+        <item>@drawable/ic_frame_anim_7 </item>
+        <item>@drawable/ic_frame_anim_8 </item>
+        <item>@drawable/ic_frame_anim_9 </item>
+        <item>@drawable/ic_frame_anim_10</item>
+        <item>@drawable/ic_frame_anim_11</item>
+        <item>@drawable/ic_frame_anim_12</item>
+        <item>@drawable/ic_frame_anim_13</item>
+        <item>@drawable/ic_frame_anim_14</item>
+        <item>@drawable/ic_frame_anim_15</item>
+        <item>@drawable/ic_frame_anim_16</item>
+        <item>@drawable/ic_frame_anim_17</item>
+        <item>@drawable/ic_frame_anim_18</item>
+        <item>@drawable/ic_frame_anim_19</item>
+        <item>@drawable/ic_frame_anim_20</item>
+        <item>@drawable/ic_frame_anim_21</item>
+        <item>@drawable/ic_frame_anim_22</item>
+        <item>@drawable/ic_frame_anim_23</item>
+        <item>@drawable/ic_frame_anim_24</item>
+        <item>@drawable/ic_frame_anim_25</item>
+        <item>@drawable/ic_frame_anim_26</item>
+        <item>@drawable/ic_frame_anim_27</item>
+        <item>@drawable/ic_frame_anim_28</item>
+        <item>@drawable/ic_frame_anim_29</item>
+        <item>@drawable/ic_frame_anim_30</item>
+        <item>@drawable/ic_frame_anim_31</item>
+        <item>@drawable/ic_frame_anim_32</item>
+        <item>@drawable/ic_frame_anim_33</item>
+        <item>@drawable/ic_frame_anim_34</item>
+        <item>@drawable/ic_frame_anim_35</item>
+        <item>@drawable/ic_frame_anim_36</item>
+        <item>@drawable/ic_frame_anim_37</item>
+        <item>@drawable/ic_frame_anim_38</item>
+        <item>@drawable/ic_frame_anim_39</item>
+        <item>@drawable/ic_frame_anim_40</item>
+        <item>@drawable/ic_frame_anim_41</item>
+        <item>@drawable/ic_frame_anim_42</item>
+        <item>@drawable/ic_frame_anim_43</item>
+        <item>@drawable/ic_frame_anim_44</item>
+        <item>@drawable/ic_frame_anim_45</item>
+        <item>@drawable/ic_frame_anim_46</item>
+        <item>@drawable/ic_frame_anim_47</item>
+        <item>@drawable/ic_frame_anim_48</item>
+        <item>@drawable/ic_frame_anim_49</item>
+        <item>@drawable/ic_frame_anim_50</item>
+        <item>@drawable/ic_frame_anim_51</item>
+        <item>@drawable/ic_frame_anim_52</item>
+        <item>@drawable/ic_frame_anim_53</item>
+        <item>@drawable/ic_frame_anim_54</item>
+        <item>@drawable/ic_frame_anim_55</item>
+        <item>@drawable/ic_frame_anim_56</item>
+        <item>@drawable/ic_frame_anim_57</item>
+        <item>@drawable/ic_frame_anim_58</item>
+        <item>@drawable/ic_frame_anim_59</item>
+        <item>@drawable/ic_frame_anim_60</item>
+        <item>@drawable/ic_frame_anim_61</item>
+        <item>@drawable/ic_frame_anim_62</item>
+        <item>@drawable/ic_frame_anim_63</item>
+        <item>@drawable/ic_frame_anim_64</item>
+        <item>@drawable/ic_frame_anim_65</item>
+        <item>@drawable/ic_frame_anim_66</item>
+        <item>@drawable/ic_frame_anim_67</item>
+        <item>@drawable/ic_frame_anim_68</item>
+        <item>@drawable/ic_frame_anim_69</item>
+        <item>@drawable/ic_frame_anim_70</item>
+        <item>@drawable/ic_frame_anim_71</item>
+        <item>@drawable/ic_frame_anim_72</item>
+        <item>@drawable/ic_frame_anim_73</item>
+        <item>@drawable/ic_frame_anim_74</item>
+        <item>@drawable/ic_frame_anim_75</item>
+        <item>@drawable/ic_frame_anim_76</item>
+        <item>@drawable/ic_frame_anim_77</item>
+    </string-array>
 </resources>
